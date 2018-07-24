@@ -55,30 +55,15 @@
 	<table type="Y Axis" storageaddress="0xcb4e" />
 </table>
 
-	<table name="MAF" storageaddress="0xb650">
-</table>
-
-
-
-<table name="Rev Limit (Fuel Cut)" storageaddress="0x78aa">
-</table>
-
-<table name="No Load Rev Limit (Fuel Cut)" storageaddress="0x78ae">
-</table>
-
-<table name="Idle Target" storageaddress="0xacf0">
-</table>
-
-<table name="Fuel Injection Multiplier" storageaddress="0x7818">
-</table>
-
-<table name="Speed Limiter" storageaddress="0x7974"></table>
-
-<table name="Throttle Rev Limit" storageaddress="0x7942"></table>
-
-<table name="Load Base Fuel Schedule" storageaddress="0xb914">
-	</table>
-
+<table name="MAF" storageaddress="0xb650"/>
+<table name="Rev Limit (Fuel Cut)" storageaddress="0x78aa"/>
+<table name="No Load Rev Limit (Fuel Cut)" storageaddress="0x78ae"/>
+<table name="Idle Target" storageaddress="0xacf0"/>
+<table name="Fuel Injection Multiplier" storageaddress="0x7818"/>
+<table name="Speed Limiter" storageaddress="0x7974"/>
+<table name="Throttle Rev Limit" storageaddress="0x7942"/>
+<table name="Load Base Fuel Schedule" storageaddress="0xb914"/>
+<table name="MAF factor" storageaddress="0x715e" />
 
 <checksum type="std" start="0" end="0xFFFFF" sumloc="0x7b58" xorloc="0x7b50" />
 

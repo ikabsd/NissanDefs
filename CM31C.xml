@@ -134,6 +134,7 @@
 <table name="Air/Fuel correction limits, % (MALPRV)" storageaddress="0x34d3" />
 <table name="Idle BFS limits, ms (TPRV)" storageaddress="0x8b0e" />
 <table name="Load Base Fuel Schedule" storageaddress="0xcb2c" />
+<table name="MAF factor" storageaddress="0x8224" />
 
 	<checksum type="std" start="0" end="0xFFFFF" sumloc="0x8C54" xorloc="0x8C4C"/>
 

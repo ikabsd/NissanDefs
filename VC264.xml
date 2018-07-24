@@ -15,14 +15,15 @@
       <filesize>512kb</filesize>
     </romid>
     
-
-    <table name="High Octane Ignition Trim" storageaddress="0x0BE9">
+<!-- Unconventional scaling units used-->
+    <table name="Cold Ignition Trim" storageaddress="0x0BE9">
       <table type="X Axis" storageaddress="0x255B" >
         <scaling units="Test" expression="x*0.2" to_byte="x/0.2" format="0.00" fineincrement=".2" coarseincrement="1" />
 	   </table>
       <table type="Y Axis" storageaddress="0x256B" />
     </table>
-    
+ 
+ <!-- Unconventional scaling units used-->   
 	<table name="Regular Ignition Trim" storageaddress="0x0D69">
       <table type="X Axis" storageaddress="0x255B" >
         <scaling units="Reset" expression="x*0.1" to_byte="x/0.1" format="0.00" fineincrement=".2" coarseincrement="1" />
