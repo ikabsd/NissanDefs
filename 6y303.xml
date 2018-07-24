@@ -17,17 +17,17 @@
     </romid>
 
 
-   <table name="Timing1" storageaddress="0x52c9">
+   <table name="Cold Ignition Trim" storageaddress="0x52c9">
       <table type="X Axis" storageaddress="0x6f21" />
       <table type="Y Axis" storageaddress="0x6f31" />
     </table>
 
-    <table name="Timing Main Low Detonation" storageaddress="0x53c9">
+    <table name="High Octane Ignition Trim" storageaddress="0x53c9">
       <table type="X Axis" storageaddress="0x6f21" />
       <table type="Y Axis" storageaddress="0x6f31" />
     </table>
 
-    <table name="Timing High Detonation" storageaddress="0x54c9">
+    <table name="Regular Ignition Trim" storageaddress="0x54c9">
       <table type="X Axis" storageaddress="0x6f21" />
       <table type="Y Axis" storageaddress="0x6f31" />
     </table>
@@ -42,7 +42,7 @@
       <table type="Y Axis" storageaddress="0x6e13" />
     </table>
     
-	<table name="CL Fuel Scalar" storageaddress="0x7301"/>
+	<table name="OL Fuel Scalar" storageaddress="0x7301"/>
 
 <table name="Intake Cam Timing (16x16)" storageaddress="0x5ad9">
       <table type="X Axis" storageaddress="0x7785" />
@@ -75,14 +75,14 @@
 <table name="Speed Limiter" storageaddress="0x50b2" />
 <table name="Speed Limiter (km/h)" storageaddress="0x50b2" />
 
-<table name="Throttle Open" storageaddress="0x85fc">
+<table name="QH0/ torque conversion map" storageaddress="0x85fc">
 	<table type="X Axis" storageaddress="0x88d0" />
 	<table type="Y Axis" storageaddress="0x8840" />
 </table>
 <table name="MAF idle voltage limits (USRV)" storageaddress="0x5106" />
 <table name="MAF voltage limits" storageaddress="0x4ed6" />
 <table name="MAF low voltage range_w" storageaddress="0x504c" />
-<table name="Fuel correction limits, % (MALPRV)" storageaddress="0x4c96" />
+<table name="Air/Fuel correction limits, % (MALPRV)" storageaddress="0x4c96" />
 <table name="BFS limits, ms (TPRV)" storageaddress="0x50dc" />
 <table name="Injector Latency at 14V" storageaddress="0x4dac" />
 <table name="Fuel Injector Latency Adder" storageaddress="0x4908" />

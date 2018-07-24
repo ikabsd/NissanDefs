@@ -17,15 +17,15 @@
     </romid>
 
 <!-- timing axis may be reversed-->  
-  <table name="Timing1" storageaddress="0x7cb1">
+  <table name="Cold Ignition Trim" storageaddress="0x7cb1">
       <table type="X Axis" storageaddress="0xa4e2" />
       <table type="Y Axis" storageaddress="0xa4d2" />
     </table>
-    <table name="Timing Main Low Detonation" storageaddress="0x7db1">
+    <table name="High Octane Ignition Trim" storageaddress="0x7db1">
       <table type="X Axis" storageaddress="0xa4e2" />
       <table type="Y Axis" storageaddress="0xa4d2" />
     </table>
-    <table name="Timing High Detonation" storageaddress="0x7eb1">
+    <table name="Regular Ignition Trim" storageaddress="0x7eb1">
       <table type="X Axis" storageaddress="0xa4e2" />
       <table type="Y Axis" storageaddress="0xa4d2" />
     </table>
@@ -38,19 +38,19 @@
       <table type="Y Axis" storageaddress="0xa1a3" />
     </table>
     
-	<table name="CL Fuel Scalar" storageaddress="0xaa46"/>
+	<table name="OL Fuel Scalar" storageaddress="0xaa46"/>
 	
 	<table name="Intake Cam Timing (16x16)" storageaddress="0x89f1">
       <table type="X Axis" storageaddress="0xb15a" />
       <table type="Y Axis" storageaddress="0xb17a" />
     </table>
 
-<table name="Throttle Open" storageaddress="0x965c">
+<table name="QH0/ torque conversion map" storageaddress="0x965c">
 	<table type="X Axis" storageaddress="0xB630" />
 	<table type="Y Axis" storageaddress="0xa388" />
 </table>
 
-<table name="Throttle Open 2" storageaddress="0x0c90a">
+<table name="QH0/ torque conversion map 2" storageaddress="0x0c90a">
 	<table type="X Axis" storageaddress="0xcbde" />
 	<table type="Y Axis" storageaddress="0xcb4e" />
 </table>

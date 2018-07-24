@@ -19,15 +19,15 @@
 	</romid>
 
 
-	<table name="Timing1" storageaddress="0x8da9">
+	<table name="Cold Ignition Trim" storageaddress="0x8da9">
 		<table type="X Axis" storageaddress="0xB60C" />
 		<table type="Y Axis" storageaddress="0xB5FC" />
 	</table>
-	<table name="Timing Main Low Detonation" storageaddress="0x8ea9">
+	<table name="High Octane Ignition Trim" storageaddress="0x8ea9">
 		<table type="X Axis" storageaddress="0xB60C" />
 		<table type="Y Axis" storageaddress="0xB5FC" />
 	</table>
-	<table name="Timing High Detonation" storageaddress="0x8fa9">
+	<table name="Regular Ignition Trim" storageaddress="0x8fa9">
 		<table type="X Axis" storageaddress="0xB60C" />
 		<table type="Y Axis" storageaddress="0xB5FC" />
 	</table>
