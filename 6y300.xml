@@ -17,17 +17,17 @@
     </romid>
 
 
-   <table name="Timing1" storageaddress="0x52a1">
+   <table name="Cold Ignition Trim" storageaddress="0x52a1">
       <table type="X Axis" storageaddress="0x6ef9" />
       <table type="Y Axis" storageaddress="0x6f09" />
     </table>
 
-    <table name="Timing Main Low Detonation" storageaddress="0x53a1">
+    <table name="High Octane Ignition Trim" storageaddress="0x53a1">
       <table type="X Axis" storageaddress="0x6ef9" />
       <table type="Y Axis" storageaddress="0x6f09" />
     </table>
 
-    <table name="Timing High Detonation" storageaddress="0x54a1">
+    <table name="Regular Ignition Trim" storageaddress="0x54a1">
       <table type="X Axis" storageaddress="0x6ef9" />
       <table type="Y Axis" storageaddress="0x6f09" />
     </table>
@@ -47,17 +47,17 @@
       <table type="Y Axis" storageaddress="0x776d" />
     </table>
 	
-    <table name="Torque Request 1" storageaddress="0x5c21">
+    <table name="MSATHA" storageaddress="0x5c21">
       <table type="X Axis" storageaddress="0x6d12" />
       <table type="Y Axis" storageaddress="0x6d36" />
     </table>
 	
-	<table name="Torque Request 2" storageaddress="0x5d21">
+	<table name="MSATHB" storageaddress="0x5d21">
       <table type="X Axis" storageaddress="0x6d12" />
       <table type="Y Axis" storageaddress="0x6d36" />
     </table>
 	
-	<table name="Torque Request 3" storageaddress="0x5e21">
+	<table name="MSATH" storageaddress="0x5e21">
       <table type="X Axis" storageaddress="0x6d12" />
       <table type="Y Axis" storageaddress="0x6d36" />
     </table>
@@ -77,22 +77,22 @@
 
 <table name="Speed Limiter (km/h)" storageaddress="0x5074" />
 
-<table name="Throttle Open" storageaddress="0x644c">
+<table name="QH0/ torque conversion map" storageaddress="0x644c">
 	<table type="X Axis" storageaddress="0x794a" />
 	<table type="Y Axis" storageaddress="0x6e0b" />
 </table>
 
-<table name="Throttle Open 2" storageaddress="0x85dc">
+<table name="QH0/ torque conversion map 2" storageaddress="0x85dc">
 	<table type="X Axis" storageaddress="0x88b0" />
 	<table type="Y Axis" storageaddress="0x8820" />
 </table>
 
-<table name="Powertrain Force 1" storageaddress="0x81dc">
+<table name="mMTFDDS_S" storageaddress="0x81dc">
       <table type="X Axis" storageaddress="0x8870" />
       <table type="Y Axis" storageaddress="0x8890" />
     </table>
 	
-	<table name="Powertrain Force 2" storageaddress="0x83dc">
+	<table name="mMTFDD_S" storageaddress="0x83dc">
       <table type="X Axis" storageaddress="0x8870" />
       <table type="Y Axis" storageaddress="0x8890" />
     </table>

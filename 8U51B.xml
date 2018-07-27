@@ -19,17 +19,17 @@
  Code patterns practically identical -->
 <!-- note, MAF scaling not confirmed. -->
 
-	<table name="Timing1" storageaddress="0x5721">
+	<table name="Cold Ignition Trim" storageaddress="0x5721">
 		<table type="X Axis" storageaddress="0x77c5" />
 		<table type="Y Axis" storageaddress="0x77d5" />
 	</table>
 
-	<table name="Timing Main Low Detonation" storageaddress="0x5821">
+	<table name="High Octane Ignition Trim" storageaddress="0x5821">
 		<table type="X Axis" storageaddress="0x77c5" />
 		<table type="Y Axis" storageaddress="0x77d5" />
 	</table>
 
-	<table name="Timing High Detonation" storageaddress="0x5921">
+	<table name="Regular Ignition Trim" storageaddress="0x5921">
 		<table type="X Axis" storageaddress="0x77c5" />
 		<table type="Y Axis" storageaddress="0x77d5" />
 	</table>
@@ -70,17 +70,17 @@
 
 	<table name="Fuel Injection Multiplier" storageaddress="0x5366" />
 
-	<table name="Throttle Open" storageaddress="0x686c">
+	<table name="QH0/ torque conversion map" storageaddress="0x686c">
 		<table type="X Axis" storageaddress="0x84ea" />
 		<table type="Y Axis" storageaddress="0x76c6" />
 	</table>
 
-	<table name="Throttle ? A" storageaddress="0x646c">
+	<table name="mMTFDD" storageaddress="0x646c">
 		<table type="X Axis" storageaddress="0x8446" />
 		<table type="Y Axis" storageaddress="0x8466" />
 	</table>
 
-	<table name="Throttle ? B" storageaddress="0x666c">
+	<table name="mMTFDDS" storageaddress="0x666c">
 		<table type="X Axis" storageaddress="0x8446" />
 		<table type="Y Axis" storageaddress="0x8466" />
 	</table>

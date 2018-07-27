@@ -17,17 +17,17 @@
     </romid>
 
 
-   <table name="Timing1" storageaddress="0x52a1">
+   <table name="Cold Ignition Trim" storageaddress="0x52a1">
       <table type="X Axis" storageaddress="0x6ef9" />
       <table type="Y Axis" storageaddress="0x6f09" />
     </table>
 
-    <table name="Timing Main Low Detonation" storageaddress="0x53a1">
+    <table name="High Octane Ignition Trim" storageaddress="0x53a1">
       <table type="X Axis" storageaddress="0x6ef9" />
       <table type="Y Axis" storageaddress="0x6f09" />
     </table>
 
-    <table name="Timing High Detonation" storageaddress="0x54a1">
+    <table name="Regular Ignition Trim" storageaddress="0x54a1">
       <table type="X Axis" storageaddress="0x6ef9" />
       <table type="Y Axis" storageaddress="0x6f09" />
     </table>
@@ -62,7 +62,7 @@
 </table>
 <table name="Speed Limiter" storageaddress="0x5074" />
 <table name="Speed Limiter (km/h)" storageaddress="0x5074" />
-<table name="Throttle Open" storageaddress="0x85dc">
+<table name="QH0/ torque conversion map" storageaddress="0x85dc">
 	<table type="X Axis" storageaddress="0x88b0" />
 	<table type="Y Axis" storageaddress="0x8820" />
 </table>

@@ -17,17 +17,17 @@
     </romid>
 
 
-   <table name="Timing1" storageaddress="0x52c9">
+   <table name="Cold Ignition Trim" storageaddress="0x52c9">
       <table type="X Axis" storageaddress="0x6f21" />
       <table type="Y Axis" storageaddress="0x6f31" />
     </table>
 
-    <table name="Timing Main Low Detonation" storageaddress="0x53c9">
+    <table name="High Octane Ignition Trim" storageaddress="0x53c9">
       <table type="X Axis" storageaddress="0x6f21" />
       <table type="Y Axis" storageaddress="0x6f31" />
     </table>
 
-    <table name="Timing High Detonation" storageaddress="0x54c9">
+    <table name="Regular Ignition Trim" storageaddress="0x54c9">
       <table type="X Axis" storageaddress="0x6f21" />
       <table type="Y Axis" storageaddress="0x6f31" />
     </table>
@@ -41,6 +41,8 @@
       <table type="X Axis" storageaddress="0x6cfe" />
       <table type="Y Axis" storageaddress="0x6e13" />
     </table>
+    
+	<table name="OL Fuel Scalar" storageaddress="0x7301"/>
 
 <table name="Intake Cam Timing (16x16)" storageaddress="0x5ad9">
       <table type="X Axis" storageaddress="0x7785" />
@@ -52,27 +54,68 @@
       <table type="Y Axis" storageaddress="0x77b9" />
     </table>
     
-<table name="Rev Limit (Fuel Cut)" storageaddress="0x5062" />
-<table name="No Load Rev Limit (Fuel Cut)" storageaddress="0x5066" />
-<table name="VIAS Setpoints" storageaddress="0x4e18" />
+<table name="Rev Limit (Fuel Cut)" storageaddress="0x5062"/>
+<table name="No Load Rev Limit (Fuel Cut)" storageaddress="0x5066"/>
+<table name="VIAS Setpoints" storageaddress="0x4e18"/>
+
 <table name="MAF" storageaddress="0x7992">
    <scaling units="Airflow g/s" expression="(x-3121)*(105/25600)" to_byte="3121+x*(25600/105)" format="0.00" fineincrement="1" coarseincrement="100" />
 </table>
-<table name="MAF factor" storageaddress="0x4c21" />
-<table name="MAF offset" storageaddress="0x508a" />
-<table name="Idle Target" storageaddress="0x7403" />
-<table name="Fuel Injection Multiplier" storageaddress="0x500c" />
-<table name="Speed Limiter" storageaddress="0x50b2" />
-<table name="Speed Limiter (km/h)" storageaddress="0x50b2" />
+<table name="MAF factor" storageaddress="0x4c21"/>
+<table name="MAF offset" storageaddress="0x508a"/>
+<table name="Idle Target" storageaddress="0x73df"/>
+<table name="Idle Target 2" storageaddress="0x7403"/>
+<table name="Fuel Injection Multiplier" storageaddress="0x500c"/>
+<table name="Speed Limiter" storageaddress="0x50b2"/>
+<table name="Speed Limiter (km/h)" storageaddress="0x50b2"/>
 
-<table name="Throttle Open" storageaddress="0x85fc">
+ <table name="mMTFDD" storageaddress="0x6074">
+ 	<table type="X Axis" storageaddress="0x78fe" />
+ 	<table type="Y Axis" storageaddress="0x791e" />
+ </table>
+ <table name="mMTFDDS" storageaddress="0x6274">
+ 	<table type="X Axis" storageaddress="0x78fe" />
+ 	<table type="Y Axis" storageaddress="0x791e" />
+ </table>
+<table name="QH0/ torque conversion map" storageaddress="0x6474">
+	<table type="X Axis" storageaddress="0x6e33" />
+	<table type="Y Axis" storageaddress="0x7972" />
+</table>
+ <table name="mMTFDDS_S" storageaddress="0x81fc">
+ 	<table type="X Axis" storageaddress="0x8890" />
+ 	<table type="Y Axis" storageaddress="0x88b0" />
+ </table>
+ <table name="mMTFDD_S" storageaddress="0x83fc">
+	<table type="X Axis" storageaddress="0x8890" />
+	<table type="Y Axis" storageaddress="0x88b0" /> 
+</table> 
+ 
+<table name="QH0/ torque conversion map 2" storageaddress="0x85fc">
 	<table type="X Axis" storageaddress="0x88d0" />
 	<table type="Y Axis" storageaddress="0x8840" />
 </table>
+
+<table name="Engine torque value map" storageaddress="0x68f4"/>
+
+	
+	<table name="MSATHA" storageaddress="0x5c49">
+      <table type="X Axis" storageaddress="0x6d3a" />
+      <table type="Y Axis" storageaddress="0x6d5e" />
+    </table>
+	
+	<table name="MSATHB" storageaddress="0x5d49">
+      <table type="X Axis" storageaddress="0x6d3a" />
+      <table type="Y Axis" storageaddress="0x6d5e" />
+    </table>
+	
+	<table name="MSATH" storageaddress="0x5e49">
+      <table type="X Axis" storageaddress="0x6d3a" />
+      <table type="Y Axis" storageaddress="0x6d5e" />
+    </table>
 <table name="MAF idle voltage limits (USRV)" storageaddress="0x5106" />
 <table name="MAF voltage limits" storageaddress="0x4ed6" />
 <table name="MAF low voltage range_w" storageaddress="0x504c" />
-<table name="Fuel correction limits, % (MALPRV)" storageaddress="0x4c96" />
+<table name="Air/Fuel correction limits, % (MALPRV)" storageaddress="0x4c96" />
 <table name="Idle BFS limits, ms (TPRV)" storageaddress="0x50dc" />
 <table name="Injector Latency at 14V" storageaddress="0x4dac" />
 <table name="Fuel Injector Latency Adder" storageaddress="0x4908" />
@@ -83,6 +126,7 @@
 <table name="Catalyst DTC Min Threshold Fix (P0420, P0430)" storageaddress="0x6FB9" />
 <table name="Secondary O2 Heaters DTC Fix (P0037, P0038, P0057, P0058)" storageaddress="0x4C74" />
 <table name="VIAS Solenoid CEL (P1800)" storageaddress="0x81d0" />
+
 
 <checksum type="std" start="0" end="0x7FFFF" sumloc="0x51c0" xorloc="0x51b8" />
 

@@ -16,17 +16,17 @@
       <filesize>1024kb</filesize>
     </romid>
 
-   <table name="Timing1" storageaddress="0x730D">
+   <table name="Cold Ignition Trim" storageaddress="0x730D">
       <table type="X Axis" storageaddress="0x92ee" />
       <table type="Y Axis" storageaddress="0x92fe" />
     </table>
 	
-    <table name="Timing Main Low Detonation" storageaddress="0x740D">
+    <table name="High Octane Ignition Trim" storageaddress="0x740D">
       <table type="X Axis" storageaddress="0x92ee" />
       <table type="Y Axis" storageaddress="0x92fe" />
     </table>
 	
-    <table name="Timing High Detonation" storageaddress="0x750D">
+    <table name="Regular Ignition Trim" storageaddress="0x750D">
       <table type="X Axis" storageaddress="0x92ee" />
       <table type="Y Axis" storageaddress="0x92fe" />
     </table>
