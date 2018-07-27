@@ -10,17 +10,17 @@
       <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
         <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
-      <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
+	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
         <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
       </table>
       <description>mMADVTRMC Ignition Timing Map. This is tied to coolant temp and only used when the coolant temp is under a certain set point. This needs to be kept close to the "High Octane Ignition Trim" map.</description>
     </table>
 <table type="3D" name="High Octane Ignition Trim" category="Ignition Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="x-64" to_byte="x+64" format="0" fineincrement="1" coarseincrement="4" />
-      <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+     <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
         <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
-      <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
+	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
         <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
       </table>
       <description>mMADVTRMH This is the main timing table that the ECU uses when high-octane fuel is determined.</description>
@@ -30,7 +30,7 @@
       <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
         <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
-      <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
+	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
         <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
       </table>
       <description>mMADVTRMR This timing map is used by the ecu when it detects regular fuel. This table should ALWAYS be lower than the high octane table.</description>
@@ -38,10 +38,10 @@
 
 <table type="3D" name="Intake Cam Timing (8x8)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
-      <table type="X Axis" name="BFS" storagetype="uint8" endian="big" logparam="?">
-        <scaling units="Load" expression="x*0.151875" to_byte="x/0.151875" format="0.00" fineincrement=".2" coarseincrement="1" />
+      <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
-      <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
+	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
         <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
       </table>
       <description>Advance of the intake camshaft in degrees.</description>
@@ -49,10 +49,10 @@
 	
 	<table type="3D" name="Intake Cam Timing Cold (8x8)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
-      <table type="X Axis" name="BFS" storagetype="uint8" endian="big" logparam="?">
-        <scaling units="Load" expression="x*0.151875" to_byte="x/0.151875" format="0.00" fineincrement=".2" coarseincrement="1" />
+      <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
-      <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
+	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
         <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
       </table>
       <description>Advance of the intake camshaft in degrees.</description>
@@ -60,21 +60,21 @@
 
 <table type="3D" name="Intake Cam Timing (16x16)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
-      <table type="X Axis" name="BFS" storagetype="uint8" endian="big" logparam="?">
-        <scaling units="Load" expression="x*0.151875" to_byte="x/0.151875" format="0.00" fineincrement=".2" coarseincrement="1" />
+      <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
-      <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
+	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
         <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
-      </table>
+      </table>      
       <description>Advance of the intake camshaft in degrees.</description>
     </table>
 
 <table type="3D" name="Intake Cam Timing (4x4)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="4" sizey="4" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
-      <table type="X Axis" name="BFS" storagetype="uint8" endian="big" logparam="?">
-        <scaling units="Load" expression="x*0.151875" to_byte="x/0.151875" format="0.00" fineincrement=".2" coarseincrement="1" />
+      <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
-      <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
+	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
         <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
       </table>
       <description>mMRHVTI VTC target operation angle regular compensation value computed map</description>
@@ -82,10 +82,10 @@
 
 <table type="3D" name="Exhaust Cam Timing" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
       <scaling units="Degrees Retard" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
-      <table type="X Axis" name="BFS" storagetype="uint8" endian="big" logparam="?">
-        <scaling units="Load" expression="x*0.151875" to_byte="x/0.151875" format="0.00" fineincrement=".2" coarseincrement="1" />
+     <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
-      <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
+	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
         <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
       </table>
       <description>Retard of the exhaust camshaft in degrees.</description>
@@ -386,14 +386,14 @@
   <table type="2D" name="Individual Cylinder Fuel Trims" category="Fuel" storagetype="uint8" endian="big" sizey="6" userlevel="1">
    <scaling units="Percentage" expression="x/128" to_byte="x*128" format="0.00%" fineincrement="1" coarseincrement="10" />
    <table type="Static Y Axis" name="Cylinder Fuel Trim" sizey="6">
-    	<data>  Cylinder 6   </data>
-    	<data>  Cylinder 5  </data>
-		<data>  Cylinder 4  </data>
-    	<data>  Cylinder 3  </data>
-		<data>  Cylinder 2  </data>
-    	<data>  Cylinder 1  </data>
+    	<data>  Cylinder 1   </data>
+    	<data>  Cylinder 2  </data>
+		<data>  Cylinder 3  </data>
+    	<data>  Cylinder 4  </data>
+		<data>  Cylinder 5  </data>
+    	<data>  Cylinder 6  </data>
    </table>
-   <description>This adds or subtracts fuel from the respective cylinder. Values over 100 add fuel, values under 100 subtract fuel.</description>
+   <description>mTRLCY2 This adds or subtracts fuel from the respective cylinder. Values over 100 add fuel, values under 100 subtract fuel.</description>
   </table>
 
 <table type="2D" name="Open loop fuel target delay" category="Fuel" storagetype="uint8" endian="big" sizey="1" userlevel="1">
@@ -405,19 +405,19 @@
   </table>
   
   <table type="2D" name="Injector Latency at 14V" category="Fuel" storagetype="uint8" endian="big" sizey="1" userlevel="1">
-   <scaling units="Milliseconds" expression="x*.02" to_byte="x/.02" format="0.000ms" fineincrement=".02" coarseincrement=".1" />
+   <scaling units="Microseconds" expression="x*10" to_byte="x/10" format="0μs" fineincrement="1" coarseincrement="10" />
    <table type="Static Y Axis" name=" Latency @ 14V " sizey="1">
     <data></data>
    </table>
-   <description>Injector Open Time in Milliseconds</description>
+   <description>mTS14VZ Injector Open Time in Microseconds</description>
   </table>
   
   <table type="2D" name="Fuel Injector Latency Adder" category="Fuel" storagetype="uint8" endian="big" sizey="1" userlevel="1">
-   <scaling units="Milliseconds Per Volt" expression="x*.002" to_byte="x/.002" format="0.000ms" fineincrement=".002" coarseincrement=".01" />
+   <scaling units="Milliseconds Per Volt" expression="x*0.000976563" to_byte="x/0.000976563" format="0.000ms" fineincrement=".002" coarseincrement=".01" />
    <table type="Static Y Axis" name=" Injector Latency Adder " sizey="1">
     <data></data>
    </table>
-   <description>This is the value in milliseconds that is added to the "injector latency 14V table for every 1v drop in voltage. IE: if latency at 14v is 2ms and the adder is 1ms then the latency at 13v would be 3ms.</description>
+   <description>mDTS This is the value in milliseconds that is added to the "injector latency 14V table for every 1v drop in voltage. IE: if latency at 14v is 2ms and the adder is 1ms then the latency at 13v would be 3ms.</description>
   </table>
 
   <table type="2D" name="Cranking Enrichment" category="Fuel" storagetype="uint16" endian="big" sizey="8" userlevel="1">
@@ -435,122 +435,142 @@
    <description>This is the percent of enrichment that is added during cranking at the shown temperature.</description>
   </table>
 
-    <table type="3D" name="QH0/ torque conversion map" category="Electronic Throttle" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+    <table type="3D" name="QH0/ torque conversion map" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 	  <scaling units="Nm" expression="x/10-3276.8" to_byte="x*10+32768" format="0" fineincrement="1" coarseincrement="10" />
-      <table type="X Axis" name="?" storagetype="uint16" endian="big" logparam="?">
-        <scaling units="N/A" expression="x/655.35" to_byte="x*655.35" format="0.00" fineincrement="10" coarseincrement="100" />
-      </table>
-	  <table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="?">
-	  <!-- ECU actually scales *16 internally for calculations, but until more is known, just 1:1 here -->
-        <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="1" coarseincrement="10" />
-      </table>
+	 <table type="X Axis" name="QH0 flow quantity ratio" storagetype="uint16" endian="big" logparam="?">
+	    <scaling units="%" expression="x*0.00152588" to_byte="x/0.00152588" format="0.00" fineincrement="1" coarseincrement="10" />
+     </table>
+	 <table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
+     </table>
       <description>mMTTE QH0/ torque 1 and 2 must match exactly if you makes changes.</description>
 </table>
 
-<table type="3D" name="QH0/ torque conversion map 2" category="Electronic Throttle" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+<table type="3D" name="QH0/ torque conversion map 2" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 	<scaling units="Nm" expression="x/10-3276.8" to_byte="x*10+32768" format="0" fineincrement="1" coarseincrement="10" />
-      <table type="X Axis" name="?" storagetype="uint16" endian="big" logparam="?">
-        <scaling units="N/A" expression="x/655.35" to_byte="x*655.35" format="0.00" fineincrement="10" coarseincrement="100" />
-      </table>
-	  <table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="?">
-	  <!-- ECU actually scales *16 internally for calculations, but until more is known, just 1:1 here -->
-        <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="1" coarseincrement="10" />
-      </table>
+	 <table type="X Axis" name="QH0 flow quantity ratio" storagetype="uint16" endian="big" logparam="?">
+	    <scaling units="%" expression="x*0.00152588" to_byte="x/0.00152588" format="0.00" fineincrement="1" coarseincrement="10" />
+     </table>
+	 <table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
+     </table>
       <description>mMTTE_S QH0/ torque 1 and 2 must match exactly if you makes changes.</description>
 </table>
 
- <table type="3D" name="Engine torque value map" category="Electronic Throttle" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+ <table type="3D" name="Engine torque value map" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 	  <scaling units="Nm" expression="x/10-3276.8" to_byte="x*10+32768" format="0" fineincrement="1" coarseincrement="10" />
-      <table type="X Axis" name="?" storagetype="uint16" endian="big" logparam="?">
-        <scaling units="N/A" expression="x/655.35" to_byte="x*655.35" format="0.00" fineincrement="10" coarseincrement="100" />
-      </table>
-	  <table type="Y Axis" name="?" storagetype="uint8" endian="big" logparam="?">
-	  <!-- ECU actually scales *16 internally for calculations, but until more is known, just 1:1 here -->
-        <scaling units="N/A" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="10" />
-      </table>
-      <description>mTENGMAP </description>
+   <table type="Static X Axis" name="?" format="0" sizey="16">
+	<data>0</data>
+    <data>10</data>
+    <data>20</data>
+    <data>30</data>
+    <data>40</data>
+    <data>50</data>
+    <data>60</data>
+    <data>70</data>
+    <data>80</data>
+    <data>90</data>
+    <data>100</data>
+    <data>110</data>
+    <data>120</data>
+    <data>130</data>
+    <data>140</data>
+	<data>150</data>        
+   </table>
+   <table type="Static Y Axis" name="RPM" format="0" sizey="16">
+     <data>400</data>
+     <data>800</data>
+     <data>1200</data>
+     <data>1600</data>
+     <data>2000</data>
+     <data>2400</data>
+     <data>2800</data>
+     <data>3200</data>
+     <data>3600</data>
+     <data>4000</data>
+     <data>4400</data>
+     <data>4800</data>
+     <data>5200</data>
+     <data>5600</data>
+     <data>6000</data>
+	 <data>6400</data>
+	</table>
+   <description>mTENGMAP </description>
 </table>
 
 <table type="3D" name="MSATHA" category="Misfire Detection" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
       <scaling units="NA" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="50" />
-      
-	  <table type="X Axis" name="BFS" storagetype="uint8" endian="big" logparam="?">
-        <scaling units="milliseconds" expression="x*0.151875" to_byte="x/0.151875" format="0.00" fineincrement=".2" coarseincrement="1" />
+      <table type="X Axis" name="Cylinder intake quantity equivalent pulse width" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="ms" expression="x*.1250" to_byte="x/.1250" format="0.00" fineincrement=".2" coarseincrement="1" />
       </table>
-      <table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="?">
-        <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
+	  <table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
       </table>
-      <description>Misfire Diagnosis table A"</description>
+      <description>MSATHA Misfire Diagnosis table A"</description>
     </table>
 	
 	<table type="3D" name="MSATHB" category="Misfire Detection" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
       <scaling units="NA" expression="x" to_byte="x" format="0" fineincrement=".2" coarseincrement="1" />
-      
-	  <table type="X Axis" name="BFS" storagetype="uint8" endian="big" logparam="?">
-        <scaling units="milliseconds" expression="x*0.151875" to_byte="x/0.151875" format="0.00" fineincrement=".2" coarseincrement="1" />
+      <table type="X Axis" name="Cylinder intake quantity equivalent pulse width" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="ms" expression="x*.1250" to_byte="x/.1250" format="0.00" fineincrement=".2" coarseincrement="1" />
       </table>
-      <table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="?">
-        <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
+	  <table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
       </table>
-      <description>Misfire Diagnosis table B"</description>
+      <description>MSATHB Misfire Diagnosis table B"</description>
     </table>
 	
-	<table type="3D" name="MSATHH" category="Misfire Detection" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+	<table type="3D" name="MSATH" category="Misfire Detection" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
       <scaling units="NA" expression="x" to_byte="x" format="0" fineincrement=".2" coarseincrement="1" />
-      
-	  <table type="X Axis" name="BFS" storagetype="uint8" endian="big" logparam="?">
-        <scaling units="milliseconds" expression="x*0.151875" to_byte="x/0.151875" format="0.00" fineincrement=".2" coarseincrement="1" />
+      <table type="X Axis" name="Cylinder intake quantity equivalent pulse width" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="ms" expression="x*.1250" to_byte="x/.1250" format="0.00" fineincrement=".2" coarseincrement="1" />
       </table>
-      <table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="?">
-        <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
+	  <table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
       </table>
-      <description>Misfire Diagnosis table H"</description>
+      <description>MSATH Misfire Diagnosis table"</description>
     </table>
 	
-	<table type="3D" name="mMTFDD" category="Electronic Throttle" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+	<table type="3D" name="mMTFDD" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 	  <scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
-      <table type="X Axis" name="?" storagetype="uint16" endian="big" logparam="?">
-        <scaling units="N/A" expression="x/655.35" to_byte="x*655.35" format="0.00" fineincrement="10" coarseincrement="100" />
+	  <table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="?">
+        <scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
       </table>
-	  <table type="Y Axis" name="?" storagetype="uint16" endian="big" logparam="?">
-	  <!-- ECU actually scales *16 internally for calculations, but until more is known, just 1:1 here -->
-        <scaling units="N/A" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="10" />
+	  <table type="Y Axis" name="Accelerator Open" storagetype="uint16" endian="big" logparam="?">
+        <scaling units="deg" expression="x*0.11" to_byte="x/0.11" format="0.00" fineincrement="10" coarseincrement="100" />
       </table>
       <description>mMTFDD D range target drive power map</description>
-</table>
+	</table>
 
-<table type="3D" name="mMTFDDS" category="Electronic Throttle" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
-	      <scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
-      <table type="X Axis" name="?" storagetype="uint16" endian="big" logparam="?">
-        <scaling units="N/A" expression="x/655.35" to_byte="x*655.35" format="0.00" fineincrement="10" coarseincrement="100" />
+	<table type="3D" name="mMTFDDS" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+	  <scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
+      <table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="?">
+        <scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
       </table>
-	  <table type="Y Axis" name="?" storagetype="uint16" endian="big" logparam="?">
-	  <!-- ECU actually scales *16 internally for calculations, but until more is known, just 1:1 here -->
-        <scaling units="N/A" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="10" />
+	  <table type="Y Axis" name="Accelerator Open" storagetype="uint16" endian="big" logparam="?">
+        <scaling units="deg" expression="x*0.11" to_byte="x/0.11" format="0.00" fineincrement="10" coarseincrement="100" />
       </table>
       <description>mMTFDDS Ds range target drive power map</description>
-</table>
+	</table>
 
-	<table type="3D" name="mMTFDDS_S" category="Electronic Throttle" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+	<table type="3D" name="mMTFDDS_S" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 	  <scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
-      <table type="X Axis" name="?" storagetype="uint16" endian="big" logparam="?">
-        <scaling units="N/A" expression="x/655.35" to_byte="x*655.35" format="0.00" fineincrement="10" coarseincrement="100" />
+	  <table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="?">
+        <scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
       </table>
-	  <table type="Y Axis" name="?" storagetype="uint16" endian="big" logparam="?">
-	  <!-- ECU actually scales *16 internally for calculations, but until more is known, just 1:1 here -->
-        <scaling units="N/A" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="10" />
+	  <table type="Y Axis" name="Accelerator Open" storagetype="uint16" endian="big" logparam="?">
+        <scaling units="deg" expression="x*0.11" to_byte="x/0.11" format="0.00" fineincrement="10" coarseincrement="100" />
       </table>
       <description>mMTFDDS_S Ds range target drive power map (redundant operation vice-operation part)</description>
-</table>
+	</table>
 
-<table type="3D" name="mMTFDD_S" category="Electronic Throttle" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
-	      <scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
-      <table type="X Axis" name="?" storagetype="uint16" endian="big" logparam="?">
-        <scaling units="N/A" expression="x/655.35" to_byte="x*655.35" format="0.00" fineincrement="10" coarseincrement="100" />
+	<table type="3D" name="mMTFDD_S" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+	 <scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
+	  <table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="?">
+        <scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
       </table>
-	  <table type="Y Axis" name="?" storagetype="uint16" endian="big" logparam="?">
-	  <!-- ECU actually scales *16 internally for calculations, but until more is known, just 1:1 here -->
-        <scaling units="N/A" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="10" />
+	  <table type="Y Axis" name="Accelerator Open" storagetype="uint16" endian="big" logparam="?">
+        <scaling units="deg" expression="x*0.11" to_byte="x/0.11" format="0.00" fineincrement="10" coarseincrement="100" />
       </table>
       <description>mMTFDD_S D range target drive power map (redundant operation vice-operation part)</description>
 </table>
@@ -574,8 +594,7 @@
 <table type="2D" name="Throttle Rev Limit" category="Limiters" storagetype="uint16" endian="big" sizey="1" userlevel="1">
    <scaling units="Engine Speed (RPM)" expression="x*.781300" to_byte="x/.781300" format="#" fineincrement="50" coarseincrement="100" />
    <table type="Static Y Axis" name="Rev Limit Throttle Cut" sizey="1">
-    <data>Throttle Cut</data>
-    
+    <data>Throttle Cut</data> 
    </table>
    <description>Engine speed at which the rev limiter is engaged and disengaged, by closing the throttle. </description>
   </table>
@@ -601,7 +620,7 @@
     <data>5600</data>
     <data>6000</data>
    </table>
-   <description>This table is how the ecu calculates 100% load at x rpm. The values shown are 100% load calculated from the base fuel schedule milliseconds. This is important for proper automatic transmission shifting. It needs to be adjusted so that the ecu sees at or near 100% when wide open throttle to correctly shift the automatic transmission.</description>
+   <description>mTCCLV This table is how the ecu calculates 100% load at x rpm. The values shown are 100% load calculated from the base fuel schedule milliseconds. This is important for proper automatic transmission shifting. It needs to be adjusted so that the ecu sees at or near 100% when wide open throttle to correctly shift the automatic transmission.</description>
   </table>
 
 

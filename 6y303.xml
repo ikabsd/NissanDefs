@@ -108,7 +108,7 @@
       <table type="Y Axis" storageaddress="0x6d5e" />
     </table>
 	
-	<table name="MSATHH" storageaddress="0x5e49">
+	<table name="MSATH" storageaddress="0x5e49">
       <table type="X Axis" storageaddress="0x6d3a" />
       <table type="Y Axis" storageaddress="0x6d5e" />
     </table>
