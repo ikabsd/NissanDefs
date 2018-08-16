@@ -7,7 +7,7 @@
 
     <table type="3D" name="Cold Ignition Trim" category="Ignition Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="x-64" to_byte="x+64" format="0" fineincrement="1" coarseincrement="4" />
-      <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+      <table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="?">
         <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
 	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
@@ -15,9 +15,10 @@
       </table>
       <description>mMADVTRMC Ignition Timing Map. This is tied to coolant temp and only used when the coolant temp is under a certain set point. This needs to be kept close to the "High Octane Ignition Trim" map.</description>
     </table>
-<table type="3D" name="High Octane Ignition Trim" category="Ignition Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+
+	<table type="3D" name="High Octane Ignition Trim" category="Ignition Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="x-64" to_byte="x+64" format="0" fineincrement="1" coarseincrement="4" />
-     <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+     <table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="?">
         <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
 	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
@@ -25,9 +26,10 @@
       </table>
       <description>mMADVTRMH This is the main timing table that the ECU uses when high-octane fuel is determined.</description>
     </table>
-<table type="3D" name="Regular Ignition Trim" category="Ignition Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+
+	<table type="3D" name="Regular Ignition Trim" category="Ignition Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="x-64" to_byte="x+64" format="0" fineincrement="1" coarseincrement="4" />
-      <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+      <table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="?">
         <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
 	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
@@ -36,9 +38,103 @@
       <description>mMADVTRMR This timing map is used by the ecu when it detects regular fuel. This table should ALWAYS be lower than the high octane table.</description>
     </table>
 
-<table type="3D" name="Intake Cam Timing (8x8)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="1" logparam="?">
+	<table type="3D" name="High Octane Knock Limit" category="Ignition Timing" storagetype="uint8" endian="big" sizex="3" sizey="3" userlevel="1" logparam="?">
+      <scaling units="Degrees Retard" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="4" />
+     <table type="Static X Axis" name="RPM" sizex="3">
+       <data>0</data>
+		<data>800</data> 
+		<data>5200</data>
+      </table>
+	  <table type="Static Y Axis" name="TP" sizey="3">
+       <data>0</data>
+		<data>8</data> 
+		<data>13</data>
+      </table>
+      <description>mMKLMRTH This table sets the limits of knock retard correction when high-octane fuel is determined.</description>
+    </table>
+
+	<table type="3D" name="Regular Knock Limit" category="Ignition Timing" storagetype="uint8" endian="big" sizex="3" sizey="3" userlevel="1" logparam="?">
+      <scaling units="Degrees Retard" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="4" />
+      <table type="Static X Axis" name="RPM" sizex="3">
+       <data>0</data>
+		<data>800</data> 
+		<data>5200</data>
+      </table>
+	  <table type="Static Y Axis" name="TP" sizey="3">
+       <data>0</data>
+		<data>8</data> 
+		<data>13</data>
+      </table>
+      <description>mMKLMRTR This table sets the limits of knock retard correction when regular fuel is determined.</description>
+    </table>
+
+	<table type="3D" name="Knock Slice Table" category="Knock" storagetype="uint16" endian="big" sizex="16" sizey="8" userlevel="1" logparam="?">
+      <scaling units="dB?" expression="x/256" to_byte="x*256" format="0" fineincrement="1" coarseincrement="4" />
+      <table type="Static X Axis" name="RPM" sizex="16">
+	  	<data>400</data>
+		<data>800</data> 
+		<data>1200</data>
+		<data>1600</data> 
+		<data>2000</data>
+		<data>2400</data> 
+		<data>2800</data>
+		<data>3200</data>
+		<data>3600</data>
+		<data>4000</data> 
+		<data>4400</data>
+		<data>4800</data> 
+		<data>5200</data>
+		<data>5600</data>
+		<data>6000</data>
+		<data>6400</data>		
+      </table>
+	  <table type="Y Axis" name="cylinder" sizey="8">
+        <data>1</data>
+		<data>2</data> 
+		<data>3</data>
+		<data>4</data>
+		<data>5</data> 
+		<data>6</data>
+		<data>7</data>
+		<data>8</data> 
+      </table>
+      <description>mTSL This table sets the thresholds for determining knock by cylinder.</description>
+    </table>	
+	
+	<table type="2D" name="Dwell speed 2/ three power table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1" logparam="?">
+      <scaling units="RPM^(2/3)" expression="x*2" to_byte="x/2" format="0.0" fineincrement=".2" coarseincrement="1" />
+      <table type="Static Y Axis" name="RPM" sizey="8">
+		<data>0</data>
+		<data>1600</data> 
+		<data>3200</data>
+		<data>4800</data> 
+		<data>6400</data>
+		<data>8000</data> 
+		<data>9600</data>
+		<data>11200</data>
+	   </table>
+      <description>mTDWLNE Ignition dwell</description>
+</table>
+
+<table type="2D" name="Dwell battery (-2/3) power table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1" logparam="?">
+      <scaling units="1/V^(2/3)" expression="x*0.0015625" to_byte="x/0.0015625" format="0.00" fineincrement=".02" coarseincrement=".1" />
+      <table type="Static Y Axis" name="Battery Volts" sizey="8">
+		<data>0</data>
+		<data>2.56</data> 
+		<data>5.12</data>
+		<data>7.68</data> 
+		<data>10.24</data>
+		<data>12.8</data> 
+		<data>15.36</data>
+		<data>17.92</data>
+	   </table>
+      <description>mTDWLVB Dwell battery (-2/3) power table</description>
+</table>
+	
+	
+	<table type="3D" name="Intake Cam Timing (8x8)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
-      <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+      <table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="?">
         <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
 	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
@@ -49,7 +145,7 @@
 	
 	<table type="3D" name="Intake Cam Timing Cold (8x8)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
-      <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+      <table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="?">
         <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
 	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
@@ -60,7 +156,7 @@
 
 <table type="3D" name="Intake Cam Timing (16x16)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
-      <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+      <table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="?">
         <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
 	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
@@ -71,7 +167,7 @@
 
 <table type="3D" name="Intake Cam Timing (4x4)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="4" sizey="4" userlevel="1" logparam="?">
       <scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
-      <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+      <table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="?">
         <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
 	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
@@ -82,7 +178,7 @@
 
 <table type="3D" name="Exhaust Cam Timing" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
       <scaling units="Degrees Retard" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
-     <table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
+     <table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="?">
         <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
       </table>
 	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
@@ -330,7 +426,6 @@
     <data>194</data>
     <data>212</data>
     <data>230</data>
-   
    </table>
    <description>This is the target idle table which references Coolant Temperature</description>
   </table>
@@ -354,12 +449,34 @@
     <data>194</data>
     <data>212</data>
     <data>230</data>
-   
    </table>
    <description>This is the target idle table which references Coolant Temperature</description>
   </table>
 
-<table type="2D" name="Fuel Injection Multiplier" category="Fuel" storagetype="uint16" endian="big" sizey="1" userlevel="1">
+ <table type="2D" name="Fuel Cut Prohibition Speed" category="Fuel" storagetype="uint8" endian="big" sizey="16" userlevel="1">
+   <scaling units="RPM" expression="x*12.5" to_byte="x/12.5" format="0" fineincrement="1" coarseincrement="100" />
+   <table type="Static Y Axis" name="Coolant Temperature(Fahrenheit)" format="0" sizey="16">
+   <data>-40</data>
+    <data>-22</data>
+    <data>-4</data>
+    <data>14</data>
+    <data>32</data>
+    <data>50</data>
+    <data>68</data>
+    <data>86</data>
+    <data>104</data>
+    <data>122</data>
+    <data>140</data>
+    <data>158</data>
+    <data>176</data>
+    <data>194</data>
+    <data>212</data>
+    <data>230</data>   
+   </table>
+   <description>mTTXNEL Fuel cut prohibited ?above/below? this engine speed</description>
+  </table>
+
+  <table type="2D" name="Fuel Injection Multiplier" category="Fuel" storagetype="uint16" endian="big" sizey="1" userlevel="1">
    <scaling units="" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="100" />
    <table type="Static Y Axis" name="K Value" sizey="2">
     <data>K Value</data>
@@ -367,7 +484,24 @@
    <description>Global Fuel injection Multiplier. This can be used to compensate for larger or smaller injectors, or a larger or smaller maf housing. This can also be used for alternate fuels such as e85.</description>
   </table>
   
-  <table type="2D" name="Radiator Fan Switch Point" category="Misc" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+<table type="2D" name="Dwell Time Coefficient" category="Ignition" storagetype="uint8" endian="big" sizey="1" userlevel="1"> 
+ <scaling units="Milliseconds" expression="x/50" to_byte="x*50" format="0.00" fineincrement="0.02" coarseincrement="1" />
+   <table type="Static Y Axis" name="Coefficient" sizey="1">
+    <data>Coefficient</data>
+	</table>
+   <description>Coil Timing </description>
+  </table>
+
+<table type="2D" name="Dwell Voltage Coefficient" category="Ignition" storagetype="uint16" endian="big" sizey="1" userlevel="1"> 
+ <scaling units="(mv^2)se" expression="x*128" to_byte="x/128" format="0" fineincrement="128" coarseincrement="2560" />
+   <table type="Static Y Axis" name="Coefficient" sizey="1">
+    <data>Coefficient</data>
+	</table>
+   <description>Coil Timing </description>
+  </table>
+  
+
+ <table type="2D" name="Radiator Fan Switch Point" category="Misc" storagetype="uint8" endian="big" sizey="1" userlevel="1">
    <scaling units="Degrees Farenheight" expression="(x-50)*1.8+32" to_byte="(x-32)/1.8+50" format="#" fineincrement="1" coarseincrement="10" />
    <table type="Static Y Axis" name="Coolant Temp" sizey="2">
     <data>Coolant Temp</data>
