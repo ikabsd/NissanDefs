@@ -101,7 +101,7 @@
       <description>mTSL This table sets the thresholds for determining knock by cylinder.</description>
     </table>	
 	
-	<table type="2D" name="Dwell speed 2/ three power table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1" logparam="?">
+	<table type="2D" name="Dwell RPM table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1" logparam="?">
       <scaling units="RPM^(2/3)" expression="x*2" to_byte="x/2" format="0.0" fineincrement=".2" coarseincrement="1" />
       <table type="Static Y Axis" name="RPM" sizey="8">
 		<data>0</data>
@@ -113,10 +113,10 @@
 		<data>9600</data>
 		<data>11200</data>
 	   </table>
-      <description>mTDWLNE Ignition dwell</description>
+      <description>mTDWLNE This is just a RPM^0.6667 table. You probably don't need to touch it</description>
 </table>
 
-<table type="2D" name="Dwell battery (-2/3) power table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1" logparam="?">
+<table type="2D" name="Dwell battery table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1" logparam="?">
       <scaling units="1/V^(2/3)" expression="x*0.0015625" to_byte="x/0.0015625" format="0.00" fineincrement=".02" coarseincrement=".1" />
       <table type="Static Y Axis" name="Battery Volts" sizey="8">
 		<data>0</data>
@@ -128,7 +128,7 @@
 		<data>15.36</data>
 		<data>17.92</data>
 	   </table>
-      <description>mTDWLVB Dwell battery (-2/3) power table</description>
+      <description>mTDWLVB Dwell; Battery Voltage^(-2/3) table</description>
 </table>
 	
 	
