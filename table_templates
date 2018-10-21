@@ -101,7 +101,19 @@
       <description>mTSL This table sets the thresholds for determining knock by cylinder.</description>
     </table>	
 	
-	<table type="2D" name="Dwell RPM table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1" logparam="?">
+
+<table type="3D" name="MBT Flame Speed" category="Ignition" storagetype="uint8" endian="big" sizex="4" sizey="4" userlevel="4" logparam="?">
+      <scaling units="cc/ms" expression="x*0.0625" to_byte="x/0.0625" format="0.00" fineincrement=".0625" coarseincrement="1" />
+      <table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
+      </table>
+	  <table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="?">
+        <scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="100" />
+      </table>
+      <description>mMFLML Layer way flame speed basic map</description>
+    </table>
+
+<table type="2D" name="Dwell RPM table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="4" logparam="?">
       <scaling units="RPM^(2/3)" expression="x*2" to_byte="x/2" format="0.0" fineincrement=".2" coarseincrement="1" />
       <table type="Static Y Axis" name="RPM" sizey="8">
 		<data>0</data>
@@ -116,7 +128,7 @@
       <description>mTDWLNE This is just a RPM^0.6667 table. You probably don't need to touch it</description>
 </table>
 
-<table type="2D" name="Dwell battery table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1" logparam="?">
+<table type="2D" name="Dwell battery table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="4" logparam="?">
       <scaling units="1/V^(2/3)" expression="x*0.0015625" to_byte="x/0.0015625" format="0.00" fineincrement=".02" coarseincrement=".1" />
       <table type="Static Y Axis" name="Battery Volts" sizey="8">
 		<data>0</data>
@@ -221,8 +233,8 @@
       <description>Air fuel ratio that is targeted by the ECU. If this value doesn't match when logging other paramaters need to be adjusted, like fuel compensation, and/or maf scaling.</description>
 </table>
 
-<table type="2D" name="OL Fuel Scalar" category="Fuel" storagetype="uint8" endian="big" sizey="8" userlevel="1" logparam="?">
-      <scaling units="Lambda" expression="x/128" to_byte="x*128" format="0.00" fineincrement=".02" coarseincrement=".1" />
+<table type="2D" name="OL Fueling Target Rate" category="Fuel" storagetype="uint8" endian="big" sizey="8" userlevel="1" logparam="?">
+      <scaling units="None" expression="x/128" to_byte="x*128" format="0.00" fineincrement=".02" coarseincrement=".1" />
       <table type="Static Y Axis" name="RPM" sizey="8">
 		<data>0</data>
 		<data>800</data> 
@@ -233,7 +245,7 @@
 		<data>4800</data>
 		<data>5600</data>
 	   </table>
-      <description>The ECU multiplies OL AFR Target lookup result by this RPM related factor.</description>
+      <description>mTKREGR Target air-fuel ratio regular compensation rate</description>
 </table>
 
 <table type="3D" name="Fuel Target 16x16" category="Fuel" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
@@ -500,7 +512,68 @@
    <description>Coil Timing </description>
   </table>
   
+<table type="2D" name="mTDENS" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1"> 
+ <scaling units="g/m3" expression="125*x" to_byte="x/125" format="0" fineincrement="125" coarseincrement="1000" />
+      <table type="Static Y Axis" name="Intake air efficiency" sizey="8">
+		<data>12.5%</data> 
+		<data>25%</data>
+		<data>37.5%</data> 
+		<data>50%</data>
+		<data>62.5%</data>
+		<data>75%</data> 
+		<data>87.5%</data>
+		<data>100%</data>
+	   </table>
+   <description>An unburned gas density table </description>
+  </table>  
+ 
+ <table type="2D" name="mTFLTW" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1"> 
+ <scaling units="none" expression="x*.78125" to_byte="x/.78125" format="0" fineincrement="1" coarseincrement="5" />
+      <table type="Static Y Axis" name="Degrees Fahrenheit" sizey="8">
+    	<data>     -40    </data>
+    	<data>     -4     </data>
+		<data>     32     </data>
+    	<data>     68     </data>
+		<data>     104     </data>
+    	<data>     140     </data>
+		<data>     176     </data>
+    	<data>     212     </data>
+	   </table>
+   <description>Coolant temperature compensation table </description>
+  </table>  
 
+  <table type="2D" name="mDILU" category="Ignition" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+   <scaling units="%" expression="x*1.5625" to_byte="x/1.5625" format="#" fineincrement="1" coarseincrement="5" />
+   <table type="Static Y Axis" name="Dilution modification coefficient" sizey="1">
+    <data></data>
+   </table>
+   <description>Dilution modification coefficient</description>
+  </table>
+  
+  <table type="2D" name="mMBTT" category="Ignition" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+   <scaling units="cc/sec" expression="x/8" to_byte="x*8" format="0.00" fineincrement=".125" coarseincrement="1" />
+   <table type="Static Y Axis" name="War way speed weight constant" sizey="1">
+    <data></data>
+   </table>
+   <description>War way speed weight constant</description>
+  </table>
+  
+  <table type="2D" name="mMBTM" category="Ignition" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+   <scaling units="g" expression="x/256" to_byte="x*256" format="0.00" fineincrement=".01" coarseincrement=".1" />
+   <table type="Static Y Axis" name="Ignition timing main constant" sizey="1">
+    <data></data>
+   </table>
+   <description>Ignition timing main constant</description>
+  </table>
+  
+  <table type="2D" name="mTAU0" category="Ignition" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+   <scaling units="ms" expression="x*.01953" to_byte="x/.01953" format="0.000" fineincrement=".005" coarseincrement=".025" />
+   <table type="Static Y Axis" name="Ignition delay time" sizey="1">
+    <data></data>
+   </table>
+   <description>Ignition delay time</description>
+  </table>
+  
  <table type="2D" name="Radiator Fan Switch Point" category="Misc" storagetype="uint8" endian="big" sizey="1" userlevel="1">
    <scaling units="Degrees Farenheight" expression="(x-50)*1.8+32" to_byte="(x-32)/1.8+50" format="#" fineincrement="1" coarseincrement="10" />
    <table type="Static Y Axis" name="Coolant Temp" sizey="2">
@@ -795,13 +868,172 @@
    <state name="off" data=" 00 20" />
   </table>
   
-<table type="2D" name="VIAS Setpoints" category="Induction" storagetype="uint8" endian="big" sizey="2" userlevel="1">
-   <scaling units="Engine Speed (RPM)" expression="x*50" to_byte="x/50" format="#" fineincrement="50" coarseincrement="200" />
-   <table type="Static Y Axis" name="VIAS ON/OFF" sizey="2">
+<table type="2D" name="mVIASN0A" category="VIAS" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+   <scaling units="Engine Speed (RPM)" expression="x*50" to_byte="x/50" format="#" fineincrement="50" coarseincrement="250" />
+   <table type="Static Y Axis" name="VIAS Solenoid 'A'" sizey="1">
     <data>Low</data>
+   </table>
+   <description>Variable intake valve A lower limit engine speed</description>
+  </table>
+  
+  <table type="2D" name="mVIASN1A" category="VIAS" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+   <scaling units="Engine Speed (RPM)" expression="x*50" to_byte="x/50" format="#" fineincrement="50" coarseincrement="250" />
+   <table type="Static Y Axis" name="VIAS Solenoid 'A'" sizey="1">
     <data>High</data>
    </table>
-   <description>These are the engine speeds at which the vias solenoid is engaged and disengaged. When engine speed is equal to or exceeds the 'Low' value, VIAS is active, after which, if engine speed increases above the 'High' value, VIAS is deactived.</description>
+   <description>Variable intake valve A upper limit engine speed</description>
+  </table>
+  
+  <table type="2D" name="mVIASN0B" category="VIAS" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+   <scaling units="Engine Speed (RPM)" expression="x*50" to_byte="x/50" format="#" fineincrement="50" coarseincrement="250" />
+   <table type="Static Y Axis" name="VIAS Solenoid 'B'" sizey="1">
+    <data>Low</data>
+   </table>
+   <description>Variable intake valve B lower limit engine speed</description>
+  </table>
+  
+  <table type="2D" name="mVIASN1B" category="VIAS" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+   <scaling units="Engine Speed (RPM)" expression="x*50" to_byte="x/50" format="#" fineincrement="50" coarseincrement="250" />
+   <table type="Static Y Axis" name="VIAS Solenoid 'B'" sizey="1">
+    <data>High</data>
+   </table>
+   <description>Variable intake valve B upper limit engine speed</description>
+  </table>
+  
+    <table type="2D" name="mVIAST1A" category="VIAS" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+   <scaling units="IPW (ms)" expression="x/8" to_byte="x*8" format="0.00" fineincrement=".125" coarseincrement="1" />
+   <table type="Static Y Axis" name="VIAS Solenoid 'A'" sizey="1">
+    <data>Minimum</data>
+   </table>
+   <description>Variable intake valve A minimum injector pulse width</description>
+  </table>
+  
+  <table type="2D" name="mVIAST1B" category="VIAS" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+   <scaling units="IPW (ms)" expression="x/8" to_byte="x*8" format="0.00" fineincrement=".125" coarseincrement="1" />
+   <table type="Static Y Axis" name="VIAS Solenoid 'B'" sizey="1">
+    <data>Minimum</data>
+   </table>
+   <description>Variable intake valve B minimum injector pulse width</description>
   </table>
  
+   <table type="2D" name="mTP100" category="Fuel" storagetype="uint16" endian="big" sizey="1" userlevel="1">
+   <scaling units="IPW (ms)" expression="x/2048" to_byte="x*2048" format="0.00" fineincrement=".125" coarseincrement="1" />
+   <table type="Static Y Axis" name="BFS scalar" sizey="1">
+    <data></data>
+   </table>
+   <description>Filling up efficiency 100% TP</description>
+  </table>
+  
+ <table type="BitwiseSwitch" name="Catalyst DTCs" category="DTC">
+	<bit position ="6" name="P0420 bank 1 catalyst low efficiency"/>
+	<bit position ="5" name="P0430 bank 2 catalyst low efficiency"/> 
+   <description>Toggle DTCs</description>
+  </table>
+
+  <table type="BitwiseSwitch" name="VIAS DTCs" category="DTC">
+	<bit position ="7" name="P1800 VIAS solenoid"/>  
+   <description>Toggle DTCs</description>
+  </table>
+  
+<table type="BitwiseSwitch" name="Evap DTCs" category="DTC">
+	<bit position ="2" name="P1444 evap canister purge valve"/>
+	<bit position ="1" name="P1446 evap canister vent control valve closed"/>
+	<bit position ="0" name="P0455 evap large leak"/>  
+   <description>Toggle DTCs</description>
+  </table>  
+
+  
+<table type="BitwiseSwitch" name="Evap 2 DTCs" category="DTC">
+	<bit position ="7" name="P1448 evap canister vent control valve open"/>  
+	<bit position ="5" name="P1491 vacuum cut valve bypass malfunction"/>  
+   <description>Toggle DTCs</description>
+  </table>  
+
+ <table type="BitwiseSwitch" name="Primary O2 DTCs" category="DTC">
+	<bit position ="7" name="P0133 O2S1B1 slow"/>  
+	<bit position ="6" name="P0153 O2S1B2 slow"/>
+	<bit position ="5" name="P1143 O2S1B1 lean"/>  
+	<bit position ="4" name="P1163 O2S1B2 lean"/>
+	<bit position ="3" name="P1144 O2S1B1 rich"/>
+	<bit position ="2" name="P1164 O2S1B2 rich"/>
+	<bit position ="1" name="P0134 O2S1B1 not active"/>
+	<bit position ="0" name="P0154 O2S1B2 not active"/>  
+   <description>Toggle DTCs</description>
+  </table>
+
+<table type="BitwiseSwitch" name="Primary O2 Idle DTCs" category="DTC">
+	<bit position ="7" name="P0132 O2S1B1 high"/>  
+	<bit position ="6" name="P0152 O2S1B2 high"/>
+	<bit position ="5" name="P0032 O2S1B1 Heater high"/>  
+	<bit position ="4" name="P0052 O2S1B2 Heater high"/>
+	<bit position ="3" name="P0031 O2S1B1 Heater low"/>
+	<bit position ="2" name="P0051 O2S1B2 Heater low"/>
+	<bit position ="1" name="P0506 idle speed low"/>
+	<bit position ="0" name="P0507 idle speed high"/>  
+   <description>Toggle DTCs</description>
+  </table>
+  
+ <table type="BitwiseSwitch" name="Secondary O2 DTCs" category="DTC">
+	<bit position ="7" name="P0139 O2S2B1 slow"/>  
+	<bit position ="6" name="P0159 O2S2B2 slow"/>
+	<bit position ="5" name="P1146 O2S2B1 overvoltage"/>  
+	<bit position ="4" name="P1166 O2S2B2 overvoltage"/>
+	<bit position ="3" name="P1147 O2S2B1 undervoltage"/>
+	<bit position ="2" name="P1167 O2S2B2 undervoltage"/>
+	<bit position ="1" name="P0138 O2S2B1 high"/>
+	<bit position ="0" name="P0158 O2S2B2 high"/>  
+   <description>Toggle DTCs</description>
+  </table>
+
+<table type="BitwiseSwitch" name="Secondary O2 Knock DTCs" category="DTC">
+	<bit position ="7" name="P0038 O2S2B1 Heater high"/>  
+	<bit position ="6" name="P0058 O2S2B2 Heater high"/>
+	<bit position ="5" name="P0037 O2S2B1 Heater low"/>  
+	<bit position ="4" name="P0057 O2S2B2 Heater low"/>
+	<bit position ="3" name="P0327 knock low input"/>
+	<bit position ="2" name="P0328 knock high input"/>
+   <description>Toggle DTCs</description>
+  </table>
+
+<table type="BitwiseSwitch" name="Fuel Evap Purge Solenoid DTCs" category="DTC">
+	<bit position ="7" name="P0181 fuel temp range"/>  
+	<bit position ="6" name="P0182 fuel temp low input"/>
+	<bit position ="5" name="P0183 fuel temp high input"/>  
+	<bit position ="4" name="P0462 fuel level low input"/>
+	<bit position ="3" name="P0463 fuel level high input"/>
+	<bit position ="2" name="P0444 evap canister purge solenoid circuit open"/>
+	<bit position ="1" name="P0445 evap canister purge solenoid circuit shorted"/>
+	<bit position ="0" name=""/>  
+   <description>Toggle DTCs</description>
+  </table>
+   
+ <table type="BitwiseSwitch" name="Evap Pressure Flow DTCs" category="DTC">
+	<bit position ="3" name="P0452 evap pressure low"/>
+	<bit position ="2" name="P0453 evap pressure high"/>
+	<bit position ="1" name="P0441 evap incorrect purge flow"/>
+	<bit position ="0" name="P0447 evap canister vent open"/>
+   <description>Toggle DTCs</description>
+  </table>
+  
+  <table type="BitwiseSwitch" name="Evap Leaks DTCs" category="DTC">
+	<bit position ="7" name="P0456 evap very small leak"/>  
+	<bit position ="6" name="P1456 evap very small leak"/>
+	<bit position ="5" name="P0442 evap small leak detected"/>  
+	<bit position ="4" name="P1442 evap small leak detected"/>
+   <description>Toggle DTCs</description>
+  </table>
+
+<table type="BitwiseSwitch" name="Template" category="">
+	<bit position ="7" name=""/>  
+	<bit position ="6" name=""/>
+	<bit position ="5" name=""/>  
+	<bit position ="4" name=""/>
+	<bit position ="3" name=""/>
+	<bit position ="2" name=""/>
+	<bit position ="1" name=""/>
+	<bit position ="0" name=""/>  
+   <description>Toggle DTCs</description>
+  </table>  
+  
+  
  </rom>

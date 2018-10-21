@@ -31,6 +31,11 @@
 		<table type="Y Axis" storageaddress="0xB650"/>
 	</table>
 
+  <table  name="MBT Flame Speed"  storageaddress="0x91ad">
+      <table type="X Axis" storageaddress="0xb2f1" />
+      <table type="Y Axis" storageaddress="0xb2f5" />
+    </table>
+	
 	<table name="Fuel Compensation" storageaddress="0x948D">
 		<table type="X Axis" storageaddress="0xB526"/>
 		<table type="Y Axis" storageaddress="0xB4CA"/>
@@ -41,7 +46,7 @@
 		<table type="Y Axis" storageaddress="0xB4a2"/>
 	</table>
 
-	<table name="OL Fuel Scalar" storageaddress="0xbbb4"/>
+	<table name="OL Fueling Target Rate" storageaddress="0xbbb4"/>
 	
 	<table name="Exhaust Cam Timing" storageaddress="0x9A2D">
 		<table type="X Axis" storageaddress="0xC2f8"/>
