@@ -46,10 +46,13 @@
       <table type="Y Axis" storageaddress="0xba88" />
     </table>
 
-<table name="Intake Cam Timing Cold (8x8)" storageaddress="0x92D1">
+	<table name="Intake Cam Timing Cold (8x8)" storageaddress="0x92D1">
       <table type="X Axis" storageaddress="0xBA98" />
       <table type="Y Axis" storageaddress="0xBA90" />
     </table>
+	
+	<table name="Learning map TP shaft lattice point table" storageaddress="0xb49a"/>
+	<table name="Learning map N shaft lattice point table" storageaddress="0xb564"/>
    
 	<table name="MAF" storageaddress="0xC0E4">
 	</table>
