@@ -36,6 +36,11 @@
       <table type="X Axis" storageaddress="0x6cf6" />
       <table type="Y Axis" storageaddress="0x6cfa" />
     </table>
+	
+  <table  name="Fresh air rate"  storageaddress="0x5639">
+      <table type="X Axis" storageaddress="0x6cf6" />
+      <table type="Y Axis" storageaddress="0x6cfa" />
+    </table>
 
 	<table name="Knock Slice Table" storageaddress="0x6af4"/>
     <table name="High Octane Knock Limit" storageaddress="0x6dbe"/>
@@ -53,7 +58,10 @@
     
 	<table name="OL Fueling Target Rate" storageaddress="0x7301"/>
 
-<table name="Intake Cam Timing (16x16)" storageaddress="0x5ad9">
+<table name="Learning map TP shaft lattice point table" storageaddress="0x7329"/>
+<table name="Learning map N shaft lattice point table" storageaddress="0x73d7"/>
+	
+	<table name="Intake Cam Timing (16x16)" storageaddress="0x5ad9">
       <table type="X Axis" storageaddress="0x7785" />
       <table type="Y Axis" storageaddress="0x7795" />
     </table>
