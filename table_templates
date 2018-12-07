@@ -1,6 +1,6 @@
 <rom>
     <romid>
-   <xmlid>NISSAN_01</xmlid>
+   <xmlid>NISSAN_BASE</xmlid>
    <make>Nissan</make>
    <flashmethod>nisprog</flashmethod>
   </romid>

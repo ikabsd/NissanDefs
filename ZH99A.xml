@@ -1,4 +1,4 @@
-<rom base="NISSAN_01">
+<rom base="NISSAN_BASE">
 <!-- some similarity with CM31C in code patterns -->
 
 	<romid>

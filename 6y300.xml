@@ -1,4 +1,4 @@
-<rom base="NISSAN_01">
+<rom base="NISSAN_BASE">
     <romid>
 	<xmlid>6Y300</xmlid>
 	<hwid>1TKE8Z5N56</hwid>

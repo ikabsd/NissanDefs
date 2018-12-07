@@ -1,4 +1,4 @@
-<rom base="NISSAN_01">
+<rom base="NISSAN_BASE">
     <romid>
 	<xmlid>8U523</xmlid>
 	<hwid>3TREE21N14</hwid>

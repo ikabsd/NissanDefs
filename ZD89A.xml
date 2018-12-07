@@ -1,4 +1,4 @@
-<rom base="NISSAN_01">
+<rom base="NISSAN_BASE">
 	<romid>
 	<!--L31 MY06 QR25DE 50 State AT ASCD ULEV-->
 	<!-- initial def 2018/10 fenugrec, loosely based on CM31C. Code not very similar; 

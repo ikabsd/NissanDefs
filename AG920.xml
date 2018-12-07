@@ -1,4 +1,4 @@
-<rom base="NISSAN_01">
+<rom base="NISSAN_BASE">
 	<romid>
 		<xmlid>AG920</xmlid>
 		<hwid>9QE4V3DQ</hwid>

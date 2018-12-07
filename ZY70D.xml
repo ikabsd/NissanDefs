@@ -1,4 +1,4 @@
-<rom base="NISSAN_01">
+<rom base="NISSAN_BASE">
 	<romid>
 		<xmlid>ZY70D</xmlid>
 		<hwid>33</hwid>
@@ -32,6 +32,11 @@
 	</table>
 
   <table  name="MBT Flame Speed"  storageaddress="0xA162">
+      <table type="X Axis" storageaddress="0xE574" />
+      <table type="Y Axis" storageaddress="0xE578" />
+    </table>
+	
+  <table  name="Fresh air rate"  storageaddress="0xA1f2">
       <table type="X Axis" storageaddress="0xE574" />
       <table type="Y Axis" storageaddress="0xE578" />
     </table>
@@ -75,7 +80,7 @@
 <table name="mVIAST1B" storageaddress="0x8F22"/>
 	<table name="MAF" storageaddress="0x108EE"/>
 
-	<checksum type="std" start="0" end="0xFFFFF" sumloc="0x9A18" xorloc="0x9A10"/>
+	<checksum type="std" start="0x8200" end="0xFFFFF" sumloc="0x9A18" xorloc="0x9A10"/>
 
 
 

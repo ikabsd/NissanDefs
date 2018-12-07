@@ -1,4 +1,4 @@
-<rom base="NISSAN_01">
+<rom base="NISSAN_BASE">
     <romid>
 	<xmlid>7Y210</xmlid>
 	<hwid>5ZVTDNK</hwid>
@@ -38,7 +38,7 @@
       <table type="Y Axis" storageaddress="0xa1a3" />
     </table>
     
-	<table name="OL Fuel Scalar" storageaddress="0xaa46"/>
+	<table name="OL Fueling Target Rate" storageaddress="0xaa46"/>
 	
 	<table name="Intake Cam Timing (16x16)" storageaddress="0x89f1">
       <table type="X Axis" storageaddress="0xb15a" />
