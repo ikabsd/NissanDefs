@@ -1,10 +1,10 @@
 <rom base="NISSAN_BASE">
     <romid>
-	<xmlid>5Y703</xmlid>
-	<hwid>1TKE8Z5N59</hwid>
-      <internalidaddress>6c61</internalidaddress>
-      <internalidstring>5y703</internalidstring>
-      <ecuid>5y703</ecuid>
+    	<xmlid>5Y703</xmlid>
+    	<hwid>1TKE8Z5N59</hwid>
+      <internalidaddress>6C61</internalidaddress>
+      <internalidstring>5Y703</internalidstring>
+      <ecuid>5Y703</ecuid>
       <year>02</year>
       <market>USDM</market>
       <make>Nissan</make>

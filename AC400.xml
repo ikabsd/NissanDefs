@@ -1,7 +1,7 @@
 <rom base="NISSAN_BASE">
     <romid>
-	<xmlid>AC400</xmlid>
-	<hwid>5ZP8N00</hwid>
+	    <xmlid>AC400</xmlid>
+	    <hwid>5ZP8N00</hwid>
       <internalidaddress>8FE6</internalidaddress>
       <internalidstring>AC400</internalidstring>
       <ecuid>AC400</ecuid>

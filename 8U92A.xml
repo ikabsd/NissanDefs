@@ -1,8 +1,8 @@
 <rom base="NISSAN_BASE">
     <romid>
-	<xmlid>8U92A</xmlid>
-	<hwid>5X61BECCNA</hwid>
-      <internalidaddress>7dca</internalidaddress>
+	    <xmlid>8U92A</xmlid>
+	    <hwid>5X61BECCNA</hwid>
+      <internalidaddress>7DCA</internalidaddress>
       <internalidstring>8U92A</internalidstring>
       <ecuid>8U92A</ecuid>
       <year>04</year>

@@ -1,7 +1,7 @@
 <rom base="CM31C">
     <romid>
-	<xmlid>CF43D</xmlid>
-	<hwid>6GI5VN6</hwid>
+	  <xmlid>CF43D</xmlid>
+	  <hwid>6GI5VN6</hwid>
       <internalidaddress>2401</internalidaddress>
       <internalidstring>CF43D</internalidstring>
       <ecuid>CF43D</ecuid>

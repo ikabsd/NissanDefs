@@ -1,10 +1,10 @@
 <rom base="NISSAN_BASE">
      <romid>
-	<xmlid>CF40e</xmlid>
-	<hwid>6GI3BN5</hwid>
+	    <xmlid>CF40E</xmlid>
+	    <hwid>6GI3BN5</hwid>
       <internalidaddress>2401</internalidaddress>
-      <internalidstring>CF40e</internalidstring>
-      <ecuid>CF40e</ecuid>
+      <internalidstring>CF40E</internalidstring>
+      <ecuid>CF40E</ecuid>
       <year>06</year>
       <market>USDM</market>
       <make>Nissan</make>

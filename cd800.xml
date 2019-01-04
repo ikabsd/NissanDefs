@@ -1,10 +1,10 @@
 <rom base="CD700">
     <romid>
-	<xmlid>CD800</xmlid>
-	<hwid>1TKE8Z5N56</hwid>
-      <internalidaddress>7dfa</internalidaddress>
-      <internalidstring>cd800</internalidstring>
-      <ecuid>cd800</ecuid>
+	  <xmlid>CD800</xmlid>
+	  <hwid>1TKE8Z5N56</hwid>
+      <internalidaddress>7DFA</internalidaddress>
+      <internalidstring>CD800</internalidstring>
+      <ecuid>CD800</ecuid>
       <year>03</year>
       <market>EU</market>
       <make>Nissan</make>

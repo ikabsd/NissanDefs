@@ -1,10 +1,10 @@
 <rom base="NISSAN_BASE">
     <romid>
-	<xmlid>8y106</xmlid>
-	<hwid>4xxes9np</hwid>
-      <internalidaddress>835a</internalidaddress>
-      <internalidstring>8y106</internalidstring>
-      <ecuid>8y106</ecuid>
+	    <xmlid>8Y106</xmlid>
+	    <hwid>4xxes9np</hwid>
+      <internalidaddress>835A</internalidaddress>
+      <internalidstring>8Y106</internalidstring>
+      <ecuid>8Y106</ecuid>
       <year>04</year>
       <market>USDM</market>
       <make>Nissan</make>

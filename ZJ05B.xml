@@ -1,7 +1,7 @@
 <rom base="NISSAN_BASE">
     <romid>
-	<xmlid>ZJ05B</xmlid>
-	<hwid>7ZW91N7</hwid>
+	    <xmlid>ZJ05B</xmlid>
+	    <hwid>7ZW91N7</hwid>
       <internalidaddress>2401</internalidaddress>
       <internalidstring>ZJ05B</internalidstring>
       <ecuid>ZJ05B</ecuid>
