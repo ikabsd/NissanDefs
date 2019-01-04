@@ -167,6 +167,21 @@
 <table name="Evap Pressure Flow DTCs" storageaddress="0x8834"/>
 <table name="Evap Leaks DTCs"  storageaddress="0x8835"/>
 
+<table name="CID1301 supmask"  storageaddress="0x6ED8"/>
+<table name="CID1302 supmask"  storageaddress="0x6ED4"/>
+<table name="CID1303 supmask"  storageaddress="0x6ED5"/>
+<table name="CID1304 supmask"  storageaddress="0x6ED6"/>
+<table name="CID1305 supmask"  storageaddress="0x6ED7"/>
+<table name="CID1306 supmask"  storageaddress="0x6C49"/>
+<table name="CID1307 supmask"  storageaddress="0x6C4A"/>
+<table name="CID1308 supmask"  storageaddress="0x6C4B"/>
+<table name="CID1309 supmask"  storageaddress="0x6C4C"/>
+<table name="CID130A supmask"  storageaddress="0x6C4D"/>
+<table name="CID130B supmask"  storageaddress="0x6C4E"/>
+<table name="CID130C supmask"  storageaddress="0x6CE4"/>
+<table name="CID130F supmask"  storageaddress="0x6C14"/>
+<table name="CID1310 supmask"  storageaddress="0x6C15"/>
+
 <checksum type="std" start="0" end="0x7FFFF" sumloc="0x51c0" xorloc="0x51b8" />
 
 </rom>
