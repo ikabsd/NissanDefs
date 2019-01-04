@@ -167,6 +167,13 @@
 <table name="Evap Pressure Flow DTCs" storageaddress="0x8834"/>
 <table name="Evap Leaks DTCs"  storageaddress="0x8835"/>
 
+<table name="CID1100 supmask"  storageaddress="0x6E90"/>
+<table name="CID1120 supmask"  storageaddress="0x6E9C"/>
+<table name="CID1140 supmask"  storageaddress="0x6E94"/>
+<table name="CID1160 supmask"  storageaddress="0x6E98"/>
+<table name="CID1200 supmask"  storageaddress="0x6EA8"/>
+<table name="CID1220 supmask"  storageaddress="0x6EAC"/>
+<table name="CID1300 supmask"  storageaddress="0x6EB0"/>
 <table name="CID1301 supmask"  storageaddress="0x6ED8"/>
 <table name="CID1302 supmask"  storageaddress="0x6ED4"/>
 <table name="CID1303 supmask"  storageaddress="0x6ED5"/>
