@@ -680,6 +680,15 @@
 		<description>This is the percent of enrichment that is added during cranking at the shown temperature.</description>
 	</table>
 
+	<table type="2D" name="Fuel consumption quantity coefficient" category="Fuel" storagetype="uint16" endian="big" sizey="1" userlevel="1">
+		<scaling units="mm^3/ms" expression="x/100" to_byte="x*100" format="0.00" fineincrement=".2" coarseincrement="1" />
+		<table type="Static Y Axis" name=" Fuel Consumption Coefficient " sizey="1">
+			<data></data>
+		</table>
+		<description>mKSHO This is the value in cubic millimeters per millisecond. If you change the injector K value you can use this to re-calibrate your fuel consumption monitor.</description>
+	</table>
+	
+	
 	<table type="3D" name="QH0/ torque conversion map" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 		<scaling units="Nm" expression="x/10-3276.8" to_byte="x*10+32768" format="0" fineincrement="1" coarseincrement="10" />
 		<table type="X Axis" name="QH0 flow quantity ratio" storagetype="uint16" endian="big" logparam="?">
@@ -959,7 +968,20 @@
 		<table type="Static Y Axis" name="BFS scalar" sizey="1">
 			<data></data>
 		</table>
-		<description>Filling up efficiency 100% TP</description>
+		<description>Filling up efficiency 100% TP, use to rescale table axis 'Cylinder filling up efficiency' after changing injector size</description>
+	</table>
+
+	<table type="2D" name="Cruise speeds" category="Cruise" storagetype="int32" endian="big" sizey="6" userlevel="1">
+		<scaling units="km/h" expression="x/2048" to_byte="x*2048" format="0.00" fineincrement=".1" coarseincrement="1" />
+		<table type="Static Y Axis" name="Cruise" sizey="6">
+			<data></data>
+			<data></data>
+			<data></data>
+			<data></data>
+			<data></data>
+			<data></data>
+		</table>
+		<description>Minimum allowed cruise control set speed</description>
 	</table>
 
 	<table type="BitwiseSwitch" name="Secondary O2 sensors" category="Hack">
