@@ -150,7 +150,8 @@
 <table name="Fuel Injector Latency Adder" storageaddress="0x4908" />
 <table name="Load Base Fuel Schedule" storageaddress="0x7b32" />
 <table name="Fuel consumption quantity coefficient" storageaddress="" />
-<table name="Cruise speeds" storageaddress="513c"/>
+<table name="ASCD Max Speed" storageaddress="513c"/>
+<table name="ASCD Min Speed" storageaddress="5148"/>
 <table name="Knock sensor CEL (P0327, P0328)" storageaddress="0x80da" />
 <table name="Catalyst CEL Fix (P0420, P0430)" storageaddress="0x8058" />
 <table name="Catalyst DTC Max Threshold Fix (P0420, P0430)" storageaddress="0x4850" />
