@@ -971,19 +971,34 @@
 		<description>Filling up efficiency 100% TP, use to rescale table axis 'Cylinder filling up efficiency' after changing injector size</description>
 	</table>
 
-	<table type="2D" name="ASCD Max Speed" category="Cruise" storagetype="int32" endian="big" sizey="1" userlevel="1">
+	<table type="2D" name="ASCD Max Set Speed" category="Cruise" storagetype="int32" endian="big" sizey="1" userlevel="1">
 		<scaling units="km/h" expression="3.6*x/4194304" to_byte="x*4194304/3.6" format="0.00" fineincrement=".1" coarseincrement="1" />
 		<table type="Static Y Axis" name="Cruise Max" sizey="1">
 			<data>Low</data>
 		</table>
 		<description>Maximum allowed cruise control set speed</description>
 	</table>
-	<table type="2D" name="ASCD Min Speed" category="Cruise" storagetype="int32" endian="big" sizey="1" userlevel="1">
+	<table type="2D" name="ASCD Min Set Speed" category="Cruise" storagetype="int32" endian="big" sizey="1" userlevel="1">
 		<scaling units="km/h" expression="3.6*x/4194304" to_byte="x*4194304/3.6" format="0.00" fineincrement=".1" coarseincrement="1" />
 		<table type="Static Y Axis" name="Cruise Min" sizey="1">
 			<data>Low</data>
 		</table>
 		<description>Minimum allowed cruise control set speed</description>
+	</table>
+
+	<table type="2D" name="ASCD Max Calc Speed" category="Cruise" storagetype="int32" endian="big" sizey="1" userlevel="1">
+		<scaling units="km/h" expression="3.6*x/4194304" to_byte="x*4194304/3.6" format="0.00" fineincrement=".1" coarseincrement="1" />
+		<table type="Static Y Axis" name="Cruise Max" sizey="1">
+			<data>Low</data>
+		</table>
+		<description>Maximum speed calculated by the cruise control routine</description>
+	</table>
+	<table type="2D" name="ASCD Min Calc Speed" category="Cruise" storagetype="int32" endian="big" sizey="1" userlevel="1">
+		<scaling units="km/h" expression="3.6*x/4194304" to_byte="x*4194304/3.6" format="0.00" fineincrement=".1" coarseincrement="1" />
+		<table type="Static Y Axis" name="Cruise Min" sizey="1">
+			<data>Low</data>
+		</table>
+		<description>Minimum speed calculated by the cruise control routine</description>
 	</table>
 
 	<table type="BitwiseSwitch" name="Secondary O2 sensors" category="Hack">
