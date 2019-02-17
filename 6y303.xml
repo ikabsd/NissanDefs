@@ -149,6 +149,10 @@
 <table name="Injector Latency at 14V" storageaddress="0x4dac" />
 <table name="Fuel Injector Latency Adder" storageaddress="0x4908" />
 <table name="Load Base Fuel Schedule" storageaddress="0x7b32" />
+<table name="ASCD Max Set Speed" storageaddress="0x513c"/>
+<table name="ASCD Min Set Speed" storageaddress="0x5148"/>
+<table name="ASCD Max Calc Speed" storageaddress="0x5198"/>
+<table name="ASCD Min Calc Speed" storageaddress="0x519c"/>
 <table name="Knock sensor CEL (P0327, P0328)" storageaddress="0x80da" />
 <table name="Catalyst CEL Fix (P0420, P0430)" storageaddress="0x8058" />
 <table name="Catalyst DTC Max Threshold Fix (P0420, P0430)" storageaddress="0x4850" />
@@ -166,6 +170,28 @@
 <table name="Fuel Evap Purge Solenoid DTCs" storageaddress="0x8832"/>
 <table name="Evap Pressure Flow DTCs" storageaddress="0x8834"/>
 <table name="Evap Leaks DTCs"  storageaddress="0x8835"/>
+
+<table name="CID1100 supmask"  storageaddress="0x6E90"/>
+<table name="CID1120 supmask"  storageaddress="0x6E9C"/>
+<table name="CID1140 supmask"  storageaddress="0x6E94"/>
+<table name="CID1160 supmask"  storageaddress="0x6E98"/>
+<table name="CID1200 supmask"  storageaddress="0x6EA8"/>
+<table name="CID1220 supmask"  storageaddress="0x6EAC"/>
+<table name="CID1300 supmask"  storageaddress="0x6EB0"/>
+<table name="CID1301 supmask"  storageaddress="0x6ED8"/>
+<table name="CID1302 supmask"  storageaddress="0x6ED4"/>
+<table name="CID1303 supmask"  storageaddress="0x6ED5"/>
+<table name="CID1304 supmask"  storageaddress="0x6ED6"/>
+<table name="CID1305 supmask"  storageaddress="0x6ED7"/>
+<table name="CID1306 supmask"  storageaddress="0x6C49"/>
+<table name="CID1307 supmask"  storageaddress="0x6C4A"/>
+<table name="CID1308 supmask"  storageaddress="0x6C4B"/>
+<table name="CID1309 supmask"  storageaddress="0x6C4C"/>
+<table name="CID130A supmask"  storageaddress="0x6C4D"/>
+<table name="CID130B supmask"  storageaddress="0x6C4E"/>
+<table name="CID130C supmask"  storageaddress="0x6CE4"/>
+<table name="CID130F supmask"  storageaddress="0x6C14"/>
+<table name="CID1310 supmask"  storageaddress="0x6C15"/>
 
 <checksum type="std" start="0" end="0x7FFFF" sumloc="0x51c0" xorloc="0x51b8" />
 
