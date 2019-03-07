@@ -1,105 +1,105 @@
 <rom base="NISSAN_BASE">
-    <romid>
-	    <xmlid>6Y300</xmlid>
-	    <hwid>1TKE8Z5N56</hwid>
-      <internalidaddress>6C39</internalidaddress>
-      <internalidstring>6Y300</internalidstring>
-      <ecuid>6Y300</ecuid>
-      <year>03</year>
-      <market>USDM</market>
-      <make>Nissan</make>
-      <model>Maxima</model>
-      <submodel>Base</submodel>
-      <transmission>MT</transmission>
-      <memmodel>SH7055</memmodel>
-      <flashmethod>nisprog</flashmethod>
-      <filesize>512kb</filesize>
-    </romid>
+	<romid>
+		<xmlid>6Y300</xmlid>
+		<hwid>1TKE8Z5N56</hwid>
+		<internalidaddress>6C39</internalidaddress>
+		<internalidstring>6Y300</internalidstring>
+		<ecuid>6Y300</ecuid>
+		<year>03</year>
+		<market>USDM</market>
+		<make>Nissan</make>
+		<model>Maxima</model>
+		<submodel>Base</submodel>
+		<transmission>MT</transmission>
+		<memmodel>SH7055</memmodel>
+		<flashmethod>nisprog</flashmethod>
+		<filesize>512kb</filesize>
+	</romid>
 
 
-   <table name="Cold Ignition Trim" storageaddress="0x52a1">
-      <table type="X Axis" storageaddress="0x6ef9" />
-      <table type="Y Axis" storageaddress="0x6f09" />
-    </table>
-
-    <table name="High Octane Ignition Trim" storageaddress="0x53a1">
-      <table type="X Axis" storageaddress="0x6ef9" />
-      <table type="Y Axis" storageaddress="0x6f09" />
-    </table>
-
-    <table name="Regular Ignition Trim" storageaddress="0x54a1">
-      <table type="X Axis" storageaddress="0x6ef9" />
-      <table type="Y Axis" storageaddress="0x6f09" />
-    </table>
-
-    <table name="Fuel Compensation" storageaddress="0x5761">
-      <table type="X Axis" storageaddress="0x6e4f" />
-      <table type="Y Axis" storageaddress="0x6df3" />
-    </table>
-
-    <table name="Fuel Target" storageaddress="0x5971">
-      <table type="X Axis" storageaddress="0x6cd6" />
-      <table type="Y Axis" storageaddress="0x6deb" />
-    </table>
-
-<table name="Intake Cam Timing (16x16)" storageaddress="0x5ab1">
-      <table type="X Axis" storageaddress="0x775d" />
-      <table type="Y Axis" storageaddress="0x776d" />
-    </table>
-	
-    <table name="MSATHA" storageaddress="0x5c21">
-      <table type="X Axis" storageaddress="0x6d12" />
-      <table type="Y Axis" storageaddress="0x6d36" />
-    </table>
-	
-	<table name="MSATHB" storageaddress="0x5d21">
-      <table type="X Axis" storageaddress="0x6d12" />
-      <table type="Y Axis" storageaddress="0x6d36" />
-    </table>
-	
-	<table name="MSATH" storageaddress="0x5e21">
-      <table type="X Axis" storageaddress="0x6d12" />
-      <table type="Y Axis" storageaddress="0x6d36" />
-    </table>
-	
-<table name="Rev Limit (Fuel Cut)" storageaddress="0x5026">
-</table>
-<table name="No Load Rev Limit (Fuel Cut)" storageaddress="0x502a">
-</table>
-<table name="MAF" storageaddress="0x796a">
-</table>
-<table name="Idle Target" storageaddress="0x73f3">
-</table>
-
-<table name="Fuel Injection Multiplier" storageaddress="0x4FD0">
-</table>
-<table name="Speed Limiter" storageaddress="0x5074" />
-
-<table name="Speed Limiter (km/h)" storageaddress="0x5074" />
-
-<table name="QH0/ torque conversion map" storageaddress="0x644c">
-	<table type="X Axis" storageaddress="0x794a" />
-	<table type="Y Axis" storageaddress="0x6e0b" />
-</table>
-
-<table name="QH0/ torque conversion map 2" storageaddress="0x85dc">
-	<table type="X Axis" storageaddress="0x88b0" />
-	<table type="Y Axis" storageaddress="0x8820" />
-</table>
-
-<table name="mMTFDDS_S" storageaddress="0x81dc">
-      <table type="X Axis" storageaddress="0x8870" />
-      <table type="Y Axis" storageaddress="0x8890" />
-    </table>
-	
-	<table name="mMTFDD_S" storageaddress="0x83dc">
-      <table type="X Axis" storageaddress="0x8870" />
-      <table type="Y Axis" storageaddress="0x8890" />
-    </table>
-	
-<table name="Load Base Fuel Schedule" storageaddress="0x7b0a">
+	<table name="Cold Ignition Trim" storageaddress="0x52a1">
+		<table type="X Axis" storageaddress="0x6ef9" />
+		<table type="Y Axis" storageaddress="0x6f09" />
 	</table>
 
-<checksum type="std" start="0" end="0x7FFFF" sumloc="0x5198" xorloc="0x5190" />
+	<table name="High Octane Ignition Trim" storageaddress="0x53a1">
+		<table type="X Axis" storageaddress="0x6ef9" />
+		<table type="Y Axis" storageaddress="0x6f09" />
+	</table>
+
+	<table name="Regular Ignition Trim" storageaddress="0x54a1">
+		<table type="X Axis" storageaddress="0x6ef9" />
+		<table type="Y Axis" storageaddress="0x6f09" />
+	</table>
+
+	<table name="Fuel Compensation" storageaddress="0x5761">
+		<table type="X Axis" storageaddress="0x6e4f" />
+		<table type="Y Axis" storageaddress="0x6df3" />
+	</table>
+
+	<table name="Fuel Target" storageaddress="0x5971">
+		<table type="X Axis" storageaddress="0x6cd6" />
+		<table type="Y Axis" storageaddress="0x6deb" />
+	</table>
+
+	<table name="Intake Cam Timing (16x16)" storageaddress="0x5ab1">
+		<table type="X Axis" storageaddress="0x775d" />
+		<table type="Y Axis" storageaddress="0x776d" />
+	</table>
+
+	<table name="MSATHA" storageaddress="0x5c21">
+		<table type="X Axis" storageaddress="0x6d36" />
+		<table type="Y Axis" storageaddress="0x6d12" />
+	</table>
+
+	<table name="MSATHB" storageaddress="0x5d21">
+		<table type="X Axis" storageaddress="0x6d36" />
+		<table type="Y Axis" storageaddress="0x6d12" />
+	</table>
+
+	<table name="MSATH" storageaddress="0x5e21">
+		<table type="X Axis" storageaddress="0x6d36" />
+		<table type="Y Axis" storageaddress="0x6d12" />
+	</table>
+
+	<table name="Rev Limit (Fuel Cut)" storageaddress="0x5026">
+	</table>
+	<table name="No Load Rev Limit (Fuel Cut)" storageaddress="0x502a">
+	</table>
+	<table name="MAF" storageaddress="0x796a">
+	</table>
+	<table name="Idle Target" storageaddress="0x73f3">
+	</table>
+
+	<table name="Fuel Injection Multiplier" storageaddress="0x4FD0">
+	</table>
+	<table name="Speed Limiter" storageaddress="0x5074" />
+
+	<table name="Speed Limiter (km/h)" storageaddress="0x5074" />
+
+	<table name="QH0/ torque conversion map" storageaddress="0x644c">
+		<table type="X Axis" storageaddress="0x794a" />
+		<table type="Y Axis" storageaddress="0x6e0b" />
+	</table>
+
+	<table name="QH0/ torque conversion map 2" storageaddress="0x85dc">
+		<table type="X Axis" storageaddress="0x88b0" />
+		<table type="Y Axis" storageaddress="0x8820" />
+	</table>
+
+	<table name="mMTFDDS_S" storageaddress="0x81dc">
+		<table type="X Axis" storageaddress="0x8890" />
+		<table type="Y Axis" storageaddress="0x8870" />
+	</table>
+
+	<table name="mMTFDD_S" storageaddress="0x83dc">
+		<table type="X Axis" storageaddress="0x8890" />
+		<table type="Y Axis" storageaddress="0x8870" />
+	</table>
+
+	<table name="Load Base Fuel Schedule" storageaddress="0x7b0a">
+	</table>
+
+	<checksum type="std" start="0" end="0x7FFFF" sumloc="0x5198" xorloc="0x5190" />
 
 </rom>
