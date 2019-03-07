@@ -687,8 +687,8 @@
 		</table>
 		<description>mKSHO This is the value in cubic millimeters per millisecond. If you change the injector K value you can use this to re-calibrate your fuel consumption monitor.</description>
 	</table>
-	
-	
+
+
 	<table type="3D" name="QH0/ torque conversion map" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 		<scaling units="Nm" expression="x/10-3276.8" to_byte="x*10+32768" format="0" fineincrement="1" coarseincrement="10" />
 		<table type="X Axis" name="QH0 flow quantity ratio" storagetype="uint16" endian="big" logparam="?">
@@ -713,7 +713,7 @@
 
 	<table type="3D" name="Engine torque value map" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 		<scaling units="Nm" expression="x/10-3276.8" to_byte="x*10+32768" format="0" fineincrement="1" coarseincrement="10" />
-		<table type="Static X Axis" name="?" format="0" sizey="16">
+		<table type="Static X Axis" name="Cylinder filling efficiency %" format="0" sizey="16">
 			<data>0</data>
 			<data>10</data>
 			<data>20</data>
@@ -749,7 +749,7 @@
 			<data>6000</data>
 			<data>6400</data>
 		</table>
-		<description>mTENGMAP </description>
+		<description>mTENGMAP Engine torque value map</description>
 	</table>
 
 	<table type="3D" name="MSATHA" category="Misfire Detection" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
@@ -1574,7 +1574,7 @@
 		<bit position ="7" name=""/>  
 		<description>bits enable/disable</description>
 	</table> 
-	
+
 	<table type="BitwiseSwitch" name="CID1313 supmask" category="ECUPeriphery">
 		<bit position ="0" name="Fan High"/>  
 		<bit position ="1" name="Fan Med"/>
