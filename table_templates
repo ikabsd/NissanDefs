@@ -854,7 +854,7 @@
 	</table>
 
 	<table type="2D" name="Load Base Fuel Schedule" category="Fuel" storagetype="uint16" endian="big" sizey="16" userlevel="1">
-		<scaling name="BFS" units="Base Fuel Schedule (milliseconds)" expression="x*0.000490080006" to_byte="x/0.000490080006" format="0.00" fineincrement=".01" coarseincrement="10" />
+		<scaling name="BFS" units="Base Fuel Schedule (milliseconds)" expression="x/2048" to_byte="x*2048" format="0.00" fineincrement=".01" coarseincrement="10" />
 
 		<table type="Static Y Axis" name="RPM" format="0" sizey="16" logparam="P8">
 			<data>0</data>
