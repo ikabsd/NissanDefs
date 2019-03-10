@@ -38,7 +38,7 @@
 		<description>mMADVTRMR This trimming map is used by the ecu when it detects regular fuel. This table should ALWAYS be lower than the high octane table.</description>
 	</table>
 
-	<table type="3D" name="High Octane Knock Limit" category="Ignition Timing" storagetype="uint8" endian="big" sizex="3" sizey="3" userlevel="1" logparam="?">
+	<table type="3D" name="High Octane Knock Limit" category="Ignition Timing" storagetype="uint8" endian="big" sizex="3" sizey="3" userlevel="1" logparam="E3015">
 		<scaling units="Degrees Retard" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="4" />
 		<table type="Static X Axis" name="RPM" sizex="3">
 			<data>0</data>
@@ -53,24 +53,24 @@
 		<description>mMKLMRTH This table sets the limits of knock retard correction when high-octane fuel is determined.</description>
 	</table>
 
-	<table type="3D" name="Regular Knock Limit" category="Ignition Timing" storagetype="uint8" endian="big" sizex="3" sizey="3" userlevel="1" logparam="?">
+	<table type="3D" name="Regular Knock Limit" category="Ignition Timing" storagetype="uint8" endian="big" sizex="3" sizey="3" userlevel="1" logparam="E3015">
 		<scaling units="Degrees Retard" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="4" />
-		<table type="Static X Axis" name="RPM" sizex="3">
-			<data>0</data>
-			<data>800</data> 
-			<data>5200</data>
+		<table type="Static X Axis" name="RPM" sizex="3" logparam="P8">
+			<data>0-800</data>
+			<data>800-5200</data> 
+			<data>5200-Max</data>
 		</table>
 		<table type="Static Y Axis" name="TP" sizey="3">
-			<data>0</data>
-			<data>8</data> 
-			<data>13</data>
+			<data>0-8</data>
+			<data>8-13</data> 
+			<data>13-Max</data>
 		</table>
 		<description>mMKLMRTR This table sets the limits of knock retard correction when regular fuel is determined.</description>
 	</table>
 
 	<table type="3D" name="Knock Slice Table" category="Knock" storagetype="uint16" endian="big" sizex="16" sizey="8" userlevel="1" logparam="?">
 		<scaling units="dB?" expression="x/256" to_byte="x*256" format="0" fineincrement="1" coarseincrement="4" />
-		<table type="Static X Axis" name="RPM" sizex="16">
+		<table type="Static X Axis" name="RPM" sizex="16" logparam="P8">
 			<data>400</data>
 			<data>800</data> 
 			<data>1200</data>
@@ -155,8 +155,8 @@
 	</table>
 
 
-	<table type="3D" name="Intake Cam Timing (8x8)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="1" logparam="?">
-		<scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
+	<table type="3D" name="Intake Cam Timing (8x8)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="1" logparam="P4410">
+		<scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.0" fineincrement=".5" coarseincrement="2" />
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
@@ -166,8 +166,8 @@
 		<description>Advance of the intake camshaft in degrees.</description>
 	</table>
 
-	<table type="3D" name="Intake Cam Timing Cold (8x8)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="1" logparam="?">
-		<scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
+	<table type="3D" name="Intake Cam Timing Cold (8x8)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="1" logparam="P4410">
+		<scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.0" fineincrement=".5" coarseincrement="2" />
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
@@ -177,8 +177,8 @@
 		<description>Advance of the intake camshaft in degrees.</description>
 	</table>
 
-	<table type="3D" name="Intake Cam Timing (16x16)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
-		<scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
+	<table type="3D" name="Intake Cam Timing (16x16)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="P4410">
+		<scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.0" fineincrement=".5" coarseincrement="2" />
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
@@ -188,8 +188,8 @@
 		<description>Advance of the intake camshaft in degrees.</description>
 	</table>
 
-	<table type="3D" name="Intake Cam Timing (4x4)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="4" sizey="4" userlevel="1" logparam="?">
-		<scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
+	<table type="3D" name="Intake Cam Timing (4x4)" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="4" sizey="4" userlevel="1" logparam="P4410">
+		<scaling units="Degrees Advance" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.0" fineincrement=".5" coarseincrement="2" />
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
@@ -199,8 +199,8 @@
 		<description>mMRHVTI VTC target operation angle regular compensation value computed map</description>
 	</table>
 
-	<table type="3D" name="Exhaust Cam Timing" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
-		<scaling units="Degrees Retard" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.00" fineincrement=".2" coarseincrement="1" />
+	<table type="3D" name="Exhaust Cam Timing" category="Variable Cam Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="P4454">
+		<scaling units="Degrees Retard" expression="(x-128)*.5" to_byte="(x*2)+128" format="0.0" fineincrement=".5" coarseincrement="2" />
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
@@ -238,10 +238,10 @@
 		</table>
 	</table>
 
-	<table type="3D" name="Fuel Compensation" category="Fuel" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+	<table type="3D" name="Fuel Compensation" category="Fuel" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="E3019">
 		<scaling units="NA" expression="(x/128)*100" to_byte="(x/100)*128" format="0.00" fineincrement=".2" coarseincrement="1" />
-		<table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
-			<scaling units="Load" expression="x" to_byte="x" format="0" fineincrement=".2" coarseincrement="1" />
+		<table type="X Axis" name="TVO-N flow-quantity" storagetype="uint8" endian="big" logparam="E3018">
+			<scaling units="%" expression="x/2.56" to_byte="x*2.56" format="0" fineincrement=".2" coarseincrement="1" />
 		</table>
 		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
@@ -249,10 +249,10 @@
 		<description>This is an enrichment table for the ECU. Values above 100 are adding fuel, and values below 100 remove fuel.</description>
 	</table>
 
-	<table type="3D" name="Fuel Compensation Cold" category="Fuel" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
+	<table type="3D" name="Fuel Compensation Cold" category="Fuel" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="E3019">
 		<scaling units="NA" expression="(x/128)*100" to_byte="(x/100)*128" format="0.00" fineincrement=".2" coarseincrement="1" />
-		<table type="X Axis" name="Load" storagetype="uint8" endian="big" logparam="?">
-			<scaling units="Load" expression="x" to_byte="x" format="0" fineincrement=".2" coarseincrement="1" />
+		<table type="X Axis" name="TVO-N flow-quantity" storagetype="uint8" endian="big" logparam="E3018">
+			<scaling units="%" expression="x/2.56" to_byte="x*2.56" format="0" fineincrement=".2" coarseincrement="1" />
 		</table>
 		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
@@ -260,10 +260,10 @@
 		<description>This is an enrichment table for the ECU. Values above 100 are adding fuel, and values below 100 remove fuel.</description>
 	</table>
 
-	<table type="3D" name="Fuel Target" category="Fuel" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="1" logparam="?">
-		<scaling units="AFR(Gasoline Scale)" expression="14.7/(x*.0078125)" to_byte="(14.7/x)/.0078125" format="0.00" fineincrement=".2" coarseincrement="1" />
-		<table type="X Axis" name="BFS" storagetype="uint8" endian="big" logparam="?">
-			<scaling units="Load" expression="x*0.151875" to_byte="x/0.151875" format="0.00" fineincrement=".1" coarseincrement="1" />
+	<table type="3D" name="Fuel Target" category="Fuel" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="1" logparam="P4404">
+		<scaling units="AFR(Gasoline Scale)" expression="14.7/(x/128)" to_byte="128*(14.7/x)" format="0.00" fineincrement=".2" coarseincrement="1" />
+		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
+			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
 		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
@@ -286,10 +286,10 @@
 		<description>mTKREGR Target air-fuel ratio regular compensation rate</description>
 	</table>
 
-	<table type="3D" name="Fuel Target 16x16" category="Fuel" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
-		<scaling units="AFR(Gasoline Scale)" expression="14.7/(x*.0078125)" to_byte="(14.7/x)/.0078125" format="0.00" fineincrement=".2" coarseincrement="1" />
-		<table type="X Axis" name="BFS" storagetype="uint8" endian="big" logparam="?">
-			<scaling units="Load" expression="x*0.151875" to_byte="x/0.151875" format="0.00" fineincrement=".1" coarseincrement="1" />
+	<table type="3D" name="Fuel Target 16x16" category="Fuel" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="P4404">
+		<scaling units="AFR(Gasoline Scale)" expression="14.7/(x/128)" to_byte="128*(14.7/x)" format="0.00" fineincrement=".2" coarseincrement="1" />
+		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
+			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
 		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
@@ -787,7 +787,7 @@
 
 	<table type="3D" name="mMTFDD" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 		<scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
-		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="?">
+		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="P4354">
 			<scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
 		</table>
 		<table type="Y Axis" name="Accelerator Open" storagetype="uint16" endian="big" logparam="?">
@@ -798,7 +798,7 @@
 
 	<table type="3D" name="mMTFDDS" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 		<scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
-		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="?">
+		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="P4354">
 			<scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
 		</table>
 		<table type="Y Axis" name="Accelerator Open" storagetype="uint16" endian="big" logparam="?">
@@ -809,7 +809,7 @@
 
 	<table type="3D" name="mMTFDDS_S" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 		<scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
-		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="?">
+		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="P4354">
 			<scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
 		</table>
 		<table type="Y Axis" name="Accelerator Open" storagetype="uint16" endian="big" logparam="?">
@@ -820,7 +820,7 @@
 
 	<table type="3D" name="mMTFDD_S" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
 		<scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
-		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="?">
+		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="P4354">
 			<scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
 		</table>
 		<table type="Y Axis" name="Accelerator Open" storagetype="uint16" endian="big" logparam="?">
