@@ -16,18 +16,17 @@
       <filesize>1024kb</filesize>
     </romid>
 
-<!-- timing axis may be reversed-->  
   <table name="Cold Ignition Trim" storageaddress="0x7cb1">
-      <table type="X Axis" storageaddress="0xa4e2" />
-      <table type="Y Axis" storageaddress="0xa4d2" />
+      <table type="X Axis" storageaddress="0xa4d2" />
+      <table type="Y Axis" storageaddress="0xa4e2" />
     </table>
     <table name="High Octane Ignition Trim" storageaddress="0x7db1">
-      <table type="X Axis" storageaddress="0xa4e2" />
-      <table type="Y Axis" storageaddress="0xa4d2" />
+      <table type="X Axis" storageaddress="0xa4d2" />
+      <table type="Y Axis" storageaddress="0xa4e2" />
     </table>
     <table name="Regular Ignition Trim" storageaddress="0x7eb1">
-      <table type="X Axis" storageaddress="0xa4e2" />
-      <table type="Y Axis" storageaddress="0xa4d2" />
+      <table type="X Axis" storageaddress="0xa4d2" />
+      <table type="Y Axis" storageaddress="0xa4e2" />
     </table>
     <table name="Fuel Compensation" storageaddress="0x8351">
       <table type="X Axis" storageaddress="0xa3c8" />
