@@ -61,9 +61,9 @@
 
 	<table name="mTP100" storageaddress="0x8884"/>
 
-	<table name="Open loop fuel target delay" storageaddress="0x7c89"/>
-
 	<table name="Throttle Rev Limit" storageaddress="0x8806"/>
+
+	<table name="OL Fueling Target Rate" storageaddress="0xB44A"/>
 
 	<table name="Engine torque value map" storageaddress="0xA9BC"/>
 
