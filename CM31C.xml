@@ -31,11 +31,11 @@
 		<table type="Y Axis" storageaddress="0xB650"/>
 	</table>
 
-  <table  name="MBT Flame Speed"  storageaddress="0x91ad">
-      <table type="X Axis" storageaddress="0xb2f1" />
-      <table type="Y Axis" storageaddress="0xb2f5" />
-    </table>
-	
+	<table  name="MBT Flame Speed"  storageaddress="0x91ad">
+		<table type="X Axis" storageaddress="0xb2f1" />
+		<table type="Y Axis" storageaddress="0xb2f5" />
+	</table>
+
 	<table name="Fuel Compensation" storageaddress="0x948D">
 		<table type="X Axis" storageaddress="0xB526"/>
 		<table type="Y Axis" storageaddress="0xB4CA"/>
@@ -47,7 +47,7 @@
 	</table>
 
 	<table name="OL Fueling Target Rate" storageaddress="0xbbb4"/>
-	
+
 	<table name="Exhaust Cam Timing" storageaddress="0x9A2D">
 		<table type="X Axis" storageaddress="0xC2f8"/>
 		<table type="Y Axis" storageaddress="0xC318"/>
@@ -76,10 +76,7 @@
 	<table name="MAF" storageaddress="0x0c83e">
 	</table>
 
-	<table name="Rev Limit (Fuel Cut)" storageaddress="0x8998">
-	</table>
-
-	<table name="No Load Rev Limit (Fuel Cut)" storageaddress="0x899c">
+	<table name="Rev Limit (Fuel Cut - 3D)" storageaddress="0x8998">
 	</table>
 
 	<table name="Throttle Rev Limit" storageaddress="0x8a30">
@@ -131,15 +128,15 @@
 
 	<table name="Fuel Injector Latency Adder" storageaddress="0x7d9f">
 	</table>
-	
+
 	<table name="Cranking Enrichment" storageaddress="0xd1a2">
 	</table>
 	<table name="MAF idle voltage limits (USRV)" storageaddress="0x8b4a" />
 
-<table name="Fuel correction limits, % (MALPRV)" storageaddress="0x34d3" />
-<table name="Idle BFS limits, ms (TPRV)" storageaddress="0x8b0e" />
-<table name="Load Base Fuel Schedule" storageaddress="0xcb2c" />
-<table name="MAF factor" storageaddress="0x8224" />
+	<table name="Fuel correction limits, % (MALPRV)" storageaddress="0x34d3" />
+	<table name="Idle BFS limits, ms (TPRV)" storageaddress="0x8b0e" />
+	<table name="Load Base Fuel Schedule" storageaddress="0xcb2c" />
+	<table name="MAF factor" storageaddress="0x8224" />
 
 	<checksum type="std" start="0" end="0xFFFFF" sumloc="0x8C54" xorloc="0x8C4C"/>
 

@@ -52,9 +52,7 @@
 
 	<table name="MAF" storageaddress="0xC7FA" />
 
-	<table name="Rev Limit (Fuel Cut)" storageaddress="0x8954" />
-
-	<table name="No Load Rev Limit (Fuel Cut)" storageaddress="0x8958" />
+	<table name="Rev Limit (Fuel Cut - 3D)" storageaddress="0x8954" />
 
 	<table name="Throttle Rev Limit" storageaddress="0x89EC" />
 

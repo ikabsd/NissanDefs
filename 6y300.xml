@@ -62,9 +62,7 @@
 		<table type="Y Axis" storageaddress="0x6d12" />
 	</table>
 
-	<table name="Rev Limit (Fuel Cut)" storageaddress="0x5026">
-	</table>
-	<table name="No Load Rev Limit (Fuel Cut)" storageaddress="0x502a">
+	<table name="Rev Limit (Fuel Cut - 3D)" storageaddress="0x5026">
 	</table>
 	<table name="MAF" storageaddress="0x796a">
 	</table>

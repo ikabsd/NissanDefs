@@ -297,22 +297,69 @@
 		<description>Air fuel ratio that is targeted by the ECU. If this value doesn't match when logging other paramaters need to be adjusted, like fuel compensation, and/or maf scaling.</description>
 	</table>
 
-	<table type="2D" name="Rev Limit (Fuel Cut)" category="Limiters" storagetype="uint16" endian="big" sizey="2" userlevel="1">
+	<table type="2D" name="Rev Limit (Fuel Cut)" category="Limiters" storagetype="uint16" endian="big" sizey="1" userlevel="1">
 		<scaling units="Engine Speed (RPM)" expression="x*12.5" to_byte="x/12.5" format="#" fineincrement="50" coarseincrement="100" />
-		<table type="Static Y Axis" name="Rev Limit Fuel Cut" sizey="2">
+		<table type="Static Y Axis" sizey="1">
+			<data>Cut</data>
+		</table>
+		<description>This is the engine speed at which the rev limiter is engaged. When engine speed is equal to or exceeds the 'On' value, fuel cut is active.</description>
+	</table>
+
+	<table type="2D" name="Reverse Rev Limit (Fuel Cut)" category="Limiters" storagetype="uint16" endian="big" sizey="1" userlevel="1">
+		<scaling units="Engine Speed (RPM)" expression="x*12.5" to_byte="x/12.5" format="#" fineincrement="50" coarseincrement="100" />
+		<table type="Static Y Axis" sizey="1">
+			<data>Cut</data>
+		</table>
+		<description>This is the engine speed at which the rev limiter is engaged. When engine speed is equal to or exceeds the 'On' value, fuel cut is active.</description>
+	</table>
+
+	<table type="2D" name="Rev Limit (Fuel Restore)" category="Limiters" storagetype="uint16" endian="big" sizey="1" userlevel="1">
+		<scaling units="Engine Speed (RPM)" expression="x*12.5" to_byte="x/12.5" format="#" fineincrement="50" coarseincrement="100" />
+		<table type="Static Y Axis" sizey="1">
+			<data>Restore</data>
+		</table>
+		<description>This is the engine speed at which the rev limiter is disengaged. When engine speed is below the 'Off' value, fueling is resumed.</description>
+	</table>
+
+		<table type="2D" name="Reverse Rev Limit (Fuel Restore)" category="Limiters" storagetype="uint16" endian="big" sizey="1" userlevel="1">
+		<scaling units="Engine Speed (RPM)" expression="x*12.5" to_byte="x/12.5" format="#" fineincrement="50" coarseincrement="100" />
+		<table type="Static Y Axis" sizey="1">
+			<data>Restore</data>
+		</table>
+		<description>This is the engine speed at which the rev limiter is disengaged. When engine speed is below the 'Off' value, fueling is resumed.</description>
+	</table>
+
+	<!-- rev limiters are not actually stored as tables, but happen to be arranged that these configurations works -->
+	<!-- if neither of these tables have valid data, you will have to specify the address of each setting with the tables above -->
+
+	<table type="3D" name="Rev Limit (Fuel Cut - 3D)" category="Limiters" storagetype="uint16" endian="big" sizex="2" sizey="2" userlevel="1">
+		<scaling units="Engine Speed (RPM)" expression="x*12.5" to_byte="x/12.5" format="#" fineincrement="50" coarseincrement="100" />
+		<table type="Static X Axis" name="State" sizex="2">
+			<data>Normal</data>
+			<data>Reverse</data>
+		</table>
+		<table type="Static Y Axis" name="Limit" sizey="2">
 			<data>Fuel Cut</data>
-			<data>Fuel Restore</data>
+			<data>Restore</data>
+		</table>
+		<description>These are the engine speeds at which the rev limiter is engaged and disengaged. When engine speed is equal to or exceeds the 'On' value, fuel cut is active, after which, if engine speed drops below the 'Off' value, fueling is resumed.</description>
+	</table>
+	
+	<table type="2D" name="Rev Limit (Fuel Cut - 2D)" category="Limiters" storagetype="uint16" endian="big" sizex="2" sizey="2" userlevel="1">
+		<scaling units="Engine Speed (RPM)" expression="x*12.5" to_byte="x/12.5" format="#" fineincrement="50" coarseincrement="100" />
+		<table type="Static X Axis" name="Limit" sizex="2">
+			<data>Fuel Cut</data>
+			<data>Restore</data>
 		</table>
 		<description>These are the engine speeds at which the rev limiter is engaged and disengaged. When engine speed is equal to or exceeds the 'On' value, fuel cut is active, after which, if engine speed drops below the 'Off' value, fueling is resumed.</description>
 	</table>
 
-	<table type="2D" name="No Load Rev Limit (Fuel Cut)" category="Limiters" storagetype="uint16" endian="big" sizey="2" userlevel="1">
-		<scaling units="Engine Speed (RPM)" expression="x*12.5" to_byte="x/12.5" format="#" fineincrement="50" coarseincrement="100" />
-		<table type="Static Y Axis" name="Rev Limit Fuel Cut(No Load)" sizey="2">
-			<data>Fuel Cut</data>
-			<data>Fuel Restore</data>
+	<table type="2D" name="Rev Limiter Fuel Cut Delay" category="Limiters" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+		<scaling units="seconds" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+		<table type="Static Y Axis" name="Fuel Cut Delay" sizey="1">
+			<data>X</data>
 		</table>
-		<description>These are the engine speeds at which the rev limiter is engaged and disengaged. When engine speed is equal to or exceeds the 'On' value, fuel cut is active, after which, if engine speed drops below the 'Off' value, fueling is resumed.</description>
+		<description>mTNCUTD  Usually set to 0, surprised the units are in seconds. "A high rotation cut judgement delay"</description>
 	</table>
 
 	<table type="2D" name="MAF idle voltage limits (USRV)" category="Airflow" storagetype="uint16" endian="big" sizey="2" userlevel="1">

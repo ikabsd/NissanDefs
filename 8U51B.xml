@@ -53,9 +53,7 @@
 		<table type="Y Axis" storageaddress="0x81bb" />
 	</table>	
 
-	<table name="Rev Limit (Fuel Cut)" storageaddress="0x53d4" />
-
-	<table name="No Load Rev Limit (Fuel Cut)" storageaddress="0x53d8" />
+	<table name="Rev Limit (Fuel Cut - 3D)" storageaddress="0x53d4" />
 
 	<table name="MAF" storageaddress="0x850A">
 		<scaling units="Airflow g/s" expression="(x-3013)*95/25600" to_byte="3013+x*25600/95" format="0.00" fineincrement="1" coarseincrement="100" />

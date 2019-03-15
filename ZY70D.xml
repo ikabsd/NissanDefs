@@ -72,12 +72,12 @@
 	<table name="mMBTM" storageaddress="0x892C"/>
 	<table name="mMBTT" storageaddress="0x892D"/>
 	<table name="mTAU0" storageaddress="0x8CD7"/>
-<table name="mVIASN0A" storageaddress="0x8F1B"/>
-<table name="mVIASN0B" storageaddress="0x8F1C"/>
-<table name="mVIASN1A" storageaddress="0x8F1D"/>
-<table name="mVIASN1B" storageaddress="0x8F1E"/>
-<table name="mVIAST1A" storageaddress="0x8F21"/>
-<table name="mVIAST1B" storageaddress="0x8F22"/>
+	<table name="mVIASN0A" storageaddress="0x8F1B"/>
+	<table name="mVIASN0B" storageaddress="0x8F1C"/>
+	<table name="mVIASN1A" storageaddress="0x8F1D"/>
+	<table name="mVIASN1B" storageaddress="0x8F1E"/>
+	<table name="mVIAST1A" storageaddress="0x8F21"/>
+	<table name="mVIAST1B" storageaddress="0x8F22"/>
 	<table name="MAF" storageaddress="0x108EE"/>
 
 	<checksum type="std" start="0x8200" end="0xFFFFF" sumloc="0x9A18" xorloc="0x9A10"/>
