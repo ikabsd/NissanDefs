@@ -113,6 +113,7 @@
 	</table>
 
 	<table name="Knock Slice Table" storageaddress="0xABBC"/>
+	<table name="Individual Cylinder Fuel Trims" storageaddress="0xB6FC"/>
 
 	<checksum type="std" start="0" end="0xFFFFF" sumloc="0x89b8" xorloc="0x89b0"/>
 

@@ -96,5 +96,7 @@
 	<table name="Idle BFS limits, ms (TPRV)" storageaddress="0x66e8" />
 	<table name="MAF factor" storageaddress="0x61ae" />
 
+	<table name="Fuel Cut Prohibition Speed" storageaddress="0x8DB7" />
+
 	<checksum type="std" start="0" end="0x7FFFF" sumloc="0x67f0" xorloc="0x67e8" />
 </rom>

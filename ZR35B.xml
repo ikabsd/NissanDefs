@@ -65,8 +65,6 @@
 
 	<table name="OL Fueling Target Rate" storageaddress="0xBF80"/>
 
-  <checksum type="std" start="0" end="0xFFFFF" sumloc="0x911C" xorloc="0x9114"/>
-
-  <!-- checksum addresses are correct but an error is generated in RR, suspect a different algorithm used for these later ECUs -->
+  <checksum type="alt2" start="0x8204" end="0xFFFFF" sumloc="0x911C" xorloc="0x9114"/>
 
 </rom>

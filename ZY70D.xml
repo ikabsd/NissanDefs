@@ -80,9 +80,7 @@
 	<table name="mVIAST1B" storageaddress="0x8F22"/>
 	<table name="MAF" storageaddress="0x108EE"/>
 
-	<checksum type="std" start="0x8200" end="0xFFFFF" sumloc="0x9A18" xorloc="0x9A10"/>
-
-
+	<checksum type="alt2" start="0x8204" end="0xFFFFF" sumloc="0x9A18" xorloc="0x9A14"/>
 
 
 </rom>

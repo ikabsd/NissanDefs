@@ -101,7 +101,7 @@
 
 	<table name="Idle Target" storageaddress="0xbd02"/>
 
-	<!--table name="Radiator Fan Switch Point" storageaddress="0x8287"/-->
+	<table name="Radiator Fan High Coolant" storageaddress="0x8287"/>
 
 	<table name="Speed Limiter" storageaddress="0x8A6A"/>
 
@@ -109,17 +109,15 @@
 
 	<table name="Minimum Injector Pulse Width" storageaddress="0x8ACC"/>
 
-	<table name="Individual Cylinder Fuel Trims" storageaddress="0xbea2"/>
+	<table name="Individual Cylinder Fuel Trims" storageaddress="0xbea2" sizey="6"/>
 
-	<!--table name="Open loop fuel target delay" storageaddress="0x8001"/-->
-
-	<table name="Individual Cylinder Fuel Trims" storageaddress="0xbea2"/>
+	<table name="Master Fueling Transition Delay" storageaddress="0x8003"/>
 
 	<table name="Injector Latency at 14V" storageaddress="0x846C"/>
 
 	<table name="Fuel Injector Latency Adder" storageaddress="0x7DA3"/>
 
-	<table name="Cranking Enrichment" storageaddress="0xd1a2"/>
+	<table name="Crank Fueling TP value" storageaddress="0xd1a2"/>
 
 	<table name="MAF idle voltage limits (USRV)" storageaddress="0x8B4C" />
 

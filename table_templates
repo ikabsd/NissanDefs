@@ -68,6 +68,21 @@
 		<description>mMKLMRTR This table sets the limits of knock retard correction when regular fuel is determined.</description>
 	</table>
 
+	<table type="2D" name="Cranking Advance" category="Starting" storagetype="uint8" endian="big" sizey="8" userlevel="1">
+		<scaling units="deg" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+		<table type="Static Y Axis" name="Coolant Temperature(Fahrenheit)" format="0" sizey="8">
+			<data>-40</data>
+			<data>-4</data>
+			<data>32</data>
+			<data>68</data>
+			<data>104</data>
+			<data>140</data>
+			<data>176</data>
+			<data>212</data>
+		</table>
+		<description>mTCRADV This is the target ignition advance at startup which references Coolant Temperature</description>
+	</table>
+
 	<table type="3D" name="Knock Slice Table" category="Knock" storagetype="uint16" endian="big" sizex="16" sizey="8" userlevel="1" logparam="?">
 		<scaling units="dB?" expression="x/256" to_byte="x*256" format="0" fineincrement="1" coarseincrement="4" />
 		<table type="Static X Axis" name="RPM" sizex="16" logparam="P8">
@@ -102,7 +117,7 @@
 	</table>	
 
 
-	<table type="3D" name="MBT Flame Speed" category="Ignition" storagetype="uint8" endian="big" sizex="4" sizey="4" userlevel="4" logparam="?">
+	<table type="3D" name="MBT Flame Speed" category="Ignition (Advanced)" storagetype="uint8" endian="big" sizex="4" sizey="4" userlevel="4" logparam="?">
 		<scaling units="cc/ms" expression="x*0.0625" to_byte="x/0.0625" format="0.00" fineincrement=".0625" coarseincrement="0.625" />
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
@@ -113,7 +128,7 @@
 		<description>mMFLML Layer way flame speed basic map</description>
 	</table>
 
-	<table type="3D" name="Fresh air rate" category="Ignition" storagetype="uint8" endian="big" sizex="4" sizey="4" userlevel="4" logparam="?">
+	<table type="3D" name="Fresh air rate" category="Ignition (Advanced)" storagetype="uint8" endian="big" sizex="4" sizey="4" userlevel="4" logparam="?">
 		<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.00" fineincrement=".78125" coarseincrement="4" />
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".78125" coarseincrement="4" />
@@ -124,7 +139,7 @@
 		<description>mMITAN Fresh air rate map</description>
 	</table>
 
-	<table type="2D" name="Dwell RPM table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="4" logparam="?">
+	<table type="2D" name="Dwell RPM table" category="Ignition (Advanced)" storagetype="uint8" endian="big" sizey="8" userlevel="4" logparam="?">
 		<scaling units="RPM^(2/3)" expression="x*2" to_byte="x/2" format="0.0" fineincrement=".2" coarseincrement="1" />
 		<table type="Static Y Axis" name="RPM" sizey="8" logparam="P8">
 			<data>0</data>
@@ -139,7 +154,7 @@
 		<description>mTDWLNE This is just a RPM^0.6667 table. You probably don't need to touch it</description>
 	</table>
 
-	<table type="2D" name="Dwell battery table" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="4" logparam="?">
+	<table type="2D" name="Dwell battery table" category="Ignition (Advanced)" storagetype="uint8" endian="big" sizey="8" userlevel="4" logparam="?">
 		<scaling units="1/V^(2/3)" expression="x*0.0015625" to_byte="x/0.0015625" format="0.00" fineincrement=".02" coarseincrement=".1" />
 		<table type="Static Y Axis" name="Battery Volts" sizey="8">
 			<data>0</data>
@@ -551,7 +566,7 @@
 	</table>
 
 	<table type="2D" name="Fuel Cut Prohibition Speed" category="Fuel" storagetype="uint8" endian="big" sizey="16" userlevel="1">
-		<scaling units="RPM" expression="x*12.5" to_byte="x/12.5" format="0" fineincrement="1" coarseincrement="100" />
+		<scaling units="RPM" expression="x*12.5" to_byte="x/12.5" format="0" fineincrement="25" coarseincrement="200" />
 		<table type="Static Y Axis" name="Coolant Temperature(Fahrenheit)" format="0" sizey="16">
 			<data>-40</data>
 			<data>-22</data>
@@ -570,7 +585,7 @@
 			<data>212</data>
 			<data>230</data>   
 		</table>
-		<description>mTTXNEL Fuel cut prohibited ?above/below? this engine speed</description>
+		<description>mTTXNEL Fuel cut prohibited below this engine speed</description>
 	</table>
 
 	<table type="2D" name="Fuel Injection Multiplier" category="Fuel" storagetype="uint16" endian="big" sizey="1" userlevel="1">
@@ -581,7 +596,7 @@
 		<description>Global Fuel injection Multiplier. This can be used to compensate for larger or smaller injectors, or a larger or smaller maf housing. This can also be used for alternate fuels such as e85.</description>
 	</table>
 
-	<table type="2D" name="Dwell Time Coefficient" category="Ignition" storagetype="uint8" endian="big" sizey="1" userlevel="1"> 
+	<table type="2D" name="Dwell Time Coefficient" category="Ignition (Advanced)" storagetype="uint8" endian="big" sizey="1" userlevel="1"> 
 		<scaling units="Milliseconds" expression="x/50" to_byte="x*50" format="0.00" fineincrement="0.02" coarseincrement="1" />
 		<table type="Static Y Axis" name="Coefficient" sizey="1">
 			<data>Coefficient</data>
@@ -589,7 +604,7 @@
 		<description>Coil Timing </description>
 	</table>
 
-	<table type="2D" name="Dwell Voltage Coefficient" category="Ignition" storagetype="uint16" endian="big" sizey="1" userlevel="1"> 
+	<table type="2D" name="Dwell Voltage Coefficient" category="Ignition (Advanced)" storagetype="uint16" endian="big" sizey="1" userlevel="1"> 
 		<scaling units="(mv^2)se" expression="x*128" to_byte="x/128" format="0" fineincrement="128" coarseincrement="2560" />
 		<table type="Static Y Axis" name="Coefficient" sizey="1">
 			<data>Coefficient</data>
@@ -597,7 +612,7 @@
 		<description>Coil Timing </description>
 	</table>
 
-	<table type="2D" name="mTDENS" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1"> 
+	<table type="2D" name="mTDENS" category="Ignition (Advanced)" storagetype="uint8" endian="big" sizey="8" userlevel="1"> 
 		<scaling units="g/m3" expression="125*x" to_byte="x/125" format="0" fineincrement="125" coarseincrement="1000" />
 		<table type="Static Y Axis" name="Intake air efficiency" sizey="8">
 			<data>12.5%</data> 
@@ -612,7 +627,7 @@
 		<description>An unburned gas density table </description>
 	</table>  
 
-	<table type="2D" name="mTFLTW" category="Ignition" storagetype="uint8" endian="big" sizey="8" userlevel="1"> 
+	<table type="2D" name="mTFLTW" category="Ignition (Advanced)" storagetype="uint8" endian="big" sizey="8" userlevel="1"> 
 		<scaling units="none" expression="x*.78125" to_byte="x/.78125" format="0" fineincrement="1" coarseincrement="5" />
 		<table type="Static Y Axis" name="Degrees Fahrenheit" sizey="8">
 			<data>     -40    </data>
@@ -627,7 +642,7 @@
 		<description>Coolant temperature compensation table </description>
 	</table>  
 
-	<table type="2D" name="mDILU" category="Ignition" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+	<table type="2D" name="mDILU" category="Ignition (Advanced)" storagetype="uint8" endian="big" sizey="1" userlevel="1">
 		<scaling units="%" expression="x*1.5625" to_byte="x/1.5625" format="#" fineincrement="1" coarseincrement="5" />
 		<table type="Static Y Axis" name="Dilution modification coefficient" sizey="1">
 			<data></data>
@@ -635,7 +650,7 @@
 		<description>Dilution modification coefficient</description>
 	</table>
 
-	<table type="2D" name="mMBTT" category="Ignition" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+	<table type="2D" name="mMBTT" category="Ignition (Advanced)" storagetype="uint8" endian="big" sizey="1" userlevel="1">
 		<scaling units="cc/sec" expression="x/8" to_byte="x*8" format="0.00" fineincrement=".125" coarseincrement="1" />
 		<table type="Static Y Axis" name="War way speed weight constant" sizey="1">
 			<data></data>
@@ -643,7 +658,7 @@
 		<description>War way speed weight constant</description>
 	</table>
 
-	<table type="2D" name="mMBTM" category="Ignition" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+	<table type="2D" name="mMBTM" category="Ignition (Advanced)" storagetype="uint8" endian="big" sizey="1" userlevel="1">
 		<scaling units="g" expression="x/256" to_byte="x*256" format="0.00" fineincrement=".01" coarseincrement=".1" />
 		<table type="Static Y Axis" name="Ignition timing main constant" sizey="1">
 			<data></data>
@@ -651,7 +666,7 @@
 		<description>mMBTM Ignition timing main constant. Higher values increase advance</description>
 	</table>
 
-	<table type="2D" name="mTAU0" category="Ignition" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+	<table type="2D" name="mTAU0" category="Ignition (Advanced)" storagetype="uint8" endian="big" sizey="1" userlevel="1">
 		<scaling units="ms" expression="x*.01953" to_byte="x/.01953" format="0.000" fineincrement=".005" coarseincrement=".025" />
 		<table type="Static Y Axis" name="Ignition delay time" sizey="1">
 			<data></data>
@@ -659,41 +674,43 @@
 		<description>Ignition delay time</description>
 	</table>
 
-	<table type="2D" name="Radiator Fan Switch Point" category="Misc" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+	<table type="2D" name="Radiator Fan High Coolant" category="Misc" storagetype="uint8" endian="big" sizey="1" userlevel="1">
 		<scaling units="Degrees Farenheight" expression="(x-50)*1.8+32" to_byte="(x-32)/1.8+50" format="#" fineincrement="1" coarseincrement="10" />
 		<table type="Static Y Axis" name="Coolant Temp" sizey="2">
 			<data>Coolant Temp</data>
 		</table>
-		<description>This is the temperature that the radiator fan will turn on.</description>
+		<description>mRFTWHI  "Radiator fan High requirement coolant temperature"</description>
 	</table>
 
 	<table type="2D" name="Minimum Injector Pulse Width" category="Fuel" storagetype="uint16" endian="big" sizey="1" userlevel="1">
-		<scaling units="Milliseconds" expression="x/100" to_byte="x*100" format="0.00" fineincrement=".1" coarseincrement="1" />
+		<scaling units="Milliseconds" expression="x/256" to_byte="x*256" format="0.00" fineincrement=".1" coarseincrement="1" />
 		<table type="Static Y Axis" name=" Minimum Pulse Width " sizey="1">
 			<data></data>
 		</table>
-		<description>Minimum amount that the injector can pulse in milliseconds.</description>
+		<description>mTEMIN  "Pulse width minimum limitation value"</description>
 	</table>
 
-	<table type="2D" name="Individual Cylinder Fuel Trims" category="Fuel" storagetype="uint8" endian="big" sizey="6" userlevel="1">
-		<scaling units="Percentage" expression="x/128" to_byte="x*128" format="0.00%" fineincrement="1" coarseincrement="10" />
-		<table type="Static Y Axis" name="Cylinder Fuel Trim" sizey="6">
+	<table type="2D" name="Individual Cylinder Fuel Trims" category="Fuel" storagetype="uint8" endian="big" sizey="8" userlevel="1">
+		<scaling units="Percentage" expression="x/128" to_byte="x*128" format="0.0%" fineincrement="1" coarseincrement="5" />
+		<table type="Static Y Axis" name="Cylinder Fuel Trim" sizey="8">
 			<data>  Cylinder 1   </data>
 			<data>  Cylinder 2  </data>
 			<data>  Cylinder 3  </data>
 			<data>  Cylinder 4  </data>
 			<data>  Cylinder 5  </data>
 			<data>  Cylinder 6  </data>
+			<data>  Cylinder 7  </data>
+			<data>  Cylinder 8  </data>
 		</table>
-		<description>mTRLCY2 This adds or subtracts fuel from the respective cylinder. Values over 100 add fuel, values under 100 subtract fuel.</description>
+		<description>mTRLCY2 "Compensation value table by the cylinder" This adds or subtracts fuel from the respective cylinder. Values over 100 add fuel, values under 100 subtract fuel.</description>
 	</table>
 
-	<table type="2D" name="Open loop fuel target delay" category="Fuel" storagetype="uint8" endian="big" sizey="1" userlevel="1">
-		<scaling units="" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+	<table type="2D" name="Master Fueling Transition Delay" category="Fuel" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+		<scaling units="seconds" expression="x/5" to_byte="x*5" format="0.0" fineincrement=".2" coarseincrement="1" />
 		<table type="Static Y Axis" name="Delay time units" sizey="1">
-			<data>possibly ms</data>
+			<data>time</data>
 		</table>
-		<description>This value represents a delay between the time the car goes from closed to open loop fuel target values. This is generally set to 0 for performance applications to ensure that the ecu transitions to the fuel target as fst as possible upon wide open throttle.</description>
+		<description> mKMRCT1  "All the delay stage delays" This value represents a maximum delay between the time the car goes from closed to open loop fuel target values. There are several other potential delays but setting this to 0 should override them. For performance applications to ensure that the ecu transitions to the fuel target as fast as possible upon wide open throttle, set to 0.</description>
 	</table>
 
 	<table type="2D" name="Injector Latency at 14V" category="Fuel" storagetype="uint8" endian="big" sizey="1" userlevel="1">
@@ -705,15 +722,15 @@
 	</table>
 
 	<table type="2D" name="Fuel Injector Latency Adder" category="Fuel" storagetype="uint8" endian="big" sizey="1" userlevel="1">
-		<scaling units="Milliseconds Per Volt" expression="x*0.000976563" to_byte="x/0.000976563" format="0.000ms" fineincrement=".002" coarseincrement=".01" />
+		<scaling units="Milliseconds Per Volt" expression="x/1024" to_byte="x*1024" format="0.000ms" fineincrement=".002" coarseincrement=".01" />
 		<table type="Static Y Axis" name=" Injector Latency Adder " sizey="1">
 			<data></data>
 		</table>
-		<description>mDTS This is the value in milliseconds that is added to the "injector latency 14V table for every 1v drop in voltage. IE: if latency at 14v is 2ms and the adder is 1ms then the latency at 13v would be 3ms.</description>
+		<description>mDTS "TS voltage compensation coefficient" This is the value in milliseconds that is added to the "injector latency 14V table for every 1v drop in voltage. IE: if latency at 14v is 2ms and the adder is 1ms then the latency at 13v would be 3ms.</description>
 	</table>
 
-	<table type="2D" name="Cranking Enrichment" category="Fuel" storagetype="uint16" endian="big" sizey="8" userlevel="1">
-		<scaling units="Percentage" expression="x/32768" to_byte="x*32768" format="0.00%" fineincrement=".1" coarseincrement="10" />
+	<table type="2D" name="Crank Fueling TP value" category="Starting" storagetype="uint16" endian="big" sizey="8" userlevel="1">
+		<scaling units="ms" expression="x/2048" to_byte="x*2048" format="0.00" fineincrement=".1" coarseincrement="1" />
 		<table type="Static Y Axis" name="Degrees Farenheight" sizey="8">
 			<data>     -40    </data>
 			<data>     -4     </data>
@@ -724,8 +741,35 @@
 			<data>     176     </data>
 			<data>     212     </data>
 		</table>
-		<description>This is the percent of enrichment that is added during cranking at the shown temperature.</description>
+		<description>mTTPINT TP initial value table. Startup which references Coolant Temperature. This table bypasses the injector K value, so modifying this for larger injectors is essential</description>
 	</table>
+
+	<table type="2D" name="High Temp Enrichment" category="Fuel" storagetype="uint16" endian="big" sizey="8" userlevel="1">
+		<scaling units="Percentage" expression="x/1.28" to_byte="x*1.28" format="0.00" fineincrement="1" coarseincrement="5" />
+		<table type="Static Y Axis" name="Degrees Celcius" sizey="8">
+			<data>     80    </data>
+			<data>     85     </data>
+			<data>     90     </data>
+			<data>     95     </data>
+			<data>     100     </data>
+			<data>     105     </data>
+			<data>     110     </data>
+			<data>     115     </data>
+		</table>
+		<description>mTKHTTW1  "A high coolant temperature increase compensation table"</description>
+	</table>
+
+
+	<table type="3D" name="High Temp Fuel Comp" category="Fuel" storagetype="uint8" endian="big" sizex="4" sizey="4" userlevel="4" logparam="?">
+		<scaling units="%" expression="x/1.28" to_byte="x*1.28" format="0.00" fineincrement=".78125" coarseincrement="4" />
+		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
+			<scaling units="%" expression="x/1.28" to_byte="x*1.28" format="0.0" fineincrement=".78125" coarseincrement="4" />
+		</table>
+		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
+		</table>
+		<description>mKHTMAP  "A high coolant temperature increase map" Not sure exactly how this is used</description>
+	</table>	
 
 	<table type="2D" name="Fuel consumption quantity coefficient" category="Fuel" storagetype="uint16" endian="big" sizey="1" userlevel="1">
 		<scaling units="mm^3/ms" expression="x/100" to_byte="x*100" format="0.00" fineincrement=".2" coarseincrement="1" />
@@ -924,7 +968,6 @@
 		<description>mTCCLV This table is how the ecu calculates 100% load at x rpm. The values shown are 100% load calculated from the base fuel schedule milliseconds. This is important for proper automatic transmission shifting. It needs to be adjusted so that the ecu sees at or near 100% when wide open throttle to correctly shift the automatic transmission.</description>
 	</table>
 
-
 	<table type="Switch" name="Knock sensor CEL (P0327, P0328)" category="OBD-II" sizey="4">
 		<description>When on, this enables the activation of the CEL when knock sensor is unplugged or shorted. </description>
 		<state name="on" data=" 00 A0 00 A0" />
@@ -938,13 +981,13 @@
 	</table>
 
 	<table type="Switch" name="Catalyst DTC Max Threshold Fix (P0420, P0430)" category="OBD-II" sizey="2">
-		<description>When enabled, this changes the upper limit of the measured catalyst effeciency, preventing the DTC. </description>
+		<description>Experimental: When enabled, this changes the upper limit of the measured catalyst effeciency, preventing the DTC. </description>
 		<state name="on" data=" FF FF" />
 		<state name="off" data=" 60 60" />
 	</table>
 
 	<table type="Switch" name="Catalyst DTC Min Threshold Fix (P0420, P0430)" category="OBD-II" sizey="8">
-		<description>When enabled, this changes the lower limit of the measured catalyst effeciency, preventing the DTC. </description>
+		<description>Experimental: When enabled, this changes the lower limit of the measured catalyst effeciency, preventing the DTC. </description>
 		<state name="on" data=" 01 01 01 01 01 01 01 01" />
 		<state name="off" data=" 32 32 32 32 32 32 32 32" />
 	</table>
@@ -1173,7 +1216,7 @@
 		<bit position ="0" name=""/>  
 		<description>Toggle DTCs</description>
 	</table>  
-
+<!--
 	<table type="BitwiseSwitch" name="CID1100 supmask" category="ECUPeriphery">
 		<bit position ="31" name="01 Coolant temperature"/>
 		<bit position ="30" name="02 Vehicle Speed"/>
@@ -1405,7 +1448,7 @@
 		<bit position ="14" name="12 undefined  "/>
 		<bit position ="13" name="13 vDOMON_R#8  "/>
 	</table>	
-
+-->
 	<table type="BitwiseSwitch" name="CID1301 supmask" category="ECUPeriphery">
 		<bit position ="0" name="Snow Mode"/>  
 		<bit position ="1" name="Cls TPS"/>

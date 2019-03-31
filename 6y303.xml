@@ -149,16 +149,27 @@
 	<table name="Injector Latency at 14V" storageaddress="0x4dac" />
 	<table name="Fuel Injector Latency Adder" storageaddress="0x4908" />
 	<table name="Load Base Fuel Schedule" storageaddress="0x7b32" />
+	<table name="Individual Cylinder Fuel Trims" storageaddress="0x74FF" sizey="6"/>
+
+	<table name="Cranking Advance" storageaddress="0x6FC1" />
+	<!--<table name="Crank Fueling TP value" storageaddress="0x"/>-->
+	<table name="High Temp Fuel Comp" storageaddress="0x52B9">
+		<table type="X Axis" storageaddress="0x6d06" />
+		<table type="Y Axis" storageaddress="0x6d0a" />
+	</table>
+
 	<table name="ASCD Max Set Speed" storageaddress="0x513c"/>
 	<table name="ASCD Min Set Speed" storageaddress="0x5148"/>
 	<table name="ASCD Max Calc Speed" storageaddress="0x5198"/>
 	<table name="ASCD Min Calc Speed" storageaddress="0x519c"/>
+	
 	<table name="Knock sensor CEL (P0327, P0328)" storageaddress="0x80da" />
 	<table name="Catalyst CEL Fix (P0420, P0430)" storageaddress="0x8058" />
 	<table name="Catalyst DTC Max Threshold Fix (P0420, P0430)" storageaddress="0x4850" />
 	<table name="Catalyst DTC Min Threshold Fix (P0420, P0430)" storageaddress="0x6FB9" />
 	<table name="Secondary O2 Heaters DTC Fix (P0037, P0038, P0057, P0058)" storageaddress="0x4C74" />
 	<table name="VIAS Solenoid CEL (P1800)" storageaddress="0x81d0" />
+	
 	<table name="Catalyst DTCs" storageaddress="0x8802"/>
 	<table name="Evap DTCs" storageaddress="0x880b"/>
 	<table name="Evap 2 DTCs"  storageaddress="0x880c"/>
@@ -194,5 +205,5 @@
 	<table name="CID1310 supmask"  storageaddress="0x6C15"/>
 
 	<checksum type="std" start="0" end="0x7FFFF" sumloc="0x51c0" xorloc="0x51b8" />
-
+	
 </rom>
