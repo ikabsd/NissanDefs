@@ -1216,8 +1216,8 @@
 		<bit position ="0" name=""/>  
 		<description>Toggle DTCs</description>
 	</table>  
-<!--
-	<table type="BitwiseSwitch" name="CID1100 supmask" category="ECUPeriphery">
+
+	<table type="BitwiseSwitch" name="CID1100 supmask" sizey="4" category="ECUPeriphery">
 		<bit position ="31" name="01 Coolant temperature"/>
 		<bit position ="30" name="02 Vehicle Speed"/>
 		<bit position ="29" name="03 Battery Voltage"/>
@@ -1241,10 +1241,10 @@
 		<bit position ="11" name="15 Evap Pressure Sensor Voltage"/>
 		<bit position ="10" name="16 Atmospheric Pressure Sensor Voltage"/>
 		<bit position ="9" name="17 Calculated Load"/>
-		<bit position ="8" name="18 O2 Narrowband Bank 1 Sensor "/>
-		<bit position ="7" name="19 O2 Narrowband Bank 2 Sensor "/>
-		<bit position ="6" name="1A O2 Narrowband Bank 1 Sensor "/>
-		<bit position ="5" name="1B O2 Narrowband Bank 2 Sensor "/>
+		<bit position ="8" name="18 O2 Narrowband Bank 1 Sensor"/>
+		<bit position ="7" name="19 O2 Narrowband Bank 2 Sensor"/>
+		<bit position ="6" name="1A O2 Narrowband Bank 1 Sensor"/>
+		<bit position ="5" name="1B O2 Narrowband Bank 2 Sensor"/>
 		<bit position ="4" name="1C Throttle Position Sensor 1"/>
 		<bit position ="3" name="1D Throttle Position Sensor 2"/>
 		<bit position ="2" name="1E Absolute Throttle Position"/>
@@ -1252,29 +1252,29 @@
 		<bit position ="0" name="20-3F sup"/>
 	</table>
 
-	<table type="BitwiseSwitch" name="CID1120 supmask" category="ECUPeriphery">
+	<table type="BitwiseSwitch" name="CID1120 supmask" sizey="4" category="ECUPeriphery">
 		<bit position ="31" name="21 Exhaust Gas Temperature B1"/>
 		<bit position ="30" name="22 Exhaust Gas Temperature B2"/>
-		<bit position ="29" name="23 Short Term Fuel Trim B1 "/>
-		<bit position ="28" name="24 Short Term Fuel Trim B2 "/>
-		<bit position ="27" name="25 Learned Fuel Trim B1 "/>
-		<bit position ="26" name="26 Learned Fuel Trim B2 "/>
-		<bit position ="25" name="27 Int V B1 "/>
-		<bit position ="24" name="28 Int V B2 "/>
-		<bit position ="23" name="29 Atomospheric Sensor "/>
+		<bit position ="29" name="23 Short Term Fuel Trim B1"/>
+		<bit position ="28" name="24 Short Term Fuel Trim B2"/>
+		<bit position ="27" name="25 Learned Fuel Trim B1"/>
+		<bit position ="26" name="26 Learned Fuel Trim B2"/>
+		<bit position ="25" name="27 Int V B1"/>
+		<bit position ="24" name="28 Int V B2"/>
+		<bit position ="23" name="29 Atomospheric Sensor"/>
 		<bit position ="22" name="2A MAP Voltage "/>
-		<bit position ="21" name="2B Evapo leak diagnosis monitor "/>
+		<bit position ="21" name="2B Evapo leak diagnosis monitor 1"/>
 		<bit position ="20" name="2C undefined "/>
-		<bit position ="19" name="2D Advance Adjustment (set via CONSULT) "/>
-		<bit position ="18" name="2E Cor Idle Rpm "/>
-		<bit position ="17" name="2F Position "/>
+		<bit position ="19" name="2D Advance Adjustment (set via CONSULT)"/>
+		<bit position ="18" name="2E Cor Idle Rpm"/>
+		<bit position ="17" name="2F Position"/>
 		<bit position ="16" name="30 Pres Reg"/>
-		<bit position ="15" name="31 Inj Start Tim	"/>
-		<bit position ="14" name="32 Inj Start Tim	"/>
-		<bit position ="13" name="33 Inj Start Tim	"/>
-		<bit position ="12" name="34 Target AFR	"/>
-		<bit position ="11" name="35 Intake Cam Advance Angle B1	"/>
-		<bit position ="10" name="36 Intake Cam Advance Angle B1	"/>
+		<bit position ="15" name="31 Inj Start Tim"/>
+		<bit position ="14" name="32 Inj Start Tim"/>
+		<bit position ="13" name="33 Inj Start Tim"/>
+		<bit position ="12" name="34 Target AFR"/>
+		<bit position ="11" name="35 Intake Cam Advance Angle B1"/>
+		<bit position ="10" name="36 Intake Cam Advance Angle B1"/>
 		<bit position ="9" name="37 Intake Cam Advance Angle B2"/>
 		<bit position ="8" name="38 Intake Cam Solenoid Duty B1"/>
 		<bit position ="7" name="39 Intake Cam Solenoid Duty B2"/>
@@ -1284,171 +1284,185 @@
 		<bit position ="3" name="3D Inj Timing"/>
 		<bit position ="2" name="3E VRO2 maximum value"/>
 		<bit position ="1" name="3F undefined"/>
-		<bit position ="0" name="40-5F sup  "/>
+		<bit position ="0" name="40-5F sup"/>
 	</table>
 
-	<table type="BitwiseSwitch" name="CID1140 supmask" category="ECUPeriphery">
+	<table type="BitwiseSwitch" name="CID1140 supmask" sizey="4" category="ECUPeriphery">
 		<bit position ="31" name="41 VRO2 minimum value"/>
-		<bit position ="30" name="42 undefined	"/>
-		<bit position ="29" name="43 EGR Temperature	"/>
-		<bit position ="28" name="44 Evapo leak diagnosis monitor"/>
-		<bit position ="27" name="45 Evapo leak diagnosis monitor "/>
-		<bit position ="26" name="46 Mode 8 response code (DDL2) "/>
-		<bit position ="25" name="47 MALPRVL (fuel correction lower limit)      "/>
-		<bit position ="24" name="48 MALPRVU (fuel correction upper limit)      "/>
-		<bit position ="23" name="49 Reference line pressure    "/>
-		<bit position ="22" name="4A Final FAN speed    "/>
-		<bit position ="21" name="4B Radiator    "/>
-		<bit position ="20" name="4C HO2 B1S3    "/>
-		<bit position ="19" name="4D HO2 B2S3    "/>
-		<bit position ="18" name="4E A/F HB1S1    "/>
-		<bit position ="17" name="4F A/F HB2S1    "/>
-		<bit position ="16" name="50 HO2 Heater    "/>
-		<bit position ="15" name="51 Battery State "/>
-		<bit position ="14" name="52 Eng Fuel    "/>
-		<bit position ="13" name="53 Cyl Fuel    "/>
-		<bit position ="12" name="54 Engine Fuel   "/>
-		<bit position ="11" name="55 Cyl Fuel    "/>
-		<bit position ="10" name="56 Cyl Atmo    "/>
-		<bit position ="9" name="57   	 "/>
-		<bit position ="8" name="58   	 "/>
-		<bit position ="7" name="59  The rest O2/H voltage value   "/>
-		<bit position ="6" name="5A     "/>
-		<bit position ="5" name="5B  Timing	 "/>
-		<bit position ="4" name="5C  Idle LFT 	 "/>
-		<bit position ="3" name="5D   	 "/>
-		<bit position ="2" name="5E   	 "/>
-		<bit position ="1" name="5F  SFT   "/>
-		<bit position ="0" name="60-7F sup           "/>
+		<bit position ="30" name="42 undefined"/>
+		<bit position ="29" name="43 EGR Temperature"/>
+		<bit position ="28" name="44 Evapo leak diagnosis monitor 2"/>
+		<bit position ="27" name="45 Evapo leak diagnosis monitor 3"/>
+		<bit position ="26" name="46 Mode 8 response code (DDL2)"/>
+		<bit position ="25" name="47 MALPRVL (fuel correction lower limit)"/>
+		<bit position ="24" name="48 MALPRVU (fuel correction upper limit)"/>
+		<bit position ="23" name="49 Reference line pressure"/>
+		<bit position ="22" name="4A Final FAN speed"/>
+		<bit position ="21" name="4B Radiator"/>
+		<bit position ="20" name="4C HO2 B1S3"/>
+		<bit position ="19" name="4D HO2 B2S3"/>
+		<bit position ="18" name="4E A/F Heater Duty B1S1"/>
+		<bit position ="17" name="4F A/F Heater Duty B2S1"/>
+		<bit position ="16" name="50 HO2 Heater Duty"/>
+		<bit position ="15" name="51 Battery State"/>
+		<bit position ="14" name="52 FUEL TEMP(ENG"/>
+		<bit position ="13" name="53 FUEL TEMP(CYL"/>
+		<bit position ="12" name="54 FUEL PRES(ENG"/>
+		<bit position ="11" name="55 FUEL PRES(CYL"/>
+		<bit position ="10" name="56 CYL ATMS TEMP"/>
+		<bit position ="9" name="57 A/C POS SIG"/>
+		<bit position ="8" name="58 undefined"/>
+		<bit position ="7" name="59 The rest O2/H voltage value"/>
+		<bit position ="6" name="5A undefined"/>
+		<bit position ="5" name="5B Timing"/>
+		<bit position ="4" name="5C Idle LFT"/>
+		<bit position ="3" name="5D undefined"/>
+		<bit position ="2" name="5E undefined"/>
+		<bit position ="1" name="5F SFT"/>
+		<bit position ="0" name="60-7F sup"/>
 	</table>
 
-	<table type="BitwiseSwitch" name="CID1160 supmask" category="ECUPeriphery">
+	<table type="BitwiseSwitch" name="CID1160 supmask" sizey="4" category="ECUPeriphery">
 		<bit position ="31" name="61 LFT"/>
-		<bit position ="30" name="62 Ignition Timing   "/>
-		<bit position ="29" name="63 Intake Cam Advance Angle B2   "/>
-		<bit position ="28" name="64 Exhaust Cam Retard Angle B1   "/>
-		<bit position ="27" name="65 Exhaust Cam Retard Angle B2   "/>
-		<bit position ="26" name="66 VTC target angle (exhaust)  "/>
-		<bit position ="25" name="67 Coolant   "/>
-		<bit position ="24" name="68 VSS   "/>
-		<bit position ="23" name="69 Battery   "/>
-		<bit position ="22" name="6A Intake   "/>
-		<bit position ="21" name="6B IACV-AAC/V   "/>
-		<bit position ="20" name="6C Idle Set Rpm   "/>
-		<bit position ="19" name="6D Purg Vol C/V   "/>
-		<bit position ="18" name="6E HO2B1S1   "/>
-		<bit position ="17" name="6F HO2B1S2   "/>
-		<bit position ="16" name="70 Absolute TPS   "/>
-		<bit position ="15" name="71 A/F SE B1   "/>
-		<bit position ="14" name="72 B/Fuel   "/>
-		<bit position ="13" name="73 TPS   "/>
-		<bit position ="12" name="74 CO Adj   "/>
-		<bit position ="11" name="75 Slow Inj   "/>
-		<bit position ="10" name="76 Main Inj   "/>
-		<bit position ="9" name="77 Ethanol M/R    "/>
-		<bit position ="8" name="78 Fan Duty       "/>
-		<bit position ="7" name="79 A/C Evap       "/>
-		<bit position ="6" name="7A A/C Evap Targ  "/>
-		<bit position ="5" name="7B ALT Duty       "/>
-		<bit position ="4" name="7C undefined       "/>
-		<bit position ="3" name="7D undefined       "/>
-		<bit position ="2" name="7E undefined       "/>
-		<bit position ="1" name="7F undefined       "/>
-		<bit position ="0" name="80-9F support      "/>
+		<bit position ="30" name="62 Ignition Timing"/>
+		<bit position ="29" name="63 Intake Cam Advance Angle B2"/>
+		<bit position ="28" name="64 Exhaust Cam Retard Angle B1"/>
+		<bit position ="27" name="65 Exhaust Cam Retard Angle B2"/>
+		<bit position ="26" name="66 VTC target angle (exhaust)"/>
+		<bit position ="25" name="67 Coolant"/>
+		<bit position ="24" name="68 VSS"/>
+		<bit position ="23" name="69 Battery"/>
+		<bit position ="22" name="6A Intake"/>
+		<bit position ="21" name="6B IACV-AAC/V"/>
+		<bit position ="20" name="6C Idle Set Rpm"/>
+		<bit position ="19" name="6D Purg Vol C/V"/>
+		<bit position ="18" name="6E HO2B1S1"/>
+		<bit position ="17" name="6F HO2B1S2"/>
+		<bit position ="16" name="70 Absolute TPS"/>
+		<bit position ="15" name="71 A/F SE B1"/>
+		<bit position ="14" name="72 B/Fuel"/>
+		<bit position ="13" name="73 TPS"/>
+		<bit position ="12" name="74 CO Adj"/>
+		<bit position ="11" name="75 Slow Inj"/>
+		<bit position ="10" name="76 Main Inj"/>
+		<bit position ="9" name="77 Ethanol M/R"/>
+		<bit position ="8" name="78 Fan Duty"/>
+		<bit position ="7" name="79 A/C Evap"/>
+		<bit position ="6" name="7A A/C Evap Targ"/>
+		<bit position ="5" name="7B ALT Duty"/>
+		<bit position ="4" name="7C undefined"/>
+		<bit position ="3" name="7D undefined"/>
+		<bit position ="2" name="7E undefined"/>
+		<bit position ="1" name="7F undefined"/>
+		<bit position ="0" name="80-9F support"/>
 	</table>  
 
-	<table type="BitwiseSwitch" name="CID1200 supmask" category="ECUPeriphery">
-		<bit position ="31" name="01 Engine Speed	 "/>
-		<bit position ="30" name="02 Crank Position  	 "/>
-		<bit position ="29" name="03 Travel MIL  	     "/>
-		<bit position ="28" name="04 MAF B1 Voltage  "/>
-		<bit position ="27" name="05 MAF B2 Voltage  "/>
-		<bit position ="26" name="06 Fuel Injector Bank #1 Pulse Width  "/>
-		<bit position ="25" name="07 Fuel Injector Bank #2 Pulse Width  "/>
-		<bit position ="24" name="08 Base Fuel "/>
-		<bit position ="23" name="09 Mass Airflow  "/>
-		<bit position ="22" name="0A FPCM F/P  "/>
-		<bit position ="21" name="0B  "/>
-		<bit position ="20" name="0C Fuel Pressure     "/>
-		<bit position ="19" name="0D Accelerator Pedal Sensor #1 Voltage  "/>
-		<bit position ="18" name="0E Accelerator Pedal Sensor #2 Voltage  "/>
-		<bit position ="17" name="0F Throttle Position Sensor #1 Voltage     "/>
-		<bit position ="16" name="10 Throttle Position Sensor #2 Voltage     "/>
-		<bit position ="15" name="11 Inj B1	     "/>
-		<bit position ="14" name="12 Inj B2	     "/>
-		<bit position ="13" name="13 Inj EG Start	 "/>
-		<bit position ="12" name="14 Vac S1	     "/>
-		<bit position ="11" name="15 Vac S2	     "/>
-		<bit position ="10" name="16 SWL C/V B11     "/>
-		<bit position ="9" name="17 SWL C/V B1 "/>
-		<bit position ="8" name="18 ETC Comp "/>
-		<bit position ="7" name="19 II/P Pulley	 "/>
-		<bit position ="6" name="1A Vehicle Speed (High Precision)	 "/>
+	<table type="BitwiseSwitch" name="CID1200 supmask" sizey="4" category="ECUPeriphery">
+		<bit position ="31" name="01 Engine Speed"/>
+		<bit position ="30" name="02 Crank Position"/>
+		<bit position ="29" name="03 Travel MIL"/>
+		<bit position ="28" name="04 MAF B1 Voltage"/>
+		<bit position ="27" name="05 MAF B2 Voltage"/>
+		<bit position ="26" name="06 Fuel Injector Bank #1 Pulse Width"/>
+		<bit position ="25" name="07 Fuel Injector Bank #2 Pulse Width"/>
+		<bit position ="24" name="08 Base Fuel"/>
+		<bit position ="23" name="09 Mass Airflow"/>
+		<bit position ="22" name="0A FPCM F/P"/>
+		<bit position ="21" name="0B DTC current CODE"/>
+		<bit position ="20" name="0C Fuel Pressure"/>
+		<bit position ="19" name="0D Accelerator Pedal Sensor #1 Voltage"/>
+		<bit position ="18" name="0E Accelerator Pedal Sensor #2 Voltage"/>
+		<bit position ="17" name="0F Throttle Position Sensor #1 Voltage"/>
+		<bit position ="16" name="10 Throttle Position Sensor #2 Voltage"/>
+		<bit position ="15" name="11 Inj B1"/>
+		<bit position ="14" name="12 Inj B2"/>
+		<bit position ="13" name="13 Inj EG Start"/>
+		<bit position ="12" name="14 Vac S1"/>
+		<bit position ="11" name="15 Vac S2"/>
+		<bit position ="10" name="16 SWL C/V B1"/>
+		<bit position ="9" name="17 SWL C/V B2"/>
+		<bit position ="8" name="18 ETC Comp"/>
+		<bit position ="7" name="19 Input Shaft Speed"/>
+		<bit position ="6" name="1A Vehicle Speed (High Precision)"/>
 		<bit position ="5" name="1B TPRVL (fuel correction lower limit)"/>
 		<bit position ="4" name="1C TPRVU (fuel correction upper limit)"/>
 		<bit position ="3" name="1D PFRVL"/>
 		<bit position ="2" name="1E PFRVU"/>
-		<bit position ="1" name="1F undefined	"/>
-		<bit position ="0" name="20-3F support "/>
+		<bit position ="1" name="1F TMBL POS SEN"/>
+		<bit position ="0" name="20-3F support"/>
 	</table>
 
-	<table type="BitwiseSwitch" name="CID1220 supmask" category="ECUPeriphery">
-		<bit position ="31" name="21 USRVL (minimum MAF idle voltage) "/>
-		<bit position ="30" name="22 USRVU (maximum MAF idle voltage) "/>
-		<bit position ="29" name="23 A/C Pressure Voltage "/>
-		<bit position ="28" name="24 Fan Current "/>
-		<bit position ="27" name="25 A/F sensor output voltage Bank #1 "/>
-		<bit position ="26" name="26 A/F sensor output voltage Bank #2 "/>
-		<bit position ="25" name="27 SWL/C Pos 1 "/>
-		<bit position ="24" name="28 MOTOR B TRQ "/>
-		<bit position ="23" name="29 Torque "/>
-		<bit position ="22" name="2A Vehicle Speed (Ultra High Precision) "/>
-		<bit position ="21" name="2B Cruise Control set speed "/>
-		<bit position ="20" name="2C undefined "/>
-		<bit position ="19" name="2D Intake Cam Solenoid Duty B1  "/>
-		<bit position ="18" name="2E Intake Cam Solenoid Duty B2  "/>
-		<bit position ="17" name="2F Exhaust Cam Solenoid Duty B1  "/>
-		<bit position ="16" name="30 Exhaust Cam Solenoid Duty B2 "/>
-		<bit position ="15" name="31 Engine Speed "/>
-		<bit position ="14" name="32 Inj B1 "/>
-		<bit position ="13" name="33 Mass Airflow Sensor "/>
-		<bit position ="12" name="34 Diag 1 Coolant temperature sensor function diagnosis Rate counter	 "/>
-		<bit position ="11" name="35 Diag 2 HighInput diagnosis complete counter	 "/>
-		<bit position ="10" name="36 Diag 3 LowInput diagnosis complete counter	 "/>
-		<bit position ="9" name="37 Diag 4 A counter for vehicle speed sensor diagnosis frequency measuring	 "/>
-		<bit position ="8" name="38 Diag 5 Fuel temperature sensor diagnosis diagnosis complete counter	 "/>
-		<bit position ="7" name="39 Diag 6 A counter for neutral SW diagnosis frequency measuring	 "/>
-		<bit position ="6" name="3A Diag 7 0.04-inch leak diagnosis frequency measuring counter	 "/>
-		<bit position ="5" name="3B Diag 8 Line pressure sensor function diagnosis frequency measuring counter	 "/>
-		<bit position ="4" name="3C Diag 9 Lambda control close diagnosis Rate counter	 "/>
-		<bit position ="3" name="3D Diag 10 Intake air temperature diagnosis complete counter	 "/>
-		<bit position ="2" name="3E Diag 11 Thermostat diagnosis RATE counter 	 "/>
-		<bit position ="1" name="3F Diag 12 Fuel level gauge function diagnosis RATE counter	 "/>
+	<table type="BitwiseSwitch" name="CID1220 supmask" sizey="4" category="ECUPeriphery">
+		<bit position ="31" name="21 USRVL (minimum MAF idle voltage)"/>
+		<bit position ="30" name="22 USRVU (maximum MAF idle voltage)"/>
+		<bit position ="29" name="23 A/C Pressure Voltage"/>
+		<bit position ="28" name="24 Fan Current"/>
+		<bit position ="27" name="25 A/F sensor output voltage B1"/>
+		<bit position ="26" name="26 A/F sensor output voltage B2"/>
+		<bit position ="25" name="27 SWL/C Pos 1"/>
+		<bit position ="24" name="28 MOTOR B TRQ"/>
+		<bit position ="23" name="29 Torque"/>
+		<bit position ="22" name="2A Cruise Control Vehicle Speed"/>
+		<bit position ="21" name="2B Cruise Control set speed"/>
+		<bit position ="20" name="2C undefined"/>
+		<bit position ="19" name="2D Intake Cam Solenoid Duty B1"/>
+		<bit position ="18" name="2E Intake Cam Solenoid Duty B2"/>
+		<bit position ="17" name="2F Exhaust Cam Solenoid Duty B1"/>
+		<bit position ="16" name="30 Exhaust Cam Solenoid Duty B2"/>
+		<bit position ="15" name="31 Engine Speed"/>
+		<bit position ="14" name="32 Inj B1"/>
+		<bit position ="13" name="33 Mass Airflow Sensor"/>
+		<bit position ="12" name="34 Diag 1 Coolant temperature sensor function diagnosis Rate counter"/>
+		<bit position ="11" name="35 Diag 2 HighInput diagnosis complete counter"/>
+		<bit position ="10" name="36 Diag 3 LowInput diagnosis complete counter"/>
+		<bit position ="9" name="37 Diag 4 A counter for vehicle speed sensor diagnosis frequency measuring"/>
+		<bit position ="8" name="38 Diag 5 Fuel temperature sensor diagnosis diagnosis complete counter"/>
+		<bit position ="7" name="39 Diag 6 A counter for neutral SW diagnosis frequency measuring"/>
+		<bit position ="6" name="3A Diag 7 0.04-inch leak diagnosis frequency measuring counter"/>
+		<bit position ="5" name="3B Diag 8 Line pressure sensor function diagnosis frequency measuring counter"/>
+		<bit position ="4" name="3C Diag 9 Lambda control close diagnosis Rate counter"/>
+		<bit position ="3" name="3D Diag 10 Intake air temperature diagnosis complete counter"/>
+		<bit position ="2" name="3E Diag 11 Thermostat diagnosis RATE counter"/>
+		<bit position ="1" name="3F Diag 12 Fuel level gauge function diagnosis RATE counter"/>
 		<bit position ="0" name="40-5F sup"/>
 	</table>	  
 
-	<table type="BitwiseSwitch" name="CID1300 supmask" category="ECUPeriphery">
-		<bit position ="31" name="01 vSWMONT_R#5  "/>
-		<bit position ="30" name="02 vSWMONT_R#1  "/>
-		<bit position ="29" name="03 vSWMONT_R#2  "/>
-		<bit position ="28" name="04 vSWMONT_R#3  "/>
-		<bit position ="27" name="05 vSWMONT_R#4  "/>
-		<bit position ="26" name="06 vDOMON_R#1  "/>
-		<bit position ="25" name="07 vDOMON_R#2  "/>
-		<bit position ="24" name="08 vDOMON_R#3  "/>
-		<bit position ="23" name="09 vDOMON_R#4  "/>
-		<bit position ="22" name="0A vDOMON_R#5  "/>
-		<bit position ="21" name="0B vDOMON_R#6  "/>
-		<bit position ="20" name="0C vGSTIMR_R#1  "/>
-		<bit position ="19" name="0D vASCDMON1  "/>
-		<bit position ="18" name="0E vASCDMON2  "/>
-		<bit position ="17" name="0F vCANDLM_R#1  "/>
-		<bit position ="16" name="10 vCANDLM_R#2  "/>
-		<bit position ="15" name="11 vDOMON_R#7  "/>
-		<bit position ="14" name="12 undefined  "/>
-		<bit position ="13" name="13 vDOMON_R#8  "/>
+	<table type="BitwiseSwitch" name="CID1240 supmask" sizey="4" category="ECUPeriphery">
+		<bit position ="31" name="41 A counter (for the RATE law) for ISC function diagnosis frequency measuring"/>
+		<bit position ="30" name="42 Diag 14"/>
+		<bit position ="29" name="43 A counter for purge system diagnosis frequency measuring"/>
+		<bit position ="28" name="44 A counter (bank 1) for RrO2 sensor diagnosis frequency measuring"/>
+		<bit position ="27" name="45 A counter (bank 2) for RrO2 sensor diagnosis frequency measuring"/>
+		<bit position ="26" name="46 Battery"/>
+		<bit position ="25" name="47 undefined"/>
+		<bit position ="24" name="48 undefined"/>
+		<bit position ="23" name="49 A/F ADJ-B1"/>
+		<bit position ="22" name="4A A/F ADJ-B2"/>
+		<bit position ="0" name="60-7F sup"/>
+	</table>
+	
+	<table type="BitwiseSwitch" name="CID1300 supmask" sizey="4" category="ECUPeriphery">
+		<bit position ="31" name="01 vSWMONT_R#5"/>
+		<bit position ="30" name="02 vSWMONT_R#1"/>
+		<bit position ="29" name="03 vSWMONT_R#2"/>
+		<bit position ="28" name="04 vSWMONT_R#3"/>
+		<bit position ="27" name="05 vSWMONT_R#4"/>
+		<bit position ="26" name="06 vDOMON_R#1"/>
+		<bit position ="25" name="07 vDOMON_R#2"/>
+		<bit position ="24" name="08 vDOMON_R#3"/>
+		<bit position ="23" name="09 vDOMON_R#4"/>
+		<bit position ="22" name="0A vDOMON_R#5"/>
+		<bit position ="21" name="0B vDOMON_R#6"/>
+		<bit position ="20" name="0C vGSTIMR_R#1"/>
+		<bit position ="19" name="0D vASCDMON1"/>
+		<bit position ="18" name="0E vASCDMON2"/>
+		<bit position ="17" name="0F vCANDLM_R#1"/>
+		<bit position ="16" name="10 vCANDLM_R#2"/>
+		<bit position ="15" name="11 vDOMON_R#7"/>
+		<bit position ="14" name="12 undefined"/>
+		<bit position ="13" name="13 vDOMON_R#8"/>
 	</table>	
--->
+
 	<table type="BitwiseSwitch" name="CID1301 supmask" category="ECUPeriphery">
 		<bit position ="0" name="Snow Mode"/>  
 		<bit position ="1" name="Cls TPS"/>
@@ -1689,4 +1703,143 @@
 		<description>bits enable/disable</description>
 	</table> 
 
+	<table type="BitwiseSwitch" name="OBD-2 PID 01-20 supmask" sizey="4" category="OBD-II">
+			<bit position ="31" name="01 Status since the last clearing of fault codes"/>
+			<bit position ="30" name="02 Fault code that caused the recording of 'freeze frame' data"/>
+			<bit position ="29" name="03 Fuel system status"/>
+			<bit position ="28" name="04 Engine load calculated in %"/>
+			<bit position ="27" name="05 Temperature of the engine coolant in °C"/>
+			<bit position ="26" name="06 Short-term fuel % trim bank 1"/>
+			<bit position ="25" name="07 Long-term fuel % trim bank 1"/>
+			<bit position ="24" name="08 Short-term fuel % trim bank 2"/>
+			<bit position ="23" name="09 Long-term fuel % trim bank 2"/>
+			<bit position ="22" name="0A Fuel pressure in kPa"/>
+			<bit position ="21" name="0B Intake manifold absolute pressure in kPa"/>
+			<bit position ="20" name="0C Engine speed in rpm"/>
+			<bit position ="19" name="0D Vehicle speed in kph"/>
+			<bit position ="18" name="0E Timing advance on cylinder 1 in degrees"/>
+			<bit position ="17" name="0F Intake air temperature in °C"/>
+			<bit position ="16" name="10 Air flow measured by the flowmeter in g/s"/>
+			<bit position ="15" name="11 Throttle position in %"/>
+			<bit position ="14" name="12 Status of the secondary intake circuit"/>
+			<bit position ="13" name="13 O2 sensor positions bank/sensor"/>
+			<bit position ="12" name="14 Oxygen sensor volts bank 1 sensor 1"/>
+			<bit position ="11" name="15 Oxygen sensor volts bank 1 sensor 2"/>
+			<bit position ="10" name="16 Oxygen sensor volts bank 1 sensor 3"/>
+			<bit position ="9" name="17 Oxygen sensor volts bank 1 sensor 4"/>
+			<bit position ="8" name="18 Oxygen sensor volts bank 2 sensor 1"/>
+			<bit position ="7" name="19 Oxygen sensor volts bank 2 sensor 2"/>
+			<bit position ="6" name="1A Oxygen sensor volts bank 2 sensor 3"/>
+			<bit position ="5" name="1B Oxygen sensor volts bank 2 sensor 4"/>
+			<bit position ="4" name="1C OBD computer specification"/>
+			<bit position ="3" name="1D O2 sensor positions bank/sensor"/>
+			<bit position ="2" name="1E Auxiliary input status"/>
+			<bit position ="1" name="1F Run time since engine start"/>
+			<bit position ="0" name="20 List of PIDs supported (range 21 to 40)"/>
+</table>
+
+	<table type="BitwiseSwitch" name="OBD-2 PID 21-40 supmask" sizey="4" category="OBD-II">
+			<bit position ="31" name="21 Distance travelled with MIL on in kms"/>
+			<bit position ="30" name="22 Relative fuel rail pressure in kPa"/>
+			<bit position ="29" name="23 Fuel rail pressure in kPa"/>
+			<bit position ="28" name="24 O2 sensor (extended range) bank 1, sensor 1 (lambda and volts)"/>
+			<bit position ="27" name="25 O2 sensor (extended range) bank 1, sensor 2 (lambda and volts)"/>
+			<bit position ="26" name="26 O2 sensor (extended range) bank 1, sensor 3 (lambda and volts)"/>
+			<bit position ="25" name="27 O2 sensor (extended range) bank 1, sensor 4 (lambda and volts)"/>
+			<bit position ="24" name="28 O2 sensor (extended range) bank 2, sensor 1 (lambda and volts)"/>
+			<bit position ="23" name="29 O2 sensor (extended range) bank 2, sensor 2 (lambda and volts)"/>
+			<bit position ="22" name="2A O2 sensor (extended range) bank 2, sensor 3 (lambda and volts)"/>
+			<bit position ="21" name="2B O2 sensor (extended range) bank 2, sensor 4 (lambda and volts)"/>
+			<bit position ="20" name="2C EGR in %"/>
+			<bit position ="19" name="2D EGR error in %"/>
+			<bit position ="18" name="2E Evaporation purge in %"/>
+			<bit position ="17" name="2F Fuel level in %"/>
+			<bit position ="16" name="30 Number of warning(s) since faults (DTC) were cleared"/>
+			<bit position ="15" name="31 Distance since faults (DTC) were cleared"/>
+			<bit position ="14" name="32 Evaporation system vapour pressure in Pa"/>
+			<bit position ="13" name="33 Barometic pressure in kPa"/>
+			<bit position ="12" name="34 O2 sensor (extended range) bank 1, sensor 1 (lambda and volts)"/>
+			<bit position ="11" name="35 O2 sensor (extended range) bank 1, sensor 2 (lambda and volts)"/>
+			<bit position ="10" name="36 O2 sensor (extended range) bank 1, sensor 3 (lambda and volts)"/>
+			<bit position ="9" name="37 O2 sensor (extended range) bank 1, sensor 4 (lambda and volts)"/>
+			<bit position ="8" name="38 O2 sensor (extended range) bank 2, sensor 1 (lambda and volts)"/>
+			<bit position ="7" name="39 O2 sensor (extended range) bank 2, sensor 2 (lambda and volts)"/>
+			<bit position ="6" name="3A O2 sensor (extended range) bank 2, sensor 3 (lambda and volts)"/>
+			<bit position ="5" name="3B O2 sensor (extended range) bank 2, sensor 4 (lambda and volts)"/>
+			<bit position ="4" name="3C Catalyst temperature in Â°C bank 1, sensor 1"/>
+			<bit position ="3" name="3D Catalyst temperature in Â°C bank 2, sensor 1"/>
+			<bit position ="2" name="3E Catalyst temperature in Â°C bank 1, sensor 2"/>
+			<bit position ="1" name="3F Catalyst temperature in Â°C bank 2, sensor 1"/>
+			<bit position ="0" name="40 List of PIDs supported (range 41 to 60)"/>
+</table>
+
+	<table type="BitwiseSwitch" name="Mode 6 TID 01-20 supmask" sizey="4" category="OBD-II">
+			<bit position ="31" name="01 Bank 1 Cat	"/>
+			<bit position ="30" name="02 "/>
+            <bit position ="29" name="03 Bank 2 Cat "/>
+			<bit position ="28" name="04 "/>
+			<bit position ="27" name="05 Evap small leak"/>
+			<bit position ="26" name="06 evap purge flow"/>
+			<bit position ="25" name="07 ?Evap very small leak"/>
+			<bit position ="24" name="08 "/>
+			<bit position ="23" name="09 O2S1B1 slow"/>
+			<bit position ="22" name="0A O2S1B1 lean"/>
+			<bit position ="21" name="0B O2S1B1 rich"/>
+			<bit position ="20" name="0C O2S1B1 high"/>
+			<bit position ="19" name="0D O2S1B1 not active"/>
+			<bit position ="18" name="0E"/>
+			<bit position ="17" name="0F"/>
+			<bit position ="16" name="10"/>
+			<bit position ="15" name="11 O2S1B2 slow"/>
+			<bit position ="14" name="12 O2S1B2 lean"/>
+			<bit position ="13" name="13 O2S1B2 rich"/>
+			<bit position ="12" name="14 O2S1B2 high"/>
+			<bit position ="11" name="15 O2S1B2 not active"/>
+			<bit position ="10" name="16"/>
+			<bit position ="9" name="17"/>
+			<bit position ="8" name="18"/>
+			<bit position ="7" name="19 O2S2B1 slow"/>
+			<bit position ="6" name="1A O2S2B1 undervoltage"/>
+			<bit position ="5" name="1B O2S2B1 overvoltage"/>		
+			<bit position ="4" name="1C O2S2B1 high"/>		
+			<bit position ="3" name="1D"/>          
+			<bit position ="2" name="1E"/>          
+			<bit position ="1" name="1F"/>        
+			<bit position ="0" name="20 List of TIDs supported (range 21 to 40)"/>
+</table>
+
+	<table type="BitwiseSwitch" name="Mode 6 TID 21-40 supmask" sizey="4" category="OBD-II">
+			<bit position ="31" name="21 O2S2B2 slow"/>
+			<bit position ="30" name="22 O2S2B2 undervoltage"/>
+			<bit position ="29" name="23 O2S2B2 overvoltage"/>
+			<bit position ="28" name="24 O2S2B2 high"/>
+			<bit position ="27" name="25 "/>
+			<bit position ="26" name="26 "/>
+			<bit position ="25" name="27 "/>
+			<bit position ="24" name="28 "/>
+			<bit position ="23" name="29 O2S1B1 Heater max"/>
+			<bit position ="22" name="2A O2S1B1 Heater min"/>
+			<bit position ="21" name="2B O2S1B2 Heater max"/>
+			<bit position ="20" name="2C O2S1B2 Heater min"/>
+			<bit position ="19" name="2D O2S2B1 Heater max"/>
+			<bit position ="18" name="2E O2S2B1 Heater min"/>
+			<bit position ="17" name="2F O2S2B2 Heater max"/>
+			<bit position ="16" name="30 O2S2B2 Heater min"/>
+			<bit position ="15" name="31"/>
+			<bit position ="14" name="32"/>
+			<bit position ="13" name="33"/>
+			<bit position ="12" name="34"/>
+			<bit position ="11" name="35"/>
+			<bit position ="10" name="36"/>
+			<bit position ="9" name="37"/>
+			<bit position ="8" name="38"/>
+			<bit position ="7" name="39"/>
+			<bit position ="6" name="3A"/>
+			<bit position ="5" name="3B"/>
+			<bit position ="4" name="3C"/>
+			<bit position ="3" name="3D"/>
+			<bit position ="2" name="3E"/>
+			<bit position ="1" name="3F"/>
+			<bit position ="0" name="40 List of TIDs supported (range 41 to 60)"/>
+			</table>
 </rom>

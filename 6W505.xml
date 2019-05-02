@@ -1,0 +1,76 @@
+<rom base="NISSAN_BASE">
+	<romid>
+		<xmlid>6W505</xmlid>
+		<hwid>4WXLKN3</hwid>
+		<internalidaddress>8153</internalidaddress>
+		<internalidstring>6W505</internalidstring>
+		<ecuid>6W505</ecuid>
+		<year>04</year>
+		<market>USDM</market>
+		<make>Nissan</make>
+		<model>Pathfinder</model>
+		<submodel>4x4</submodel>
+		<transmission>Auto</transmission>
+		<memmodel>SH7055</memmodel>
+		<flashmethod>nisprog</flashmethod>
+		<filesize>512kb</filesize>
+	</romid>
+
+
+	<table name="Cold Ignition Trim" storageaddress="0x6839">
+		<table type="X Axis" storageaddress="0x8430" />
+		<table type="Y Axis" storageaddress="0x8440" />
+	</table>
+
+	<table name="Regular Ignition Trim" storageaddress="0x6939">
+		<table type="X Axis" storageaddress="0x8430" />
+		<table type="Y Axis" storageaddress="0x8440" />
+	</table>
+
+	<table name="Fuel Compensation" storageaddress="0x6bf9">
+		<table type="X Axis" storageaddress="0x835d" />
+		<table type="Y Axis" storageaddress="0x8301" />
+	</table>
+
+	<table name="Fuel Target" storageaddress="0x6e09">
+		<table type="X Axis" storageaddress="0x81b0" />
+		<table type="Y Axis" storageaddress="0x82f9" />
+	</table>
+
+	<table name="Intake Cam Timing (16x16)" storageaddress="0x6f89">
+		<table type="X Axis" storageaddress="0x8e68" />
+		<table type="Y Axis" storageaddress="0x8e78" />
+	</table>
+
+	<table name="MSATHA" storageaddress="0x7139">
+		<table type="X Axis" storageaddress="0x8218" />
+		<table type="Y Axis" storageaddress="0x81f4" />
+	</table>
+
+	<table name="MSATHB" storageaddress="0x7239">
+		<table type="X Axis" storageaddress="0x8218" />
+		<table type="Y Axis" storageaddress="0x81f4" />
+	</table>
+
+	<table name="MSATH" storageaddress="0x7339">
+		<table type="X Axis" storageaddress="0x8218" />
+		<table type="Y Axis" storageaddress="0x81f4" />
+	</table>
+
+	<table name="Rev Limit (Fuel Cut - 3D)" storageaddress="0x647e"/>
+
+	<table name="MAF" storageaddress="0x91ca"/>
+	
+	<table name="Idle Target" storageaddress="0x8972"/>
+
+	<table name="Fuel Injection Multiplier" storageaddress="0x6420"/>
+
+	<!--table name="Speed Limiter" storageaddress="0x"/>
+
+	<table name="Speed Limiter (km/h)" storageaddress="0x" /-->
+
+	<table name="Load Base Fuel Schedule" storageaddress="0x938a"/>
+
+	<checksum type="std" start="0" end="0x7FFFF" sumloc="0x6630" xorloc="0x6628" />
+
+</rom>
