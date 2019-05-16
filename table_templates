@@ -877,7 +877,7 @@
 	</table>
 
 	<table type="3D" name="mMTFDD" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
-		<scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
+		<scaling units="Newtons" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
 		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="P4354">
 			<scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
 		</table>
@@ -888,7 +888,7 @@
 	</table>
 
 	<table type="3D" name="mMTFDDS" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
-		<scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
+		<scaling units="Newtons" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
 		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="P4354">
 			<scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
 		</table>
@@ -899,7 +899,7 @@
 	</table>
 
 	<table type="3D" name="mMTFDDS_S" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
-		<scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
+		<scaling units="Newtons" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
 		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="P4354">
 			<scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
 		</table>
@@ -910,7 +910,7 @@
 	</table>
 
 	<table type="3D" name="mMTFDD_S" category="Torque Management" storagetype="uint16" endian="big" sizex="16" sizey="16" userlevel="1" logparam="?">
-		<scaling units="Unknown" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
+		<scaling units="Newtons" expression="x-32768" to_byte="x+32768" format="0" fineincrement="1" coarseincrement="10" />
 		<table type="X Axis" name="Vehicle Speed" storagetype="uint16" endian="big" logparam="P4354">
 			<scaling units="km/h" expression="x*.1" to_byte="x/.1" format="0" fineincrement="1" coarseincrement="10" />
 		</table>
@@ -1091,22 +1091,13 @@
 		<description>Minimum speed calculated by the cruise control routine</description>
 	</table>
 
-	<table type="BitwiseSwitch" name="Secondary O2 sensors" category="Hack">
-		<bit position ="6" name="P0420 bank 1 catalyst low efficiency"/>
-		<description>Toggle DTCs</description>
-	</table>
-
-	<table type="BitwiseSwitch" name="High Octane Detection" category="Hack">
-		<bit position ="7" name="Regular Gas Only"/>
-		<description>mfREGGASI Regular adaptation car specifications choice flag</description>
-	</table>
-
 	<table type="BitwiseSwitch" name="O2 Sensors Present" category="Hack">
 		<bit position ="7" name="B1S1"/>
 		<description> OBD</description>
 	</table>
 
 	<table type="BitwiseSwitch" name="Catalyst DTCs" category="DTC">
+		<bit position ="7" name="P0300 Random misfire (disable at your own peril)"/>
 		<bit position ="6" name="P0420 bank 1 catalyst low efficiency"/>
 		<bit position ="5" name="P0430 bank 2 catalyst low efficiency"/> 
 		<description>Toggle DTCs</description>
@@ -1124,6 +1115,10 @@
 		<description>Toggle DTCs</description>
 	</table>  
 
+	<table type="BitwiseSwitch" name="Power Steering DTC" category="DTC">
+		<bit position ="0" name="P0550 Power Steering Pressure Circuit"/>  
+		<description>Toggle DTCs</description>
+	</table>
 
 	<table type="BitwiseSwitch" name="Evap 2 DTCs" category="DTC">
 		<bit position ="7" name="P1448 evap canister vent control valve open"/>  

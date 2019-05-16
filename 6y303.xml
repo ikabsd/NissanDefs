@@ -151,6 +151,7 @@
 	<table name="Load Base Fuel Schedule" storageaddress="0x7b32" />
 	<table name="Individual Cylinder Fuel Trims" storageaddress="0x74FF" sizey="6"/>
 	<table name="Minimum Injector Pulse Width" storageaddress="0x50CA"/>
+	<table name="Master Fueling Transition Delay" storageaddress="0x4a90"/>
 
 	<table name="Cranking Advance" storageaddress="0x6FC1" />
 	<!--<table name="Crank Fueling TP value" storageaddress="0x"/>-->
@@ -175,6 +176,7 @@
 	<table name="Evap DTCs" storageaddress="0x880b"/>
 	<table name="Evap 2 DTCs"  storageaddress="0x880c"/>
 	<table name="VIAS DTCs"  storageaddress="0x8810"/>
+	<table name="Power Steering DTC"  storageaddress="0x8816"/>
 	<table name="Primary O2 DTCs" storageaddress="0x882c"/>
 	<table name="Primary O2 Idle DTCs" storageaddress="0x882d"/>
 	<table name="Secondary O2 DTCs" storageaddress="0x882e"/>
@@ -208,6 +210,18 @@
 	<table name="OBD-2 PID 21-40 supmask"  storageaddress="0x6C8C"/>
 	<table name="Mode 6 TID 01-20 supmask"  storageaddress="0x6D76"/>
 	<table name="Mode 6 TID 01-20 supmask"  storageaddress="0x6D7A"/>
+
+	<table type="Switch" name="Force Emissions Readiness" category="Hack" sizey="2" storageaddress="0x15CB4">
+		<description>When on, this forces all emissions monitors to display 'Ready' Off-road and racing use only. Must NEVER be enabled on vehicles that will be driven on public roads.</description>
+		<state name="on" data=" E2 65" />
+		<state name="off" data=" 62 30" />
+	</table>  
+
+	<table type="Switch" name="Force Catalyst Availabilty (for Readiness)" category="Hack" sizey="1" storageaddress="0x15C9B">
+		<description>When on, this makes the Catalyst test available if Catalyst DTCs are disabled. Off-road and racing use only. Must NEVER be enabled on vehicles that will be driven on public roads. </description>
+		<state name="on" data=" 41" />
+		<state name="off" data=" 40" />
+	</table>  
 
 	<checksum type="std" start="0" end="0x7FFFF" sumloc="0x51c0" xorloc="0x51b8" />
 	
