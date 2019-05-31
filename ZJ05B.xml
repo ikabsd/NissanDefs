@@ -50,6 +50,7 @@
 	<table name="Learning map N shaft lattice point table" storageaddress="0xb564"/>
 
 	<table name="MAF" storageaddress="0xC0E4"/>
+	<table name="MAF factor" storageaddress="0x8149"/>
 
 	<table name="Rev Limit (Fuel Cut - 2D)" storageaddress="0x8776"/>
 

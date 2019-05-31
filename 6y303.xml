@@ -209,7 +209,7 @@
 	<table name="OBD-2 PID 01-20 supmask"  storageaddress="0x6C88"/>
 	<table name="OBD-2 PID 21-40 supmask"  storageaddress="0x6C8C"/>
 	<table name="Mode 6 TID 01-20 supmask"  storageaddress="0x6D76"/>
-	<table name="Mode 6 TID 01-20 supmask"  storageaddress="0x6D7A"/>
+	<table name="Mode 6 TID 21-40 supmask"  storageaddress="0x6D7A"/>
 
 	<table type="Switch" name="Force Emissions Readiness" category="Hack" sizey="2" storageaddress="0x15CB4">
 		<description>When on, this forces all emissions monitors to display 'Ready' Off-road and racing use only. Must NEVER be enabled on vehicles that will be driven on public roads.</description>

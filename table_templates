@@ -10,7 +10,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>mMADVTRMC Ignition Advance Trimming Map. This is tied to coolant temp and only used when the coolant temp is under a certain set point. This needs to be kept close to the "High Octane Ignition Trim" map.</description>
@@ -21,7 +21,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>mMADVTRMH This is the main trimming table that the ECU uses when high-octane fuel is determined.</description>
@@ -32,7 +32,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>mMADVTRMR This trimming map is used by the ecu when it detects regular fuel. This table should ALWAYS be lower than the high octane table.</description>
@@ -122,7 +122,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>mMFLML Layer way flame speed basic map</description>
@@ -133,7 +133,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".78125" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>mMITAN Fresh air rate map</description>
@@ -175,7 +175,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>Advance of the intake camshaft in degrees.</description>
@@ -186,7 +186,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>Advance of the intake camshaft in degrees.</description>
@@ -197,7 +197,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>      
 		<description>Advance of the intake camshaft in degrees.</description>
@@ -208,7 +208,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>mMRHVTI VTC target operation angle regular compensation value computed map</description>
@@ -219,7 +219,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>Retard of the exhaust camshaft in degrees.</description>
@@ -258,7 +258,7 @@
 		<table type="X Axis" name="TVO-N flow-quantity" storagetype="uint8" endian="big" logparam="E3018">
 			<scaling units="%" expression="x/2.56" to_byte="x*2.56" format="0" fineincrement=".2" coarseincrement="1" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>This is an enrichment table for the ECU. Values above 100 are adding fuel, and values below 100 remove fuel.</description>
@@ -269,7 +269,7 @@
 		<table type="X Axis" name="TVO-N flow-quantity" storagetype="uint8" endian="big" logparam="E3018">
 			<scaling units="%" expression="x/2.56" to_byte="x*2.56" format="0" fineincrement=".2" coarseincrement="1" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>This is an enrichment table for the ECU. Values above 100 are adding fuel, and values below 100 remove fuel.</description>
@@ -280,7 +280,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>Air fuel ratio that is targeted by the ECU. If this value doesn't match when logging other paramaters need to be adjusted, like fuel compensation, and/or maf scaling.</description>
@@ -306,7 +306,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x*0.78125" to_byte="x/0.78125" format="0.0" fineincrement=".5" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>Air fuel ratio that is targeted by the ECU. If this value doesn't match when logging other paramaters need to be adjusted, like fuel compensation, and/or maf scaling.</description>
@@ -765,7 +765,7 @@
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
 			<scaling units="%" expression="x/1.28" to_byte="x*1.28" format="0.0" fineincrement=".78125" coarseincrement="4" />
 		</table>
-		<table type="Y Axis" name="RPM" storagetype="uint8" endian="big" logparam="P8">
+		<table type="Y Axis" name="Engine Speed" storagetype="uint8" endian="big" logparam="P8">
 			<scaling units="RPM" expression="x*50" to_byte="x/50" format="0" fineincrement="50" coarseincrement="250" />
 		</table>
 		<description>mKHTMAP  "A high coolant temperature increase map" Not sure exactly how this is used</description>
@@ -1698,7 +1698,7 @@
 		<description>bits enable/disable</description>
 	</table> 
 
-	<table type="BitwiseSwitch" name="OBD-2 PID 01-20 supmask" sizey="4" category="OBD-II">
+		<table type="BitwiseSwitch" name="OBD-2 PID 01-20 supmask" sizey="4" category="OBD-II">
 			<bit position ="31" name="01 Status since the last clearing of fault codes"/>
 			<bit position ="30" name="02 Fault code that caused the recording of 'freeze frame' data"/>
 			<bit position ="29" name="03 Fuel system status"/>
@@ -1731,9 +1731,9 @@
 			<bit position ="2" name="1E Auxiliary input status"/>
 			<bit position ="1" name="1F Run time since engine start"/>
 			<bit position ="0" name="20 List of PIDs supported (range 21 to 40)"/>
-</table>
+		</table>
 
-	<table type="BitwiseSwitch" name="OBD-2 PID 21-40 supmask" sizey="4" category="OBD-II">
+		<table type="BitwiseSwitch" name="OBD-2 PID 21-40 supmask" sizey="4" category="OBD-II">
 			<bit position ="31" name="21 Distance travelled with MIL on in kms"/>
 			<bit position ="30" name="22 Relative fuel rail pressure in kPa"/>
 			<bit position ="29" name="23 Fuel rail pressure in kPa"/>
@@ -1761,65 +1761,65 @@
 			<bit position ="7" name="39 O2 sensor (extended range) bank 2, sensor 2 (lambda and volts)"/>
 			<bit position ="6" name="3A O2 sensor (extended range) bank 2, sensor 3 (lambda and volts)"/>
 			<bit position ="5" name="3B O2 sensor (extended range) bank 2, sensor 4 (lambda and volts)"/>
-			<bit position ="4" name="3C Catalyst temperature in Â°C bank 1, sensor 1"/>
-			<bit position ="3" name="3D Catalyst temperature in Â°C bank 2, sensor 1"/>
-			<bit position ="2" name="3E Catalyst temperature in Â°C bank 1, sensor 2"/>
-			<bit position ="1" name="3F Catalyst temperature in Â°C bank 2, sensor 1"/>
+			<bit position ="4" name="3C Catalyst temperature in °C bank 1, sensor 1"/>
+			<bit position ="3" name="3D Catalyst temperature in °C bank 2, sensor 1"/>
+			<bit position ="2" name="3E Catalyst temperature in °C bank 1, sensor 2"/>
+			<bit position ="1" name="3F Catalyst temperature in °C bank 2, sensor 2"/>
 			<bit position ="0" name="40 List of PIDs supported (range 41 to 60)"/>
-</table>
+		</table>
 
-	<table type="BitwiseSwitch" name="Mode 6 TID 01-20 supmask" sizey="4" category="OBD-II">
-			<bit position ="31" name="01 Bank 1 Cat	"/>
-			<bit position ="30" name="02 "/>
-            <bit position ="29" name="03 Bank 2 Cat "/>
-			<bit position ="28" name="04 "/>
-			<bit position ="27" name="05 Evap small leak"/>
-			<bit position ="26" name="06 evap purge flow"/>
-			<bit position ="25" name="07 ?Evap very small leak"/>
-			<bit position ="24" name="08 "/>
-			<bit position ="23" name="09 O2S1B1 slow"/>
-			<bit position ="22" name="0A O2S1B1 lean"/>
-			<bit position ="21" name="0B O2S1B1 rich"/>
-			<bit position ="20" name="0C O2S1B1 high"/>
-			<bit position ="19" name="0D O2S1B1 not active"/>
+		<table type="BitwiseSwitch" name="Mode 6 TID 01-20 supmask" sizey="4" category="OBD-II">
+			<bit position ="31" name="01 P0420 Bank 1 Cat"/>
+			<bit position ="30" name="02 P0420"/>
+            <bit position ="29" name="03 P0430 Bank 2 Cat"/>
+			<bit position ="28" name="04 P0430"/>
+			<bit position ="27" name="05 P0442 Evap small leak"/>
+			<bit position ="26" name="06 P0441 Evap purge flow"/>
+			<bit position ="25" name="07 P0456 Evap very small leak"/>
+			<bit position ="24" name="08"/>
+			<bit position ="23" name="09 P0133 O2S1B1 slow"/>
+			<bit position ="22" name="0A P1143 O2S1B1 lean"/>
+			<bit position ="21" name="0B P1144 O2S1B1 rich"/>
+			<bit position ="20" name="0C P0132 O2S1B1 high"/>
+			<bit position ="19" name="0D P0134 O2S1B1 not active"/>
 			<bit position ="18" name="0E"/>
 			<bit position ="17" name="0F"/>
 			<bit position ="16" name="10"/>
-			<bit position ="15" name="11 O2S1B2 slow"/>
-			<bit position ="14" name="12 O2S1B2 lean"/>
-			<bit position ="13" name="13 O2S1B2 rich"/>
-			<bit position ="12" name="14 O2S1B2 high"/>
-			<bit position ="11" name="15 O2S1B2 not active"/>
+			<bit position ="15" name="11 P0153 O2S1B2 slow"/>
+			<bit position ="14" name="12 P1163 O2S1B2 lean"/>
+			<bit position ="13" name="13 P1164 O2S1B2 rich"/>
+			<bit position ="12" name="14 P0152 O2S1B2 high"/>
+			<bit position ="11" name="15 P0154 O2S1B2 not active"/>
 			<bit position ="10" name="16"/>
 			<bit position ="9" name="17"/>
 			<bit position ="8" name="18"/>
-			<bit position ="7" name="19 O2S2B1 slow"/>
-			<bit position ="6" name="1A O2S2B1 undervoltage"/>
-			<bit position ="5" name="1B O2S2B1 overvoltage"/>		
-			<bit position ="4" name="1C O2S2B1 high"/>		
+			<bit position ="7" name="19 P0139 O2S2B1 slow"/>
+			<bit position ="6" name="1A P0137 O2S2B1 undervoltage"/>
+			<bit position ="5" name="1B P0138 O2S2B1 overvoltage"/>		
+			<bit position ="4" name="1C P0138 O2S2B1 high"/>		
 			<bit position ="3" name="1D"/>          
 			<bit position ="2" name="1E"/>          
 			<bit position ="1" name="1F"/>        
 			<bit position ="0" name="20 List of TIDs supported (range 21 to 40)"/>
-</table>
+		</table>
 
-	<table type="BitwiseSwitch" name="Mode 6 TID 21-40 supmask" sizey="4" category="OBD-II">
-			<bit position ="31" name="21 O2S2B2 slow"/>
-			<bit position ="30" name="22 O2S2B2 undervoltage"/>
-			<bit position ="29" name="23 O2S2B2 overvoltage"/>
-			<bit position ="28" name="24 O2S2B2 high"/>
-			<bit position ="27" name="25 "/>
-			<bit position ="26" name="26 "/>
-			<bit position ="25" name="27 "/>
-			<bit position ="24" name="28 "/>
-			<bit position ="23" name="29 O2S1B1 Heater max"/>
-			<bit position ="22" name="2A O2S1B1 Heater min"/>
-			<bit position ="21" name="2B O2S1B2 Heater max"/>
-			<bit position ="20" name="2C O2S1B2 Heater min"/>
-			<bit position ="19" name="2D O2S2B1 Heater max"/>
-			<bit position ="18" name="2E O2S2B1 Heater min"/>
-			<bit position ="17" name="2F O2S2B2 Heater max"/>
-			<bit position ="16" name="30 O2S2B2 Heater min"/>
+		<table type="BitwiseSwitch" name="Mode 6 TID 21-40 supmask" sizey="4" category="OBD-II">
+			<bit position ="31" name="21 P0159 O2S2B2 slow"/>
+			<bit position ="30" name="22 P1167 O2S2B2 undervoltage"/>
+			<bit position ="29" name="23 P1166 O2S2B2 overvoltage"/>
+			<bit position ="28" name="24 P0158 O2S2B2 high"/>
+			<bit position ="27" name="25"/>
+			<bit position ="26" name="26"/>
+			<bit position ="25" name="27"/>
+			<bit position ="24" name="28"/>
+			<bit position ="23" name="29 P0032 O2S1B1 Heater max"/>
+			<bit position ="22" name="2A P0031 O2S1B1 Heater min"/>
+			<bit position ="21" name="2B P0052 O2S1B2 Heater max"/>
+			<bit position ="20" name="2C P0051 O2S1B2 Heater min"/>
+			<bit position ="19" name="2D P0038 O2S2B1 Heater max"/>
+			<bit position ="18" name="2E P0037 O2S2B1 Heater min"/>
+			<bit position ="17" name="2F P0058 O2S2B2 Heater max"/>
+			<bit position ="16" name="30 P0057 O2S2B2 Heater min"/>
 			<bit position ="15" name="31"/>
 			<bit position ="14" name="32"/>
 			<bit position ="13" name="33"/>
@@ -1836,5 +1836,40 @@
 			<bit position ="2" name="3E"/>
 			<bit position ="1" name="3F"/>
 			<bit position ="0" name="40 List of TIDs supported (range 41 to 60)"/>
-			</table>
+		</table>
+	
+		<table type="BitwiseSwitch" name="Mode 6 TID 41-60 supmask" sizey="4" category="OBD-II">
+			<bit position ="31" name="41 P0131 A/F B1 circuit low voltage"/>
+			<bit position ="30" name="42 P0132 A/F B1 circuit high voltage"/>
+			<bit position ="29" name="43 P2A00 A/F B1 circuit range/performance Max"/>
+			<bit position ="28" name="44 P2A00 A/F B1 circuit range/performance Min"/>
+			<bit position ="27" name="45 P0133 A/F B1 circuit slow response"/>
+			<bit position ="26" name="46 P0130 A/F B1 Max"/>
+			<bit position ="25" name="47 P0130 A/F B1 Min"/>
+			<bit position ="24" name="48 P0133 A/F B1 circuit slow response"/>
+			<bit position ="23" name="49"/>
+			<bit position ="22" name="4A"/>
+			<bit position ="21" name="4B"/>
+			<bit position ="20" name="4C P0151 A/F B2 circuit low voltage"/>
+			<bit position ="19" name="4D P0152 A/F B2 circuit high voltage"/>
+			<bit position ="18" name="4E P2A03 A/F B2 circuit range/performance Max"/>
+			<bit position ="17" name="4F P2A03 A/F B2 circuit range/performance Min"/>
+			<bit position ="16" name="50 P0153 A/F B2 circuit slow response"/>
+			<bit position ="15" name="51 P0150 A/F B2 Max"/>
+			<bit position ="14" name="52 P0150 A/F B2 Min"/>
+			<bit position ="13" name="53 P0153 A/F B2 circuit slow response"/>
+			<bit position ="12" name="54"/>
+			<bit position ="11" name="55"/>
+			<bit position ="10" name="56"/>
+			<bit position ="9" name="57 P0032 A/F heater B1 Max"/>
+			<bit position ="8" name="58 P0031 A/F heater B1 Min"/>
+			<bit position ="7" name="59 P0052 A/F heater B2 Max"/>
+			<bit position ="6" name="5A P0051 A/F heater B2 Min"/>
+			<bit position ="5" name="5B"/>
+			<bit position ="4" name="5C"/>
+			<bit position ="3" name="5D"/>
+			<bit position ="2" name="5E"/>
+			<bit position ="1" name="5F"/>
+			<bit position ="0" name="60 List of TIDs supported (range 61 to 80)"/>
+		</table>
 </rom>
