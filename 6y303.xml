@@ -164,7 +164,7 @@
 		<table type="Y Axis" storageaddress="0x6d0a" />
 	</table>
 
-	<table name="Idle Target" storageaddress="0x741B">
+	<table name="Idle Target" storageaddress="0x741B"/>
 
 	<table name="ASCD Max Set Speed" storageaddress="0x513c"/>
 	<table name="ASCD Min Set Speed" storageaddress="0x5148"/>
