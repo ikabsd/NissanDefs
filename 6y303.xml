@@ -79,8 +79,11 @@
 	</table>
 	<table name="MAF factor" storageaddress="0x4c21"/>
 	<table name="MAF offset" storageaddress="0x508a"/>
-	<table name="Idle Target" storageaddress="0x73df"/>
-	<table name="Idle Target 2" storageaddress="0x7403"/>
+	
+	<table name="Fuel Cut Bosch" storageaddress="0x73df"/>
+	<table name="Fuel Cut JECS" storageaddress="0x7403"/>
+	<table name="Fuel Restore Bosch" storageaddress="0x74db"/>
+	<table name="Fuel Restore JECS" storageaddress="0x7453"/>
 	<table name="Fuel Injection Multiplier" storageaddress="0x500c"/>
 	<table name="Speed Limiter" storageaddress="0x50b2"/>
 	<table name="Speed Limiter (km/h)" storageaddress="0x50b2"/>
@@ -113,6 +116,7 @@
 
 	<table name="Engine torque value map" storageaddress="0x68f4"/>
 	<table name="Fuel Cut Prohibition Speed" storageaddress="0x7739"/>
+	<table name="Fuel Cut Timing Retard Delay" storageaddress="0x70d5"/>
 
 	<table name="MSATHA" storageaddress="0x5c49">
 		<table type="X Axis" storageaddress="0x6d5e" />
@@ -159,6 +163,8 @@
 		<table type="X Axis" storageaddress="0x6d06" />
 		<table type="Y Axis" storageaddress="0x6d0a" />
 	</table>
+
+	<table name="Idle Target" storageaddress="0x741B">
 
 	<table name="ASCD Max Set Speed" storageaddress="0x513c"/>
 	<table name="ASCD Min Set Speed" storageaddress="0x5148"/>

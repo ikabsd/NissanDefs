@@ -91,7 +91,7 @@
 		<table type="Y Axis" storageaddress="0x7fed" />
 	</table>
 
-	<table storageaddress="0x845f" name="Idle Target"/>
+	<table name="Idle Target" storageaddress="0x845f"/>
 
 	<table name="Injector Latency at 14V" storageaddress="0x5e92" />
 	<table name="Fuel Injector Latency Adder" storageaddress="0x5a43" />
@@ -104,6 +104,10 @@
 
 	<table name="Individual Cylinder Fuel Trims" storageaddress="0x8543" sizey="6"/>
 	<table name="Fuel Cut Prohibition Speed" storageaddress="0x8795" />
+	<table name="Fuel Cut Bosch" storageaddress="0x843B"/>
+	<table name="Fuel Cut JECS" storageaddress="0x844F"/>
+	<table name="Fuel Restore Bosch" storageaddress="0x8497"/>
+	<table name="Fuel Restore JECS" storageaddress="0x851F"/>
 
 	<checksum type="std" start="0" end="0x7FFFF" sumloc="0x63b8" xorloc="0x63b0" />
 

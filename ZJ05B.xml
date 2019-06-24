@@ -54,9 +54,13 @@
 
 	<table name="Rev Limit (Fuel Cut - 2D)" storageaddress="0x8776"/>
 
-	<table name="Idle Target" storageaddress="0xb56c"/>
-
-	<table name="Idle Target 2" storageaddress="0xb590"/>
+	<table name="Fuel Cut Bosch" storageaddress="0xB56C"/>
+	<table name="Fuel Cut JECS" storageaddress="0xB590"/>
+	<table name="Fuel Restore Bosch" storageaddress="0xB628"/>
+	<table name="Fuel Restore JECS" storageaddress="0xB6D8"/>
+	
+	<table name="Idle Target" storageaddress="0xB5A0"/>
+	<table name="Idle Target 2" storageaddress="0xB5D8"/>
 
 	<table name="Fuel Injection Multiplier" storageaddress="0x86f6"/>
 

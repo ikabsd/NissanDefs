@@ -46,7 +46,12 @@
 		<table type="Y Axis" storageaddress="0x8e23" />
 	</table>
 
-	<table name="Idle Target C" storageaddress="0x8A43" />
+	<table name="Fuel Cut Bosch" storageaddress="0x8A07"/>
+	<table name="Fuel Cut JECS" storageaddress="0x8A2B"/>
+	<table name="Fuel Restore Bosch" storageaddress="0x8A7B"/>
+	<table name="Fuel Restore JECS" storageaddress="0x8B49"/>
+	
+	<table name="Idle Target" storageaddress="0x8A43" />
 
 	<table name="Speed Limiter" storageaddress="0x66B0" />
 	<table name="Speed Limiter (km/h)" storageaddress="0x66B0" />

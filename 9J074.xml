@@ -1,4 +1,5 @@
 <rom base="NISSAN_BASE">
+<!--6Y300 is a better defined base-->
 	<romid>
 		<xmlid>9J074</xmlid>
 		<hwid>1TKE8Z5N57</hwid>

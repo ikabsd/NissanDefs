@@ -1,4 +1,5 @@
 <rom base="NISSAN_BASE">
+<!--DON'T USE THIS ROM, FLASH TO 6Y303-->
 	<romid>
 		<xmlid>6Y300</xmlid>
 		<hwid>1TKE8Z5N56</hwid>
@@ -66,8 +67,7 @@
 	</table>
 	<table name="MAF" storageaddress="0x796a">
 	</table>
-	<table name="Idle Target" storageaddress="0x73f3">
-	</table>
+	<table name="Idle Target" storageaddress="0x73f3"/>
 
 	<table name="Fuel Injection Multiplier" storageaddress="0x4FD0">
 	</table>

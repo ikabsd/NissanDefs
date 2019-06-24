@@ -102,8 +102,12 @@
 		<table type="Y Axis" storageaddress="0xDDF8"/>
 	</table>
 
-	<table name="Idle Target" storageaddress="0xbd02">
-	</table>
+	<table name="Idle Target" storageaddress="0xbd02"/>
+
+	<table name="Fuel Cut Bosch" storageaddress="0xBCBE"/>
+	<table name="Fuel Cut JECS" storageaddress="0xBCF2"/>
+	<table name="Fuel Restore Bosch" storageaddress="0xBD6A"/>
+	<table name="Fuel Restore JECS" storageaddress="0xBE6E"/>	
 
 	<table name="Radiator Fan High Coolant" storageaddress="0x8285"/>
 
@@ -121,8 +125,8 @@
 
 	<table name="Fuel Injector Latency Adder" storageaddress="0x7d9f"/>
 
-	<table name="Crank Fueling TP value" storageaddress="0xd1a2">
-	</table>
+	<table name="Crank Fueling TP value" storageaddress="0xd1a2"/>
+	
 	<table name="MAF idle voltage limits (USRV)" storageaddress="0x8b4a" />
 
 	<table name="Fuel correction limits, % (MALPRV)" storageaddress="0x82C3" />
