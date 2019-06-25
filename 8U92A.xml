@@ -57,11 +57,16 @@
 	<table name="MAF" storageaddress="0x8b36">
 	</table>
 
-	<table name="Idle Target" storageaddress="0x854c">
-	</table>
+	<table name="Idle Target" storageaddress="0x8564"/>
 
 	<table name="Fuel Injection Multiplier" storageaddress="0x6310">
 	</table>
+
+	<table name="Fuel Cut Bosch" storageaddress="0x8538"/>
+	<table name="Fuel Cut JECS" storageaddress="0x854C"/>
+	<table name="Fuel Restore Bosch" storageaddress="0x859C"/>
+	<table name="Fuel Restore JECS" storageaddress="0x8658"/>
+
 	<table name="QH0/ torque conversion map" storageaddress="0x9888">
 		<table type="X Axis" storageaddress="0x9b5c" />
 		<table type="Y Axis" storageaddress="0x9acc" />
