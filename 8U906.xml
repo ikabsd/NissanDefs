@@ -41,14 +41,14 @@
 		<table type="Y Axis" storageaddress="0x7EB8" />
 	</table>
 
-	<table name="Intake Cam Timing (8x8)" storageaddress="0x6D5D">
-		<table type="X Axis" storageaddress="0x88CE" />
-		<table type="Y Axis" storageaddress="0x889A" />
-	</table>
-
-	<table name="Intake Cam Timing Cold (8x8)" storageaddress="0x6D9D">
+	<table name="Intake Cam Timing Cold (8x8)" storageaddress="0x6D5D">
 		<table type="X Axis" storageaddress="0x88BE" />
 		<table type="Y Axis" storageaddress="0x88AA" />
+	</table>
+
+	<table name="Intake Cam Timing (8x8)" storageaddress="0x6D9D">
+		<table type="X Axis" storageaddress="0x88CE" />
+		<table type="Y Axis" storageaddress="0x88A2" />
 	</table>
 
 	<table name="Rev Limit (Fuel Cut - 3D)" storageaddress="0x630A"/>
