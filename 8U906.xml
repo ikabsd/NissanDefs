@@ -78,6 +78,20 @@
 		<table type="X Axis" storageaddress="0x8A16" />
 		<table type="Y Axis" storageaddress="0x8A36" />
 	</table>
+	
+	<table name="Catalyst DTCs" storageaddress="0x99e0"/>
+	<table name="Evap DTCs" storageaddress="0x99e9"/>
+	<table name="Evap 2 DTCs"  storageaddress="0x99ea"/>
+	<table name="Power Steering DTC"  storageaddress="0x99f4"/>
+	<table name="Primary O2 DTCs" storageaddress="0x9a0a"/>
+	<table name="Primary O2 Idle DTCs" storageaddress="0x9a0b"/>
+	<table name="Secondary O2 DTCs" storageaddress="0x9a0c"/>
+	<table name="Secondary O2 Knock DTCs" storageaddress="0x9a0d"/>
+	<table name="Fuel Evap Purge Solenoid DTCs" storageaddress="0x9a10"/>
+	<table name="Evap Pressure Flow DTCs" storageaddress="0x9a12"/>
+	<table name="Evap Leaks DTCs"  storageaddress="0x9a13"/>
+
+	<table name="Knock sensor CEL (P0327, P0328)" storageaddress="0x92d8" />
 
 	<checksum type="std" start="0" end="0x7FFFF" sumloc="0x6494" xorloc="0x648C" />
 
