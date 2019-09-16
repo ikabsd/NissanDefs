@@ -8,9 +8,9 @@
 		<year>03</year>
 		<market>JDM</market>
 		<make>Nissan</make>
-		<model>Sky</model>
+		<model>Skyline</model>
 		<submodel>Base</submodel>
-		<transmission>MT</transmission>
+		<transmission>AT</transmission>
 		<memmodel>SH705513</memmodel>
 		<flashmethod>nisprog</flashmethod>
 		<filesize>512kb</filesize>
