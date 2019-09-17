@@ -67,6 +67,10 @@
 
 	<table name="Fuel Injection Multiplier" storageaddress="0x6498">
 	</table>
+	
+	<!-- Needs Checking-->
+	<!--table name="Speed Limiter" storageaddress="0x6566"/>
+	<table name="Speed Limiter (km/h)" storageaddress="0x6566" /-->
 
 
 	<checksum type="std" start="0" end="0x7FFFF" sumloc="0x66BC" xorloc="0x66B4" />
