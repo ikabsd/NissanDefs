@@ -16,10 +16,6 @@
 		<filesize>512kb</filesize>
 	</romid>
 
-	<!-- very similar to 5Y702, similar to 6Y300 -->
-	<!-- initial def : fenugrec 2018 -->
-
-	<!-- strangely, cold ign trim doesn't have an area with the 0x80 knock bit set, unlike 5y712/6y300 -->
 	<table name="Cold Ignition Trim" storageaddress="0x5299">
 		<table type="X Axis" storageaddress="0x6EE8" />
 		<table type="Y Axis" storageaddress="0x6EF8" />
