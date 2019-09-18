@@ -1,7 +1,7 @@
 <rom base="NISSAN_BASE">
 	<romid>
 		<xmlid>AM603</xmlid>
-		<hwid>3MFED18N8</hwid>
+		<hwid>3MFED17N7</hwid>
 		<internalidaddress>6c31</internalidaddress>
 		<internalidstring>AM603</internalidstring>
 		<ecuid>AM603</ecuid>
