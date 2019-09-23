@@ -69,9 +69,7 @@
 
 	<table name="Fuel Injection Multiplier" storageaddress="0x6420"/>
 
-	<!--table name="Speed Limiter" storageaddress="0x"/>
-
-	<table name="Speed Limiter (km/h)" storageaddress="0x" /-->
+	<!--table name="Speed Limiter" storageaddress="0x"/-->
 
 	<table name="Load Base Fuel Schedule" storageaddress="0x938a"/>
 

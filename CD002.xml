@@ -54,7 +54,6 @@
 	<table name="Idle Target" storageaddress="0x8A43" />
 
 	<table name="Speed Limiter" storageaddress="0x66B0" />
-	<table name="Speed Limiter (km/h)" storageaddress="0x66B0" />
 
 	<table name="Rev Limit (Fuel Cut - 3D)" storageaddress="0x6646"/>
 

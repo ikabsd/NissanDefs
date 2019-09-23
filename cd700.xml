@@ -49,7 +49,6 @@
 	</table>
 
 	<table name="Speed Limiter" storageaddress="0x6268" />
-	<table name="Speed Limiter (km/h)" storageaddress="0x6268" />
 
 	<table name="Rev Limit (Fuel Cut - 3D)" storageaddress="0x61dc"/>
 

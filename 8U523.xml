@@ -54,6 +54,8 @@
 	<table name="Rev Limit (Fuel Cut - 3D)" storageaddress="0x539e">
 	</table>
 
+    <table name="Speed Limiter" storageaddress="0x5440" />
+
 	<table name="MAF" storageaddress="0x84a6">
 		<scaling units="Airflow g/s" expression="(x-3121)*105/25600" to_byte="3121+x*25600/105" format="0.00" fineincrement="1" coarseincrement="100" />
 	</table>

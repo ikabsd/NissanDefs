@@ -55,7 +55,7 @@
 	<table name="Rev Limit (Fuel Cut - 3D)" storageaddress="0x4a40">
 	</table>
 
-	<table name="Speed Limiter (km/h)" storageaddress="0x4ac0" />
+	<table name="Speed Limiter" storageaddress="0x4ac0" />
 
 	<table name="Engine torque value map" storageaddress="0x71f8">
 		<table type="X Axis" storageaddress="0x7816" />

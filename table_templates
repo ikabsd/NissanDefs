@@ -5,6 +5,10 @@
 		<flashmethod>nisprog</flashmethod>
 	</romid>
 
+<!-- Some scalings. Names inspired from ZB060 A2L. Haven't managed to get global scalings to work... -->
+<scaling name="u8speed_COMP_0007" units="km/h" expression="x*2" to_byte="x/2" format="0.0" fineincrement="2" coarseincrement="10" />
+<scaling name="u8speed_COMP_0007_imp" units="mph" expression="x*2/1.6" to_byte="x*1.6/2" format="0.0" fineincrement="2" coarseincrement="10" />
+
 	<table type="3D" name="Cold Ignition Trim" category="Ignition Timing" storagetype="uint8" endian="big" sizex="16" sizey="16" userlevel="1" logparam="E3002">
 		<scaling units="Degrees Advance (positive increases advance)" expression="x-64" to_byte="x+64" format="0" fineincrement="1" coarseincrement="4" />
 		<table type="X Axis" name="Cylinder intake filling up efficiency" storagetype="uint8" endian="big" logparam="E3000">
@@ -1045,19 +1049,32 @@
 	</table>
 
 	<table type="2D" name="Speed Limiter" category="Limiters" storagetype="uint16" endian="big" sizey="1" userlevel="1">
-		<scaling units="" expression="x*.0621371" to_byte="x/.0621371" format="0.00" fineincrement="1" coarseincrement="10" />
-		<table type="Static Y Axis" name="MPH" sizey="2">
-			<data>K Value</data>
-		</table>
+	<scaling name="SI" units="km/h" expression="x*0.1" to_byte="x/0.1" format="0.0" fineincrement="1" coarseincrement="10" />
+	<scaling name="imp" units="mph" expression="x*.0621371" to_byte="x/.0621371" format="0.00" fineincrement="1" coarseincrement="10" />
+	<table type="Static Y Axis" name="Limit" sizey="1">
+		<data>speed</data>
+	</table>
 		<description>Speed Limiter</description>
 	</table>
 
-	<table type="2D" name="Speed Limiter (km/h)" category="Limiters" storagetype="uint16" endian="big" sizey="1" userlevel="1">
-		<scaling units="" expression="x*0.1" to_byte="x/0.1" format="0.0" fineincrement="1" coarseincrement="10" />
-		<table type="Static Y Axis" name="km/h" sizey="2">
-			<data>K Value</data>
+	<table type="2D" name="mVSPCT2 Speed Limiter (cut)" category="Limiters" storagetype="uint8" endian="big" sizey="1" userlevel="1" >
+		<!-- scalings from ZB060 A2L, seem to be valid for all 8-bit (low resolution) vehicle speed params -->
+		<scaling name="SI" units="km/h" expression="x*2" to_byte="x/2" format="0.0" fineincrement="2" coarseincrement="10" />
+		<scaling name="imp" units="mph" expression="x*2/1.6" to_byte="x*1.6/2" format="0.0" fineincrement="1" coarseincrement="10" />
+		<table type="Static Y Axis" name="fuel cut" sizey="1">
+			<data>speed</data>
 		</table>
-		<description>Speed Limiter</description>
+		<description>Speed Limiter. Some ROMs have two speed limiting mechanisms (mVSPCT2 and the other generically named "speed limiter")</description>
+	</table>
+
+	<table type="2D" name="mVSPRC2 Speed Limiter (restore)" category="Limiters" storagetype="uint8" endian="big" sizey="1" userlevel="1">
+		<!-- scaling from ZB060 A2L ("COMP_0007"), seems to be used for all 8-bit (low resolution) vehicle speed params -->
+		<scaling name="km" units="km/h" expression="x*2" to_byte="x/2" format="0.0" fineincrement="2" coarseincrement="10" />
+		<scaling name="mp" units="mph" expression="x*2/1.6" to_byte="x*1.6/2" format="0.0" fineincrement="1" coarseincrement="10" />
+		<table type="Static Y Axis" name="fuel restore" sizey="1">
+			<data>speed</data>
+		</table>
+		<description>Speed Limiter. Some ROMs have two speed limiting mechanisms (mVSPCT2 and the other generically named "speed limiter"). This speed (restore) must be lower than cut</description>
 	</table>
 
 	<table type="2D" name="Throttle Rev Limit" category="Limiters" storagetype="uint16" endian="big" sizey="1" userlevel="1">

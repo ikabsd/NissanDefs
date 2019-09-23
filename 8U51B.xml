@@ -116,7 +116,6 @@
 	<table name="MAF factor" storageaddress="0x4DEC"/>
 	<table name="MAF offset" storageaddress="0x5446"/> 
 	<table name="Speed Limiter" storageaddress="0x5482"/>
-	<table name="Speed Limiter (km/h)" storageaddress="0x5482"/>
 	<table name="mTP100" storageaddress="0x54C2"/>
 	<table name="Injector Latency at 14V" storageaddress="0x4FC9" />
 	<table name="Fuel Injector Latency Adder" storageaddress="0x4A05" />

@@ -73,8 +73,6 @@
 	</table>
 	<table name="Speed Limiter" storageaddress="0x5074" />
 
-	<table name="Speed Limiter (km/h)" storageaddress="0x5074" />
-
 	<table name="QH0/ torque conversion map" storageaddress="0x644c">
 		<table type="X Axis" storageaddress="0x794a" />
 		<table type="Y Axis" storageaddress="0x6e0b" />
