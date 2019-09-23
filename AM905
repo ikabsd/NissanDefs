@@ -1,0 +1,19 @@
+<rom base="AM900">
+	<romid>
+		<xmlid>AM905</xmlid>
+		<hwid>2wlj6d11</hwid>
+		<internalidaddress>8163</internalidaddress>
+		<internalidstring>AM905</internalidstring>
+		<ecuid>AM905</ecuid>
+		<year>03</year>
+		<market>JDM</market>
+		<make>Nissan</make>
+		<model>Skyline</model>
+		<submodel>Base</submodel>
+		<transmission>AT</transmission>
+		<memmodel>SH705513</memmodel>
+		<flashmethod>nisprog</flashmethod>
+		<filesize>512kb</filesize>
+	</romid>
+
+</rom>
