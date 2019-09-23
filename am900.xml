@@ -71,7 +71,9 @@
 <table name="Fuel Injection Multiplier" storageaddress="0x6428">
 </table>
 
-<table name="Speed Limiter (km/h)" storageaddress="0x64ea" />
+<table name="Speed Limiter" storageaddress="0x64ea" />
+<table name="mVSPCT2 Speed Limiter (cut)" storageaddress="0x621B"/>
+<table name="mVSPRC2 Speed Limiter (restore)" storageaddress="0x6225"/>
 
 <checksum type="std" start="0" end="0xFFFFF" sumloc="0x6640" xorloc="0x6638" />
 
