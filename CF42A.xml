@@ -125,8 +125,20 @@
 	<table name="Idle BFS limits, ms (TPRV)" storageaddress="0x8B10" />
 	<table name="Load Base Fuel Schedule" storageaddress="0xcb2c" />
 	<table name="MAF factor" storageaddress="0x8226" />
-
+	
+	<table name="Secondary O2 Heaters DTC Fix (P0037, P0038, P0057, P0058)" storageaddress="0x82A6" />
 	<table name="Catalyst DTCs" storageaddress="0xdd68"/>
+	
+	<table name="CID1100 supmask"  storageaddress="0xB563"/>
+	<table name="CID1120 supmask"  storageaddress="0x8392"/>
+	<table name="CID1140 supmask"  storageaddress="0xB567"/>
+	<table name="CID1160 supmask"  storageaddress="0xB56B"/>
+	<table name="CID1200 supmask"  storageaddress="0xB57B"/>
+	<table name="CID1220 supmask"  storageaddress="0xB57F"/>
+	<table name="CID1300 supmask"  storageaddress="0xB587"/>
+	<table name="CID1500 supmask"  storageaddress="0xB58B"/>
+	<table name="CID1600 supmask"  storageaddress="0xB58F"/>
+
 
 	<checksum type="std" start="0" end="0xFFFFF" sumloc="0x8C54" xorloc="0x8C4C"/>
 
