@@ -127,6 +127,16 @@
 	<table name="MAF factor" storageaddress="0x8226" />
 
 	<table name="Catalyst DTCs" storageaddress="0xdd68"/>
+	<table name="Secondary O2 Heaters DTC Fix (P0037, P0038, P0057, P0058)" storageaddress="0x82A6" />
+
+        <table name="CID1100 supmask"  storageaddress="0xB563"/>
+        <table name="CID1120 supmask"  storageaddress="0xB56F"/>
+        <table name="CID1140 supmask"  storageaddress="0xB567"/>
+        <table name="CID1160 supmask"  storageaddress="0xB56B"/>
+        <table name="CID1200 supmask"  storageaddress="0xB57B"/>
+        <table name="CID1220 supmask"  storageaddress="0xB57F"/>
+        <table name="CID1240 supmask"  storageaddress="0xB583"/>
+        <table name="CID1300 supmask"  storageaddress="0xB587"/>
 
 	<checksum type="std" start="0" end="0xFFFFF" sumloc="0x8C54" xorloc="0x8C4C"/>
 
