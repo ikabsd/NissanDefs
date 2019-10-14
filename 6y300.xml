@@ -90,10 +90,7 @@
 		<table type="Y Axis" storageaddress="0x6d12" />
 	</table>
 
-
-	
-	<table name="MAF" storageaddress="0x796a">
-	</table>
+	<table name="MAF" storageaddress="0x796a"/>
 	<table name="MAF factor" storageaddress="0x4BE9"/>
 	<table name="MAF offset" storageaddress="0x504E"/>
 
@@ -113,8 +110,6 @@
 	<table name="Fuel Injection Multiplier" storageaddress="0x4FD0">
 	</table>
 	<table name="Speed Limiter" storageaddress="0x5074" />
-
-	<table name="Speed Limiter (km/h)" storageaddress="0x5074" />
 
 	<table name="mMTFDD" storageaddress="0x604C">
 		<table type="X Axis" storageaddress="0x78F6" />
