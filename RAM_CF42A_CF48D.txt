@@ -1,1 +1,40 @@
-vTTEMAX "MTTE maximum torque" ffff199e
+MTTE maximum torque vTTEMAX ffff199e
+Calculated Load	Logic operation load value	vRTCLV	ffff3755
+Short Term Fuel Trim B1	Air-fuel ratio fF/B compensation coefficient	bvALPHA_R#1	ffff2270
+Short Term Fuel Trim B2	Air-fuel ratio fF/B compensation coefficient	bvALPHA_R#2	ffff2272
+Long Fuel Trim B1	Mixed ratio learning value	bvKBLRC_R#1	ffff229a
+Long Fuel Trim B2	Mixed ratio learning value	bvKBLRC_R#1	ffff229C
+Intake Cam Solenoid Duty B1	VTC solenoid drive DUTY ratio	vVTCDUTY_R#1	ffff23a0
+Intake Cam Solenoid Duty B2	VTC solenoid drive DUTY ratio	vVTCDUTY_R#2	ffff23a1
+Exhaust Cam Retard Angle B1	VTC operation angle (exhaust)	vVTCNOWE_R#1	FFFF1046
+Exhaust Cam Retard Angle B2	VTC operation angle (exhaust)	vVTCNOWE_R#2	FFFF1047
+VTC target angle (exhaust)	VTC target angle (exhaust)	vVTCTRGE	FFFF104C
+Cylinder filling up efficiency wvITAC	FF846E
+MBT operation value vMBTCAL	FF2355
+Trimming-map reference value vADVTRMAP	FF110A 
+High intake air temperature retard value wvHTARTDR	FF85E2 
+Catalyst heating compensation value vCATDAN	FF11B8
+Jar sound compensation value vADVJAR	FF1104
+VTC ignition timing compensation value vVTCADV	FF1A50
+At the time of usual, a basic ignition timing vTADVMnm	FF17B8
+Knock control value bvBETA	FF228E
+The amount of retard control vTQRET	FF26F0
+The amount of ADV compensation vADVHOS	FF1F16 
+At the time of the acceleration, the amount of ADV phase control vDLTADV	FF2E4A
+The amount of re-acceleration shock retard avSCKRET	FF38AE
+In front of the limiter, ignition timing vADVBL	FF1656 
+vBETACAL In front of the limiter, the amount of knock control	FF11A6
+BETA retard limiter bvKLMRT	FF22A2
+Target AFR Map Value vKMRM	FF14BF
+Commanded AFR (High Precision) vTFBYAC 	FF1880
+TVO-N flow-quantity vQH0	FF85A2
+vFLFA Air-fuel ratio compensation coefficient	FF137B
+vBETAW Knock control value	FF1012
+vBETAA Knock control learning value	FF100C
+vBETAB Knock control learning value	FF100E
+vBETAC Knock control learning value	FF1010
+vBETAD Knock control value for the high-octane/regular judgement	FF11A6
+vKNCNT The number of knock counts	FF206E
+vAFSAF_R#1 An actual air-fuel ratio	FF26F0
+vAFSAF_R#2 An actual air-fuel ratio	FF26F2
+vTEMHOS Target air-fuel ratio exhaust compensation rate	FF184C
